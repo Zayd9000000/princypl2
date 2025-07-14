@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Sitemap: https://www.netrixdigital.com/sitemap.xml
+
+Sitemap: https://netrix-1.webflow.io/sitemap.xml
