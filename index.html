@@ -4,17 +4,17 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Princypl Design Agency</title>
+  <title>Builded Design Agency</title>
   <meta
     content=""
     name="description" />
-  <meta content="Princypl Design Studio" property="og:title" />
+  <meta content="Builded Design Studio" property="og:title" />
   <meta
     content=""
     property="og:description" />
   <meta content="princypl.png"
     property="og:image" />
-  <meta content="Princypl Design Studio" property="twitter:title" />
+  <meta content="Builded Design Studio" property="twitter:title" />
   <meta
     content=""
     property="twitter:description" />
@@ -973,7 +973,7 @@
         data-autoplay="true" data-loop="true" data-wf-ignore="true"
         class="brand-identity-giff w-background-video w-background-video-atom hide-on-mobile"><video src="princypl.mp4" alt="Brand Identity" style="width:100%;height:auto;object-fit:cover;" class="service-static-img" autoplay loop muted playsinline></video></div>
       <div class="brand-identity-text-wrapper-v _100px-padding-top">
-        <div class="text-block-under-hero-desktop">Princypl is a single-source design partner that replaces the typical patchwork of agencies, freelancers, and late hand-offs with one continuous pipeline. Inside our studio, brand strategists, interface designers, artists, and front-end engineers sit side-by-side, turning product vision into a cohesive stack of assets—names, marks, type systems, motion specs, design tokens, coded components, and launch-ready prototypes—all delivered as market-ready design that behaves consistently across web, mobile, spatial, and voice surfaces, giving teams one definitive source of truth as technology keeps moving forward.
+        <div class="text-block-under-hero-desktop">Builded is a single-source design partner that replaces the typical patchwork of agencies, freelancers, and late hand-offs with one continuous pipeline. Inside our studio, brand strategists, interface designers, artists, and front-end engineers sit side-by-side, turning product vision into a cohesive stack of assets—names, marks, type systems, motion specs, design tokens, coded components, and launch-ready prototypes—all delivered as market-ready design that behaves consistently across web, mobile, spatial, and voice surfaces, giving teams one definitive source of truth as technology keeps moving forward.
 
         </div>
       </div>
@@ -982,7 +982,7 @@
   <div class="brand-identity-mobile" style="display:none;">
     <div class="brand-identity-mobile-inner">
       <div class="brand-identity-mobile-text">
-        Princypl is a single-source design partner that replaces the typical patchwork of agencies, freelancers, and late hand-offs with one continuous pipeline. Inside our studio, brand strategists, interface designers, artists, and front-end engineers sit side-by-side, turning product vision into a cohesive stack of assets—names, marks, type systems, motion specs, design tokens, coded components, and launch-ready prototypes—all delivered as market-ready design that behaves consistently across web, mobile, spatial, and voice surfaces, giving teams one definitive source of truth as technology keeps moving forward.
+        Builded is a single-source design partner that replaces the typical patchwork of agencies, freelancers, and late hand-offs with one continuous pipeline. Inside our studio, brand strategists, interface designers, artists, and front-end engineers sit side-by-side, turning product vision into a cohesive stack of assets—names, marks, type systems, motion specs, design tokens, coded components, and launch-ready prototypes—all delivered as market-ready design that behaves consistently across web, mobile, spatial, and voice surfaces, giving teams one definitive source of truth as technology keeps moving forward.
       </div>
     </div>
     <video src="princypl.mp4" alt="Brand Identity" class="brand-identity-divider-img" autoplay loop muted playsinline></video>
@@ -990,7 +990,7 @@
   <div class="what-we-do-section">
     <h2 class="what-we-do-title">What We Do</h2>
     <p class="what-we-do-desc">
-      Working with Princypl is working with a full-stack design squad—strategists, UI/UX architects, and front-end engineers—integrated into workflow to ship modular, multi-modal systems at speed. Our first-principles workflow compresses discovery, design, and delivery into rapid sprints, landing complete brand identities and production-ready interfaces, covering naming, brand identity, B2B SaaS dashboards, spatial or zero-UI prototypes, and React component libraries in days rather than weeks, giving you future-proof digital infrastructure without the usual back-and-forth.
+      Working with Builded is working with a full-stack design squad—strategists, UI/UX architects, and front-end engineers—integrated into workflow to ship modular, multi-modal systems at speed. Our first-principles workflow compresses discovery, design, and delivery into rapid sprints, landing complete brand identities and production-ready interfaces, covering naming, brand identity, B2B SaaS dashboards, spatial or zero-UI prototypes, and React component libraries in days rather than weeks, giving you future-proof digital infrastructure without the usual back-and-forth.
     </p>
   </div>
 
@@ -1109,7 +1109,9 @@
             loading="lazy" alt="Arrow" class="arrow-mobile" />
         </div>
         <div class="video-product-wrapper">
-          <video src="1.mov" alt="Case Study 1" style="width:100%;height:auto;object-fit:cover;" autoplay loop muted playsinline></video>
+          <!--<video src="1.mov" alt="Case Study 1" style="width:100%;height:auto;object-fit:cover;" autoplay loop muted playsinline></video>-->
+          <img src="1.png" alt="Case Study 2" style="width:100%;height:auto;object-fit:cover;" />
+
           <div class="click-zone"></div>
         </div>
       </a>
@@ -1302,7 +1304,7 @@
         </a><a href="mailto:hello@netrixdigital.com" class="footer-mail">contact@princypl.com</a></div>
       <div class="line"></div>
       <div data-w-id="f03925ba-35d5-08bb-42ab-44aa45d94444" class="footer-disclaimer desktop">
-        <h4 class="grey">2025 Princypl agency. All rights reserved</h4>
+        <h4 class="grey">2025 Builded agency. All rights reserved</h4>
       </div>
     </div>
   </div>
@@ -1365,6 +1367,66 @@
     });
   </script>
   <!--END-Cloneable Custom Code-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var mobileMenuLinks = document.querySelectorAll('.menu-mobile .mob-menu-ul');
+      var mobileMenu = document.querySelector('.menu-mobile');
+
+      function smoothScrollTo(target, duration = 350) {
+        var start = window.pageYOffset;
+        var end = target.getBoundingClientRect().top + window.pageYOffset;
+        var change = end - start;
+        var startTime = null;
+
+        function animateScroll(currentTime) {
+          if (!startTime) startTime = currentTime;
+          var time = currentTime - startTime;
+          var val = Math.min(time / duration, 1);
+          window.scrollTo(0, start + change * easeInOutQuad(val));
+          if (val < 1) {
+            requestAnimationFrame(animateScroll);
+          }
+        }
+
+        function easeInOutQuad(t) {
+          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        }
+
+        requestAnimationFrame(animateScroll);
+      }
+
+      mobileMenuLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var href = link.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            var target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              smoothScrollTo(target, 350);
+              setTimeout(function() {
+                if (mobileMenu) {
+                  mobileMenu.style.display = 'none';
+                }
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+              }, 370); // Hide menu after scroll finishes
+              return;
+            }
+          }
+          // If not an anchor, just close menu immediately
+          if (mobileMenu) {
+            mobileMenu.style.display = 'none';
+          }
+          document.body.style.overflow = '';
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.width = '';
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
