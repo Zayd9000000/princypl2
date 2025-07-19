@@ -161,6 +161,64 @@
       -webkit-font-smoothing: antialiased;
     }
   </style>
+
+  <style>
+    .logo {
+      display: block;
+      margin: 0 auto;         /* Center horizontally */
+      max-width: 120px;       /* Adjust as needed */
+      max-height: 60px;       /* Adjust as needed */
+      width: auto;
+      height: auto;
+    }
+
+    .navbar-logo-left-container {
+      display: flex;
+      align-items: center;    /* Center vertically */
+      justify-content: center;/* Center horizontally */
+      min-height: 80px;       /* Adjust as needed for your navbar */
+    }
+
+    /* 1. Add top margin to get in touch text for mobile */
+    @media (max-width: 767px) {
+      .lets-talk-footer {
+        margin-top: 32px !important;
+      }
+    }
+
+    /* 2. Fix double arrow error in back to top for desktop */
+    .backtotop_arrow2 {
+      display: none !important;
+    }
+
+    /* 3. Make circles.png fit its frame without cropping */
+    img[src*="circles.png"] {
+      object-fit: contain !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      display: block;
+      background: #fff;
+    }
+
+    /* 4. Make logos large displays that command visual hierarchy */
+    .main-con.mobile .sigma-bg-video {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      background: #fff !important;
+      padding: 20px !important;
+    }
+
+    .main-con.mobile .sigma-bg-video img {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+      background: transparent !important;
+    }
+  </style>
   <style>
     .body-text-16px.grey ul {
       margin: 0 0 0 1.2em;
