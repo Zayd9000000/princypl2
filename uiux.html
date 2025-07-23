@@ -419,8 +419,12 @@
         </div>
         <div class="uiux-images-grid-wide smarter-grid-simple">
           <img src="28.png" alt="Smarter.ai Screenshot 2" style="grid-column:1;grid-row:1;" />
-          <video src="smarter.mp4" autoplay loop muted playsinline style="background:#000; border-radius:10px;grid-column:2;grid-row:1;"></video>
-          <video src="smart.mp4" autoplay loop muted playsinline style="background:#000; border-radius:10px;grid-column:1;grid-row:2;"></video>
+          <div class="media-rounded-wrapper" style="grid-column:2;grid-row:1;">
+            <video src="smarter.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+          </div>
+          <div class="media-rounded-wrapper" style="grid-column:1;grid-row:2;">
+            <video src="smart.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+          </div>
           <img src="21.png" alt="Smarter.ai Screenshot 1" style="grid-column:2;grid-row:2;" />
         </div>
       </div>
@@ -430,7 +434,9 @@
           <div class="uiux-body-wide">Cyrcl asked for an app that treats presence as the only metric. We centred everything under the thumb. One radial menu fans out voice, photo, and follow-up in a single sweep, so navigation never pulls attention away from conversation. Posts remain circular, echoing the brand mark and removing hierarchy from the feed. Subtle haptics confirm intent, keeping the surface calm. Early users moved through the app instinctively; feedback called the experience "as natural as turning a wrist."</div>
         </div>
         <div class="uiux-images-grid-wide cyrcl-grid-simple">
-          <video src="cyrcl.mp4" autoplay loop muted playsinline style="background:#000; border-radius:10px;grid-column:1;grid-row:1;"></video>
+          <div class="media-rounded-wrapper" style="grid-column:1;grid-row:1;">
+            <video src="cyrcl.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+          </div>
           <img src="27.png" alt="Cyrcl Screenshot 2" style="grid-column:2;grid-row:1;" />
           <img src="19.png" alt="Cyrcl Screenshot 1" style="grid-column:1/span 2;grid-row:2;" />
         </div>
@@ -511,22 +517,53 @@
         margin-right: auto;
         box-sizing: border-box;
       }
-      /* Smarter.ai grid: always 2x2 on desktop */
-      .uiux-images-grid-wide.smarter-grid-simple {
+      /* Smarter.ai and Cyrcl grid: always 2 columns for screens >=600px */
+      .uiux-images-grid-wide.smarter-grid-simple,
+      .uiux-images-grid-wide.cyrcl-grid-simple {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: auto auto;
         grid-auto-rows: min-content;
       }
-      .uiux-images-grid-wide.smarter-grid-simple img,
-      .uiux-images-grid-wide.smarter-grid-simple video {
-        align-self: start;
-        border-radius: 16px !important;
+      .media-rounded-wrapper {
+        border-radius: 16px;
+        overflow: hidden;
         width: 100%;
-        height: auto;
-        object-fit: contain;
-        background: #fff;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+        height: 100%;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .media-rounded-wrapper video,
+      .media-rounded-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 !important;
         display: block;
+      }
+      /* Mobile grid video wrapper for consistency */
+      .uiux-images-grid-mobile .media-rounded-wrapper {
+        border-radius: 14px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .uiux-images-grid-mobile .media-rounded-wrapper video,
+      .uiux-images-grid-mobile .media-rounded-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 !important;
+        display: block;
+      }
+      .uiux-images-grid-wide video {
+        border-radius: 16px !important;
+        overflow: hidden;
       }
       /* Cyrcl grid: always 2 cols, bottom row spans both */
       .uiux-images-grid-wide.cyrcl-grid-simple {
@@ -581,9 +618,9 @@
           grid-template-rows: none;
         }
         .uiux-images-grid-wide.smarter-grid-simple img,
-        .uiux-images-grid-wide.smarter-grid-simple video,
+        .uiux-images-grid-wide.smarter-grid-simple .media-rounded-wrapper,
         .uiux-images-grid-wide.cyrcl-grid-simple img,
-        .uiux-images-grid-wide.cyrcl-grid-simple video {
+        .uiux-images-grid-wide.cyrcl-grid-simple .media-rounded-wrapper {
           grid-column: auto !important;
           grid-row: auto !important;
           align-self: unset;
@@ -659,8 +696,12 @@
       </div>
       <div class="uiux-images-grid-mobile smarter-grid-mobile">
         <img src="28.png" alt="Smarter.ai Screenshot 2" />
-        <video src="smarter.mp4" autoplay loop muted playsinline style="background:#000; border-radius:10px;"></video>
-        <video src="smart.mp4" autoplay loop muted playsinline style="background:#000; border-radius:10px;"></video>
+        <div class="media-rounded-wrapper">
+          <video src="smarter.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+        </div>
+        <div class="media-rounded-wrapper">
+          <video src="smart.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+        </div>
         <img src="21.png" alt="Smarter.ai Screenshot 1" />
       </div>
     </div>
@@ -670,7 +711,9 @@
         <div class="uiux-body-mobile">Cyrcl asked for an app that treats presence as the only metric. We centred everything under the thumb. One radial menu fans out voice, photo, and follow-up in a single sweep, so navigation never pulls attention away from conversation. Posts remain circular, echoing the brand mark and removing hierarchy from the feed. Subtle haptics confirm intent, keeping the surface calm. Early users moved through the app instinctively; feedback called the experience "as natural as turning a wrist."</div>
       </div>
       <div class="uiux-images-grid-mobile cyrcl-grid-mobile">
-        <video src="cyrcl.mp4" autoplay loop muted playsinline style="background:#000; border-radius:10px;"></video>
+        <div class="media-rounded-wrapper">
+          <video src="cyrcl.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+        </div>
         <img src="27.png" alt="Cyrcl Screenshot 2" />
         <img src="19.png" alt="Cyrcl Screenshot 1" style="grid-column:1/span 2;" />
       </div>
@@ -762,18 +805,21 @@
       margin: 0 0 28px 0;
       text-align: left;
     }
-    .uiux-images-grid-mobile.smarter-grid-mobile {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
+    .uiux-images-grid-mobile.smarter-grid-mobile,
+    .uiux-images-grid-mobile.cyrcl-grid-mobile {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
       margin-top: 10px;
       width: 100%;
       justify-content: center;
     }
     .uiux-images-grid-mobile.smarter-grid-mobile img,
-    .uiux-images-grid-mobile.smarter-grid-mobile video {
+    .uiux-images-grid-mobile.smarter-grid-mobile .media-rounded-wrapper,
+    .uiux-images-grid-mobile.cyrcl-grid-mobile img,
+    .uiux-images-grid-mobile.cyrcl-grid-mobile .media-rounded-wrapper {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: contain;
       border-radius: 14px !important;
       background: #fff;
@@ -782,18 +828,17 @@
       max-width: 100%;
       margin: 0 auto;
     }
-    .uiux-images-grid-mobile.cyrcl-grid-mobile {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 14px;
-      margin-top: 10px;
-      width: 100%;
-      justify-content: center;
-    }
     .uiux-images-grid-mobile.cyrcl-grid-mobile img[alt="19.png"],
     .uiux-images-grid-mobile.cyrcl-grid-mobile img[alt="Cyrcl Screenshot 1"] {
       grid-column: 1 / span 2 !important;
+    }
+    .uiux-images-grid-mobile.smarter-grid-mobile img:nth-child(1),
+    .uiux-images-grid-mobile.smarter-grid-mobile .media-rounded-wrapper:nth-child(2) {
+      grid-column: 1;
+    }
+    .uiux-images-grid-mobile.smarter-grid-mobile .media-rounded-wrapper:nth-child(3),
+    .uiux-images-grid-mobile.smarter-grid-mobile img:nth-child(4) {
+      grid-column: 2;
     }
     .uiux-images-grid-mobile.grid-1 {
       display: flex;
@@ -827,6 +872,10 @@
       .uiux-section-mobile {
         padding: 0 3vw 24px 3vw;
       }
+      .uiux-images-grid-mobile.smarter-grid-mobile,
+      .uiux-images-grid-mobile.cyrcl-grid-mobile {
+        gap: 8px;
+      }
     }
     /* Add vertical space above menu */
     .uiux-slider-mobile + .footer {
@@ -853,6 +902,28 @@
     @media (max-width: 991px) {
       .uiux-slider-mobile {
         display: flex !important;
+      }
+    }
+    @media (max-width: 991px) {
+      .uiux-slider-wide {
+        display: none !important;
+      }
+      .uiux-slider-mobile {
+        display: flex !important;
+      }
+      .uiux-section-wide {
+        display: none !important;
+      }
+    }
+    @media (min-width: 992px) {
+      .uiux-slider-wide {
+        display: flex !important;
+      }
+      .uiux-slider-mobile {
+        display: none !important;
+      }
+      .uiux-section-mobile {
+        display: none !important;
       }
     }
   </style>
