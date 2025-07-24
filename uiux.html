@@ -420,10 +420,10 @@
         <div class="uiux-images-grid-wide smarter-grid-simple">
           <img src="28.png" alt="Smarter.ai Screenshot 2" style="grid-column:1;grid-row:1;" />
           <div class="media-rounded-wrapper" style="grid-column:2;grid-row:1;">
-            <video src="smarter.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+            <video src="smarter.mp4" autoplay loop muted playsinline style="background:#000;" preload="none" poster="sm.png" data-lazy-video></video>
           </div>
           <div class="media-rounded-wrapper" style="grid-column:1;grid-row:2;">
-            <video src="smart.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+            <video src="smart.mp4" autoplay loop muted playsinline style="background:#000;" preload="none" poster="sma.png" data-lazy-video></video>
           </div>
           <img src="21.png" alt="Smarter.ai Screenshot 1" style="grid-column:2;grid-row:2;" />
         </div>
@@ -435,7 +435,7 @@
         </div>
         <div class="uiux-images-grid-wide cyrcl-grid-simple">
           <div class="media-rounded-wrapper" style="grid-column:1;grid-row:1;">
-            <video src="cyrcl.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+            <video src="cyrcl.mp4" autoplay loop muted playsinline style="background:#000;" preload="none" poster="cy.png" data-lazy-video></video>
           </div>
           <img src="27.png" alt="Cyrcl Screenshot 2" style="grid-column:2;grid-row:1;" />
           <img src="19.png" alt="Cyrcl Screenshot 1" style="grid-column:1/span 2;grid-row:2;" />
@@ -449,7 +449,7 @@
         <div class="uiux-images-grid-wide grid-1">
           <img src="26.png" alt="SignalBoard Screenshot 1" />
           <div class="media-rounded-wrapper">
-            <video src="signal.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+            <video src="signal.mp4" autoplay loop muted playsinline style="background:#000;" preload="none" poster="sig.png" data-lazy-video></video>
           </div>
         </div>
       </div>
@@ -700,10 +700,10 @@
       <div class="uiux-images-grid-mobile smarter-grid-mobile">
         <img src="28.png" alt="Smarter.ai Screenshot 2" />
         <div class="media-rounded-wrapper">
-          <video src="smarter.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+          <video src="smarter.mp4" autoplay loop muted playsinline style="background:#000;" preload="none" poster="sm.png" data-lazy-video></video>
         </div>
         <div class="media-rounded-wrapper">
-          <video src="smart.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+          <video src="smart.mp4" autoplay loop muted playsinline style="background:#000;" preload="none" poster="sma.png" data-lazy-video></video>
         </div>
         <img src="21.png" alt="Smarter.ai Screenshot 1" />
       </div>
@@ -715,7 +715,7 @@
       </div>
       <div class="uiux-images-grid-mobile cyrcl-grid-mobile">
         <div class="media-rounded-wrapper">
-          <video src="cyrcl.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+          <video src="cyrcl.mp4" autoplay loop muted playsinline style="background:#000;" preload="none" poster="cy.png" data-lazy-video></video>
         </div>
         <img src="27.png" alt="Cyrcl Screenshot 2" />
         <img src="19.png" alt="Cyrcl Screenshot 1" style="grid-column:1/span 2;" />
@@ -729,7 +729,7 @@
       <div class="uiux-images-grid-mobile grid-1">
         <img src="26.png" alt="SignalBoard Screenshot 1" />
         <div class="media-rounded-wrapper">
-          <video src="signal.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+          <video src="signal.mp4" autoplay loop muted playsinline style="background:#000;" preload="none" poster="sig.png" data-lazy-video></video>
         </div>
       </div>
     </div>
@@ -1089,6 +1089,36 @@
       });
     });
   </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const videos = document.querySelectorAll('video[data-lazy-video]');
+  const config = { rootMargin: "200px 0px", threshold: 0.01 };
+  const onEntry = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        if (video.dataset.src) {
+          video.src = video.dataset.src;
+        }
+        video.load();
+        observer.unobserve(video);
+      }
+    });
+  };
+  const observer = new IntersectionObserver(onEntry, config);
+  videos.forEach(video => {
+    // If using <source> children, move src to data-src and set src on intersection
+    const sources = video.querySelectorAll('source');
+    sources.forEach(source => {
+      if (source.src) {
+        source.setAttribute('data-src', source.src);
+        source.removeAttribute('src');
+      }
+    });
+    observer.observe(video);
+  });
+});
+</script>
 </body>
 
 </html>
