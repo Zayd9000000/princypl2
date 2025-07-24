@@ -448,6 +448,9 @@
         </div>
         <div class="uiux-images-grid-wide grid-1">
           <img src="26.png" alt="SignalBoard Screenshot 1" />
+          <div class="media-rounded-wrapper">
+            <video src="signal.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+          </div>
         </div>
       </div>
       <button class="uiux-arrow right" aria-label="Next section">&#8594;</button>
@@ -725,6 +728,9 @@
       </div>
       <div class="uiux-images-grid-mobile grid-1">
         <img src="26.png" alt="SignalBoard Screenshot 1" />
+        <div class="media-rounded-wrapper">
+          <video src="signal.mp4" autoplay loop muted playsinline style="background:#000;"></video>
+        </div>
       </div>
     </div>
   </div>
@@ -924,6 +930,11 @@
       }
       .uiux-section-mobile {
         display: none !important;
+      }
+    }
+    @media (max-width: 991px) {
+      .uiux-images-grid-mobile.grid-1 .media-rounded-wrapper {
+        margin-top: 20px;
       }
     }
   </style>
