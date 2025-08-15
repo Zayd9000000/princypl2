@@ -802,11 +802,11 @@
       }
       /* Add more space around each service row */
       .link-wrapper {
-        padding-top: 22px !important;
-        padding-bottom: 22px !important;
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
         padding-left: 10px !important;
         padding-right: 10px !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 36px !important; /* Increased spacing between items on mobile */
         display: block !important;
       }
       .link-container {
@@ -838,6 +838,96 @@
     .chapter-number {
       white-space: nowrap;
     }
+    
+    /* Add more spacing between numbered service items */
+    .link-wrapper {
+      margin-bottom: 48px !important; /* Increased from default */
+      padding-top: 24px !important;
+      padding-bottom: 24px !important;
+      transition: all 0.3s ease;
+    }
+    
+    /* Ensure the line dividers have adequate spacing */
+    .product-list-sec .line {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      opacity: 0.3;
+    }
+    
+    /* Add hover effect to make items feel more interactive */
+    .link-wrapper:hover {
+      padding-left: 12px;
+    }
+    
+    /* Desktop specific spacing adjustments */
+    @media (min-width: 768px) {
+      .link-wrapper {
+        margin-bottom: 64px !important; /* Even more space on desktop */
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+      }
+      
+      /* Make the service section feel more breathable */
+      .product-list-sec {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+      }
+    }
+    
+    /* Tablet specific adjustments */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .link-wrapper {
+        margin-bottom: 56px !important;
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+      }
+    }
+  </style>
+  <style>
+    /* Navbar hover underline animation */
+    .nav-menu-wrapper .no-underline {
+      position: relative;
+      border: none !important;
+      padding: 8px 20px !important;
+      border-radius: 0 !important;
+      margin-right: 15px !important;
+      transition: none !important;
+    }
+    
+    .nav-menu-wrapper .no-underline::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-color: white;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+    
+    .nav-menu-wrapper .no-underline:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    
+    /* Mobile menu styles */
+    .mob-menu-ul {
+      border: none !important;
+      padding: 12px 20px !important;
+      margin-bottom: 15px !important;
+      border-radius: 0 !important;
+      position: relative;
+    }
+    
+    .mob-menu-ul::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
   </style>
 </head>
 
@@ -860,11 +950,12 @@
           <nav role="navigation" class="nav-menu-wrapper w-nav-menu"><a data-w-id="c8d246f3-4c00-8361-959b-8140bc5a99a5"
               href="#services-list" class="no-underline w-inline-block">
               <div data-w-id="f15cd412-a5ab-db1a-44ea-5affc4d8e21b" class="nav-link">SERVICES</div>
-              <div class="underline"></div>
+            </a><a data-w-id="about-us-nav-button" href="aboutus.html"
+              class="no-underline w-inline-block">
+              <div data-w-id="about-us-nav-text" class="nav-link">ABOUT US</div>
             </a><a data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459e9" href="contact.html"
               class="no-underline w-inline-block">
               <div data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459ea" class="nav-link">CONTACT US</div>
-              <div class="underline-4"></div>
             </a></nav>
           <div scroll="both" data-w-id="44d38401-4d1b-8108-ea17-38dd2916b280" class="_14px-link grey hide-from-desktop">
             <a data-w-id="189f0706-79dd-6214-4742-009113fde886"  class="link close">close</a><a
@@ -875,236 +966,374 @@
     <div class="menu-mobile">
       <div class="mob-menu-list"><a href="#services-list" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">SERVICES</div>
-          <div data-w-id="f9a96755-95c6-a6c5-2e50-5a98894227d4" class="line menu"></div>
+        </a><a href="aboutus.html" class="mob-menu-ul w-inline-block">
+          <div class="mob-menu-link">ABOUT US</div>
         </a><a href="contact.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">CONTACT US</div>
-          <div data-w-id="f5ed9ebc-80c7-aaf2-b7a5-da1713d751a7" class="line menu"></div>
         </a></div>
       
     </div>
   </div>
   <div id="top" class="hero-sec">
-    <div data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab8e5" class="hero-bg"><img
-        src="https://cdn.prod.website-files.com/63ef85bbe954cc6863a77eab/643f0e68b5c3290154e9e950_human2%201.png"
-        loading="eager" alt="Netrix logo element
-" class="hero-img" /></div>
-    <div data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab8e7" class="html-embed-6 w-embed w-script"><canvas
-        id="x-canvas"></canvas>
-      <style>
-        #x-canvas {
-          position: absolute;
-          right: 8vw;
-          top: 9vh;
-          height: 100%;
-          transform: scale(1);
+    <style>
+      .hero-sec {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      @media (max-width: 767px) {
+        .hero-sec {
+          min-height: 60vh;
+        }
+      }
+      
+      /* Sequential letter reveal animation */
+      .hero-title {
+        display: inline-block;
+      }
+      .hero-title span {
+        display: inline-block;
+        opacity: 0;
+        animation: letterReveal 0.6s forwards;
+      }
+      .hero-title span:nth-child(1) { animation-delay: 0.1s; }
+      .hero-title span:nth-child(2) { animation-delay: 0.2s; }
+      .hero-title span:nth-child(3) { animation-delay: 0.3s; }
+      .hero-title span:nth-child(4) { animation-delay: 0.4s; }
+      .hero-title span:nth-child(5) { animation-delay: 0.5s; }
+      .hero-title span:nth-child(6) { animation-delay: 0.6s; }
+      .hero-title span:nth-child(7) { animation-delay: 0.7s; }
+      
+      @keyframes letterReveal {
+        0% {
           opacity: 0;
-          transition: 0.4s ease-in-out;
-          filter: blur(10px);
+          transform: translateY(20px);
         }
-
-        .on-load-canvas {
-          opacity: 1 !important;
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
-      </style>
-
-
-      <script>
-
-        let canvasEl, context, imgs = [], frameCount = 40
-
-        window.onload = function () {
-          canvasEl = document.getElementById('x-canvas')
-          context = canvasEl.getContext('2d')
-          initSeq()
-          onEventSeq()
+      }
+      
+      /* Geometric frames container */
+      .geometric-frames {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        height: 80vh;
+        pointer-events: none;
+        z-index: 0;
+      }
+      
+      /* Individual geometric shapes */
+      .geo-shape {
+        position: absolute;
+        transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        will-change: transform;
+      }
+      
+      .geo-rect-1 {
+        width: 120px;
+        height: 80px;
+        top: 15%;
+        left: 10%;
+        border: 1px solid rgba(255,255,255,0.5);
+        animation: float1 15s infinite ease-in-out;
+      }
+      
+      .geo-square-1 {
+        width: 60px;
+        height: 60px;
+        top: 20%;
+        right: 15%;
+        border: 1px solid rgba(255,255,255,0.25);
+        animation: float2 18s infinite ease-in-out;
+      }
+      
+      .geo-rect-2 {
+        width: 100px;
+        height: 40px;
+        bottom: 20%;
+        left: 12%;
+        border: 1px solid rgba(255,255,255,0.4);
+        animation: float3 20s infinite ease-in-out;
+      }
+      
+      .geo-square-2 {
+        width: 50px;
+        height: 50px;
+        bottom: 25%;
+        right: 10%;
+        border: 1px solid rgba(255,255,255,0.3);
+        animation: float1 16s infinite ease-in-out;
+      }
+      
+      .geo-rect-3 {
+        width: 140px;
+        height: 60px;
+        top: 35%;
+        right: 8%;
+        border: 1px solid rgba(255,255,255,0.45);
+        animation: float2 22s infinite ease-in-out;
+      }
+      
+      .geo-line-1, .geo-line-2, .geo-line-3, .geo-line-4 {
+        height: 1px;
+      }
+      
+      .geo-line-1 {
+        width: 150px;
+        top: 10%;
+        left: 35%;
+        background: rgba(255,255,255,0.35);
+        animation: float3 17s infinite ease-in-out;
+      }
+      
+      .geo-line-2 {
+        width: 100px;
+        bottom: 15%;
+        right: 30%;
+        background: rgba(255,255,255,0.25);
+        animation: float1 19s infinite ease-in-out;
+      }
+      
+      .geo-line-3 {
+        width: 120px;
+        top: 60%;
+        left: 5%;
+        background: rgba(255,255,255,0.4);
+        animation: float2 21s infinite ease-in-out;
+      }
+      
+      .geo-line-4 {
+        width: 80px;
+        bottom: 40%;
+        right: 5%;
+        background: rgba(255,255,255,0.3);
+        animation: float3 18s infinite ease-in-out;
+      }
+      
+      .geo-circle-1 {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        top: 45%;
+        left: 8%;
+        border: 1px solid rgba(255,255,255,0.35);
+        animation: float2 16s infinite ease-in-out;
+      }
+      
+      .geo-circle-2 {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        bottom: 35%;
+        right: 20%;
+        border: 1px solid rgba(255,255,255,0.5);
+        animation: float1 20s infinite ease-in-out;
+      }
+      
+      /* Different floating patterns */
+      @keyframes float1 {
+        0%, 100% { transform: translate(0, 0) rotate(-15deg); }
+        33% { transform: translate(10px, -15px) rotate(-10deg); }
+        66% { transform: translate(-10px, 10px) rotate(-20deg); }
+      }
+      
+      @keyframes float2 {
+        0%, 100% { transform: translate(0, 0) rotate(25deg); }
+        25% { transform: translate(-15px, -10px) rotate(17deg); }
+        50% { transform: translate(10px, 5px) rotate(28deg); }
+        75% { transform: translate(-5px, 15px) rotate(22deg); }
+      }
+      
+      @keyframes float3 {
+        0%, 100% { transform: translate(0, 0) rotate(10deg); }
+        20% { transform: translate(8px, -12px) rotate(14deg); }
+        40% { transform: translate(-12px, -5px) rotate(4deg); }
+        60% { transform: translate(15px, 8px) rotate(12deg); }
+        80% { transform: translate(-8px, 10px) rotate(7deg); }
+      }
+      
+      @media (max-width: 767px) {
+        .geometric-frames {
+          width: 95vw;
+          height: 70vh;
         }
-
-        const initSeq = () => {
-          initImages()
+        .geo-shape {
+          transform: scale(0.7);
         }
-
-        const initImages = () => {
-          for (let i = 1; i < frameCount; i++) {
-            const img = new Image()
-            img.src = getImage(i)
-            imgs.push(img)
-          }
-
-          imgs[0].onload = () => {
-            setTimeout(() => {
-              drawCanvas(1)
-              document.getElementById('x-canvas').classList.add('on-load-canvas')
-            }, 100)
-          }
-        }
-
-        const getImage = (num) => {
-          const t = ('' + num).padStart(4, '00')
-          return 'https://xanderspace.ams3.digitaloceanspaces.com/xdark%2FDark' + t + '.png'
-        }
-
-        const onEventSeq = () => {
-          const el = document.getElementById('top')
-
-          el.addEventListener('mousemove', (e) => {
-            let segment = window.innerWidth / frameCount
-            let frame = Math.floor(e.clientX / segment)
-            let center = window.innerWidth
-            let distance = frame * center / frameCount - center
-            let direction = distance < 0 ? 1 : -1 // invert direction
-            let reverseFrame = Math.abs(Math.floor(distance / (center / frameCount))) // calculate frame based on distance from center
-            reverseFrame = Math.min(Math.max(reverseFrame, 0), frameCount - 1) // clamp frame to valid range
-            reverseFrame = (reverseFrame + frameCount * direction) % frameCount // invert frame order
-            drawCanvas(reverseFrame)
-          })
-        }
-
-        const drawCanvas = (sequence) => {
-          const imgTemp = imgs[sequence];
-          console.log(imgTemp.width)
-          if (imgTemp) {
-            canvasEl.width = imgTemp.width
-            canvasEl.height = imgTemp.height
-            context.drawImage(imgTemp, 0, 0);
-          }
-        }
-
-      </script>
+      }
+    </style>
+    
+    <!-- Geometric frames background -->
+    <div class="geometric-frames" id="geoFrames">
+      <div class="geo-shape geo-rect-1"></div>
+      <div class="geo-shape geo-square-1"></div>
+      <div class="geo-shape geo-rect-2"></div>
+      <div class="geo-shape geo-square-2"></div>
+      <div class="geo-shape geo-rect-3"></div>
+      <div class="geo-shape geo-line-1"></div>
+      <div class="geo-shape geo-line-2"></div>
+      <div class="geo-shape geo-line-3"></div>
+      <div class="geo-shape geo-line-4"></div>
+      <div class="geo-shape geo-circle-1"></div>
+      <div class="geo-shape geo-circle-2"></div>
     </div>
     <div class="main-con w-container section-block">
-      <div class="theme-changer hide">
-        <div class="light-theme">
-          <div class="html-embed w-embed"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M9 12C10.6569 12 12 10.6569 12 9C12 7.34315 10.6569 6 9 6C7.34315 6 6 7.34315 6 9C6 10.6569 7.34315 12 9 12ZM9 13C11.2091 13 13 11.2091 13 9C13 6.79086 11.2091 5 9 5C6.79086 5 5 6.79086 5 9C5 11.2091 6.79086 13 9 13Z"
-                fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0V4H8.5V0H9.5Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8.5H18V9.5H14V8.5Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12.6422 5.70063L14.6422 3.65082L15.3579 4.34918L13.3579 6.39899L12.6422 5.70063Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M13.3325 12.6265L15.4717 14.5306L14.8068 15.2776L12.6676 13.3735L13.3325 12.6265Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M4.66293 6.4141L2.54281 4.48879L3.21509 3.74849L5.33521 5.6738L4.66293 6.4141Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M5.44259 13.3672L3.33926 15.3109L2.66059 14.5764L4.76392 12.6328L5.44259 13.3672Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.5H4V9.5H0V8.5Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 14V18H8.5V14H9.5Z" fill="#686868" />
-            </svg></div>
-          <div class="caps-12px light">LIGHT</div>
-        </div>
-        <div class="dark-theme">
-          <div class="html-embed w-embed"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9.36149 16C5.30247 16 2 12.694 2 8.63028C2 5.81577 3.56495 3.28696 6.08435 2.03096C6.19773 1.97464 6.33408 1.99646 6.42332 2.0858C6.51255 2.17513 6.53552 2.31164 6.47986 2.42486C6.02015 3.36008 5.78721 4.36547 5.78721 5.41243C5.78721 9.15125 8.82522 12.1928 12.5597 12.1928C13.6169 12.1928 14.6309 11.9543 15.5742 11.4843C15.6878 11.428 15.8239 11.4498 15.9131 11.5391C16.0027 11.6285 16.0253 11.765 15.9697 11.8782C14.721 14.4203 12.1886 16 9.36149 16ZM5.60698 2.98623C3.72633 4.23515 2.58899 6.32878 2.58899 8.63028C2.58899 12.3688 5.627 15.4103 9.36149 15.4103C11.6745 15.4103 13.7733 14.2611 15.0179 12.3608C14.2321 12.6409 13.4087 12.7825 12.56 12.7825C8.50098 12.7825 5.19851 9.47616 5.19851 5.41243C5.19851 4.5751 5.33575 3.76253 5.60698 2.98623Z"
-                fill="#292929" />
-            </svg></div>
-          <div class="caps-12px dark">Dark</div>
-        </div>
+      <div class="hero-content" style="text-align: left; padding: 0; position: relative; z-index: 1;">
+        <h1 data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab8f3" class="hp-h1 hero-title" style="font-size: clamp(3rem, 10vw, 8rem); font-weight: 700; line-height: 1; margin-bottom: 1.5rem; letter-spacing: -0.02em;">
+          <span>B</span><span>U</span><span>I</span><span>L</span><span>D</span><span>E</span><span>D</span>
+        </h1>
+        <p style="font-size: clamp(1rem, 2vw, 1.5rem); line-height: 1.5; max-width: 800px; color: rgba(255,255,255,0.8); font-weight: 400; animation: fadeInUp 1s forwards; animation-delay: 0.8s; opacity: 0;">
+          Striking visuals, seamless UI/UX, and design systems delivered with precision, consistency, and speed.
+        </p>
       </div>
-      <div class="text-wrapper section-block crop">
-        <h1 data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab8f3" class="hp-h1">shaping vision</h1>
-      </div>
-      <div class="text-wrapper section-block crop">
-        <h1 data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab8f6" class="hp-h1">into</h1>
-        <h1 data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab8f8" class="hp-h1">interfaces</h1>
-      </div>
-      <div class="text-wrapper section-block right hp">
-        <h1 data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab8fb" class="hp-h1">That Endure</h1>
-      </div>
-      <div class="_100px-space desktop"></div>
-      <div class="div-block-27">
-        <h5 data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab8ff">We translate your ideas into vivid brands, thoughtful interfaces,<br />and fluid experiences that stay relevant no matter how fast technology shifts.
-        </h5>
-      </div>
+      <style>
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 0.8;
+            transform: translateY(0);
+          }
+        }
+      </style>
+      
+      <!-- Scroll parallax effect -->
+      <script>
+        window.addEventListener('scroll', () => {
+          const scrolled = window.pageYOffset;
+          const shapes = document.querySelectorAll('.geo-shape');
+          
+          shapes.forEach((shape, index) => {
+            // Each shape moves at a different rate (parallax effect)
+            const speed = 0.3 + (index * 0.05); // Different speeds for each shape
+            const yPos = -(scrolled * speed);
+            
+            // Apply transform while preserving the original rotation
+            const currentTransform = window.getComputedStyle(shape).transform;
+            if (currentTransform && currentTransform !== 'none') {
+              // Extract rotation from current transform and add translation
+              shape.style.transform = `translateY(${yPos}px)`;
+            } else {
+              shape.style.transform = `translateY(${yPos}px)`;
+            }
+          });
+        });
+      </script>
     </div>
     <div class="main-con mobile w-container section-block">
-      <div class="theme-changer hide">
-        <div class="light-theme">
-          <div class="html-embed w-embed"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M9 12C10.6569 12 12 10.6569 12 9C12 7.34315 10.6569 6 9 6C7.34315 6 6 7.34315 6 9C6 10.6569 7.34315 12 9 12ZM9 13C11.2091 13 13 11.2091 13 9C13 6.79086 11.2091 5 9 5C6.79086 5 5 6.79086 5 9C5 11.2091 6.79086 13 9 13Z"
-                fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0V4H8.5V0H9.5Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8.5H18V9.5H14V8.5Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12.6422 5.70063L14.6422 3.65082L15.3579 4.34918L13.3579 6.39899L12.6422 5.70063Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M13.3325 12.6265L15.4717 14.5306L14.8068 15.2776L12.6676 13.3735L13.3325 12.6265Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M4.66293 6.4141L2.54281 4.48879L3.21509 3.74849L5.33521 5.6738L4.66293 6.4141Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M5.44259 13.3672L3.33926 15.3109L2.66059 14.5764L4.76392 12.6328L5.44259 13.3672Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.5H4V9.5H0V8.5Z" fill="#686868" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 14V18H8.5V14H9.5Z" fill="#686868" />
-            </svg></div>
-          <div class="caps-12px light">LIGHT</div>
-        </div>
-        <div class="dark-theme">
-          <div class="html-embed w-embed"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9.36149 16C5.30247 16 2 12.694 2 8.63028C2 5.81577 3.56495 3.28696 6.08435 2.03096C6.19773 1.97464 6.33408 1.99646 6.42332 2.0858C6.51255 2.17513 6.53552 2.31164 6.47986 2.42486C6.02015 3.36008 5.78721 4.36547 5.78721 5.41243C5.78721 9.15125 8.82522 12.1928 12.5597 12.1928C13.6169 12.1928 14.6309 11.9543 15.5742 11.4843C15.6878 11.428 15.8239 11.4498 15.9131 11.5391C16.0027 11.6285 16.0253 11.765 15.9697 11.8782C14.721 14.4203 12.1886 16 9.36149 16ZM5.60698 2.98623C3.72633 4.23515 2.58899 6.32878 2.58899 8.63028C2.58899 12.3688 5.627 15.4103 9.36149 15.4103C11.6745 15.4103 13.7733 14.2611 15.0179 12.3608C14.2321 12.6409 13.4087 12.7825 12.56 12.7825C8.50098 12.7825 5.19851 9.47616 5.19851 5.41243C5.19851 4.5751 5.33575 3.76253 5.60698 2.98623Z"
-                fill="#292929" />
-            </svg></div>
-          <div class="caps-12px dark">Dark</div>
-        </div>
-      </div>
-      <div data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab912" class="text-wrapper section-block desktop">
-        <h2 data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab913">Shaping Vision Into Interfaces That Endure </h2>
-      </div>
-      <div class="_20px-space"></div>
-      <div class="_20px-space"></div>
-      <div class="_20px-space"></div>
-      
-      <div data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab918">
-        <h6 data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab919">We translate your ideas into vivid brands,<br /> thoughtful interfaces, and fluid experiences that stay relevant no matter how fast technology shifts.</h6>
+      <div class="hero-content-mobile" style="text-align: left; padding: 0; position: relative; z-index: 1;">
+        <h1 data-w-id="1e105e65-3caa-ea30-1a37-ed56bfaab912" class="hero-title" style="font-size: clamp(2.5rem, 12vw, 4rem); font-weight: 700; line-height: 1; margin-bottom: 1rem; letter-spacing: -0.02em;">
+          <span>B</span><span>U</span><span>I</span><span>L</span><span>D</span><span>E</span><span>D</span>
+        </h1>
+        <p style="font-size: clamp(0.9rem, 3vw, 1.2rem); line-height: 1.5; color: rgba(255,255,255,0.8); font-weight: 400; animation: fadeInUp 1s forwards; animation-delay: 0.8s; opacity: 0;">Striking visuals, seamless UI/UX, and design systems delivered with precision, consistency, and speed.</p>
       </div>
     </div>
   </div>
 
+  <!-- Vertical line between hero and About -->
+  <div style="position: relative; width: 100%; height: 120px; display: flex; justify-content: center;">
+    <div style="width: 1px; height: 100%; background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 50%, transparent 50%); background-size: 1px 10px;"></div>
+  </div>
 
-
-
-
-
-
-
-  <div class="main-con w-container section-block hide-on-mobile">
-    <div class="div-block-32">
-      <div
-        data-poster-url=""
-        data-autoplay="true" data-loop="true" data-wf-ignore="true"
-        class="brand-identity-giff w-background-video w-background-video-atom hide-on-mobile"><video src="" alt="Brand Identity" style="width:100%;height:auto;object-fit:cover;" class="service-static-img" autoplay loop muted playsinline></video></div>
-      <div class="brand-identity-text-wrapper-v _100px-padding-top">
-        <div class="text-block-under-hero-desktop">Builded replaces the usual patchwork of agencies, freelancers, and late hand-offs with one seamless pipeline. Inside our studio, brand strategists, interface designers, artists, and front-end engineers sit side-by-side, translating product vision into a unified stack of names, marks, type systems, motion specs, design tokens, coded components, and launch-ready prototypes. 
-
-
-        </div>
-      </div>
+  <!-- About Section -->
+  <div class="about-section" style="position: relative; padding: 60px 0; max-width: 1200px; margin: 0 auto;">
+    <div class="about-content" style="max-width: 800px; margin: 0 auto; padding: 0 40px; position: relative; text-align: center;">
+      <h3 style="font-size: 0.9rem; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 30px;">ABOUT</h3>
+      <p style="font-size: 1.1rem; line-height: 1.8; color: rgba(255,255,255,0.85); font-weight: 300;">
+        Builded replaces the usual patchwork of agencies, freelancers, and late hand-offs with one seamless pipeline. Inside our studio, brand strategists, interface designers, artists, and front-end engineers sit side-by-side, translating product vision into a unified stack of names, marks, type systems, motion specs, design tokens, coded components, and launch-ready prototypes.
+      </p>
+      <!-- Read More Button -->
+      <a href="aboutus.html" class="read-more-btn" style="display: inline-flex; align-items: center; margin-top: 25px; text-decoration: none; color: rgba(255,255,255,0.4); font-size: 0.75rem; letter-spacing: 0.08em; position: relative; transition: all 0.3s ease;">
+        <span style="margin-right: 8px;">READ MORE</span>
+        <img src="https://cdn.prod.website-files.com/63ef85bbe954cc6863a77eab/63efdebe72dbc068972be664_arrow.svg" 
+             alt="arrow" 
+             style="width: 15px; height: auto; transition: transform 0.3s ease; opacity: 0.4;"
+             class="read-more-arrow"/>
+        <div class="underline-animation" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: rgba(255,255,255,0.7); transition: width 0.3s ease;"></div>
+      </a>
     </div>
   </div>
-  <div class="brand-identity-mobile" >
-    <div class="brand-identity-mobile-inner">
-      <div class="brand-identity-mobile-text">
-        Builded replaces the usual patchwork of agencies, freelancers, and late hand-offs with one seamless pipeline. Inside our studio, brand strategists, interface designers, artists, and front-end engineers sit side-by-side, translating product vision into a unified stack of names, marks, type systems, motion specs, design tokens, coded components, and launch-ready prototypes. 
-
-      </div>
-    </div><video ></video>
-    
+  
+  <style>
+    .read-more-btn:hover {
+      color: rgba(255,255,255,0.9) !important;
+    }
+    .read-more-btn:hover .read-more-arrow {
+      transform: translateX(5px);
+      opacity: 0.9 !important;
+    }
+    .read-more-btn:hover .underline-animation {
+      width: calc(100% - 25px) !important;
+    }
+  </style>
+  
+  <style>
+    @media (max-width: 767px) {
+      .about-section {
+        padding: 60px 0 !important;
+      }
+      .about-content {
+        padding: 0 20px !important;
+      }
+      .about-content h3 {
+        font-size: 0.8rem !important;
+      }
+      .about-content p {
+        font-size: 1rem !important;
+      }
+    }
+  </style>
+  
+  <!-- Vertical line between About and What We Do -->
+  <div style="position: relative; width: 100%; height: 120px; display: flex; justify-content: center;">
+    <div style="width: 1px; height: 100%; background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 50%, transparent 50%); background-size: 1px 10px;"></div>
   </div>
-  <div class="what-we-do-section">
-    <h2 class="what-we-do-title">What We Do</h2>
-    <p class="what-we-do-desc">
-      We plug in a full-stack design squad—strategists, UI/UX architects, and engineers—directly into your workflow. Our process compresses discovery, design, and delivery into rapid sprints, producing complete brand identities and production-ready interfaces in days, not weeks. From naming and visual identity to B2B dashboards, zero-UI prototypes, and React component libraries, we deliver digital infrastructure without the back-and-forth.
-
-    </p>
+  
+  <!-- What We Do Section -->
+  <div class="centered-what-we-do-section" style="position: relative; padding: 60px 0 !important; max-width: 1200px !important; margin: 0 auto !important; text-align: center !important;">
+    <div class="centered-what-we-do-content" style="max-width: 800px !important; margin: 0 auto !important; padding: 0 40px !important; text-align: center !important;">
+      <h3 style="font-size: 0.9rem !important; font-weight: 300 !important; letter-spacing: 0.15em !important; text-transform: uppercase !important; color: rgba(255,255,255,0.5) !important; margin-bottom: 30px !important; text-align: center !important;">WHAT WE DO</h3>
+      <p style="font-size: 1.1rem !important; line-height: 1.8 !important; color: rgba(255,255,255,0.85) !important; font-weight: 300 !important; text-align: center !important;">
+        We plug in a full-stack design squad—strategists, UI/UX architects, and engineers—directly into your workflow. Our process compresses discovery, design, and delivery into rapid sprints, producing complete brand identities and production-ready interfaces in days, not weeks. From naming and visual identity to B2B dashboards, zero-UI prototypes, and React component libraries, we deliver digital infrastructure without the back-and-forth.
+      </p>
+    </div>
   </div>
+  
+  <style>
+    /* Override existing what-we-do styles */
+    .centered-what-we-do-section,
+    .what-we-do-section {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    @media (max-width: 767px) {
+      .centered-what-we-do-content {
+        padding: 0 20px !important;
+      }
+      .centered-what-we-do-content h3 {
+        font-size: 0.8rem !important;
+      }
+      .centered-what-we-do-content p {
+        font-size: 1rem !important;
+      }
+    }
+  </style>
 
-
+  <!-- Vertical line between What We Do and Services -->
+  <div style="position: relative; width: 100%; height: 120px; display: flex; justify-content: center;">
+    <div style="width: 1px; height: 100%; background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 50%, transparent 50%); background-size: 1px 10px;"></div>
+  </div>
 
   <div class="services-section section-block" id="services-list">
     <div class="main-con-fixed w-container">
@@ -1192,17 +1421,26 @@
     </div>
   </div>
 
+  <!-- Vertical line between Services and Case Studies -->
+  <div style="position: relative; width: 100%; height: 120px; display: flex; justify-content: center;">
+    <div style="width: 1px; height: 100%; background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 50%, transparent 50%); background-size: 1px 10px;"></div>
+  </div>
 
-
-
+  <!-- Case Studies Section -->
   <div data-w-id="a22462d5-49af-5288-7bef-21b49129c0b0" class="product-list-sec">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 60px 40px; text-align: center;">
+      <h3 style="font-size: 0.9rem; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 20px;">CASE STUDIES</h3>
+      <p style="font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.7); font-weight: 300; max-width: 700px; margin: 0 auto 60px;">
+        Selected projects showcasing our end-to-end design and development capabilities across diverse industries.
+      </p>
+    </div>
     <div class="products-list w-container">
       <a href="lumina.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0b3"
          class="product-con w-inline-block">
         <div style="width:0%" class="line hp-product"></div>
         <div class="product-name-wrapper">
           <div class="product-name">
-            <h4 class="product-name-txt">LUMINA HOUSE</h4>
+            <h4 class="product-name-txt">LUMINA HOUSE <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Brand identity and digital platform for luxury real estate</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
@@ -1231,7 +1469,7 @@
         <div style="width:0%" class="line hp-product"></div>
         <div class="product-name-wrapper">
           <div class="product-name">
-            <h4 class="product-name-txt">SMARTER.AI</h4>
+            <h4 class="product-name-txt">SMARTER.AI <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Complete UI/UX redesign for AI analytics dashboard</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
@@ -1254,7 +1492,7 @@
         <div style="width:0%" class="line hp-product"></div>
         <div class="product-name-wrapper">
           <div class="product-name">
-            <h4 class="product-name-txt">TERNION INTELLIGENCE</h4>
+            <h4 class="product-name-txt">TERNION INTELLIGENCE <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Visual identity and web platform for defense tech</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
@@ -1283,7 +1521,7 @@
         <a  href="cyrcl.html"
           class="product-name-wrapper w-inline-block">
           <div class="product-name">
-            <h4 class="product-name-txt">CYRCL</h4>
+            <h4 class="product-name-txt">CYRCL <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Brand system and product design for circular economy platform</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
@@ -1312,7 +1550,7 @@
         <div style="width:0%" class="line hp-product"></div>
         <div class="product-name-wrapper">
           <div class="product-name">
-            <h4 class="product-name-txt">CIRCLES INITIATIVE</h4>
+            <h4 class="product-name-txt">CIRCLES INITIATIVE <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Web design and development for community impact</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
