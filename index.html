@@ -1161,11 +1161,90 @@
       
       @media (max-width: 767px) {
         .geometric-frames {
-          width: 95vw;
-          height: 70vh;
+          width: 100vw;
+          height: 50vh;
+          top: 55%;
         }
-        .geo-shape {
-          transform: scale(0.7);
+        .geo-rect-1 {
+          width: 60px !important;
+          height: 40px !important;
+          top: 10% !important;
+          left: 5% !important;
+        }
+        .geo-square-1 {
+          width: 30px !important;
+          height: 30px !important;
+          top: 15% !important;
+          right: 10% !important;
+        }
+        .geo-rect-2 {
+          width: 50px !important;
+          height: 20px !important;
+          bottom: 15% !important;
+          left: 8% !important;
+        }
+        .geo-square-2 {
+          width: 25px !important;
+          height: 25px !important;
+          bottom: 20% !important;
+          right: 8% !important;
+        }
+        .geo-rect-3 {
+          width: 70px !important;
+          height: 30px !important;
+          top: 30% !important;
+          right: 5% !important;
+        }
+        .geo-line-1 {
+          width: 60px !important;
+          top: 8% !important;
+          left: 30% !important;
+        }
+        .geo-line-2 {
+          width: 40px !important;
+          bottom: 12% !important;
+          right: 25% !important;
+        }
+        .geo-line-3 {
+          width: 50px !important;
+          top: 50% !important;
+          left: 3% !important;
+        }
+        .geo-line-4 {
+          width: 35px !important;
+          bottom: 35% !important;
+          right: 3% !important;
+        }
+        .geo-circle-1 {
+          width: 35px !important;
+          height: 35px !important;
+          top: 40% !important;
+          left: 6% !important;
+        }
+        .geo-circle-2 {
+          width: 22px !important;
+          height: 22px !important;
+          bottom: 30% !important;
+          right: 15% !important;
+        }
+        /* Reduce floating movement on mobile */
+        @keyframes float1 {
+          0%, 100% { transform: translate(0, 0) rotate(-15deg); }
+          33% { transform: translate(5px, -8px) rotate(-12deg); }
+          66% { transform: translate(-5px, 5px) rotate(-18deg); }
+        }
+        @keyframes float2 {
+          0%, 100% { transform: translate(0, 0) rotate(25deg); }
+          25% { transform: translate(-8px, -5px) rotate(20deg); }
+          50% { transform: translate(5px, 3px) rotate(27deg); }
+          75% { transform: translate(-3px, 8px) rotate(23deg); }
+        }
+        @keyframes float3 {
+          0%, 100% { transform: translate(0, 0) rotate(10deg); }
+          20% { transform: translate(4px, -6px) rotate(12deg); }
+          40% { transform: translate(-6px, -3px) rotate(7deg); }
+          60% { transform: translate(8px, 4px) rotate(11deg); }
+          80% { transform: translate(-4px, 5px) rotate(8deg); }
         }
       }
     </style>
@@ -1421,11 +1500,6 @@
     </div>
   </div>
 
-  <!-- Vertical line between Services and Case Studies -->
-  <div style="position: relative; width: 100%; height: 120px; display: flex; justify-content: center;">
-    <div style="width: 1px; height: 100%; background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 50%, transparent 50%); background-size: 1px 10px;"></div>
-  </div>
-
   <!-- Case Studies Section -->
   <div data-w-id="a22462d5-49af-5288-7bef-21b49129c0b0" class="product-list-sec">
     <div style="max-width: 1200px; margin: 0 auto; padding: 60px 40px; text-align: center;">
@@ -1440,7 +1514,7 @@
         <div style="width:0%" class="line hp-product"></div>
         <div class="product-name-wrapper">
           <div class="product-name">
-            <h4 class="product-name-txt">LUMINA HOUSE <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Brand identity and digital platform for luxury real estate</span></h4>
+            <h4 class="product-name-txt">LUMINA HOUSE <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Modular brand system for Europe's all-female hacker house</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
@@ -1469,7 +1543,7 @@
         <div style="width:0%" class="line hp-product"></div>
         <div class="product-name-wrapper">
           <div class="product-name">
-            <h4 class="product-name-txt">SMARTER.AI <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Complete UI/UX redesign for AI analytics dashboard</span></h4>
+            <h4 class="product-name-txt">SMARTER.AI <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Unified interface system for AI recruitment platform</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
@@ -1492,7 +1566,7 @@
         <div style="width:0%" class="line hp-product"></div>
         <div class="product-name-wrapper">
           <div class="product-name">
-            <h4 class="product-name-txt">TERNION INTELLIGENCE <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Visual identity and web platform for defense tech</span></h4>
+            <h4 class="product-name-txt">TERNION INTELLIGENCE <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Scalable identity framework for geopolitical risk analysis</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
@@ -1521,7 +1595,7 @@
         <a  href="cyrcl.html"
           class="product-name-wrapper w-inline-block">
           <div class="product-name">
-            <h4 class="product-name-txt">CYRCL <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Brand system and product design for circular economy platform</span></h4>
+            <h4 class="product-name-txt">CYRCL <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Gesture-driven interface design for social presence app</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
@@ -1550,7 +1624,7 @@
         <div style="width:0%" class="line hp-product"></div>
         <div class="product-name-wrapper">
           <div class="product-name">
-            <h4 class="product-name-txt">CIRCLES INITIATIVE <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Web design and development for community impact</span></h4>
+            <h4 class="product-name-txt">CIRCLES INITIATIVE <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 300;">— Systematic brand architecture for global think-tank network</span></h4>
           </div>
           <div class="tags-con">
             <div class="tag-wrapper">
