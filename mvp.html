@@ -116,6 +116,52 @@
       }
     }
   </style>
+  <style>
+    /* Navbar hover underline animation */
+    .nav-menu-wrapper .no-underline {
+      position: relative;
+      border: none !important;
+      padding: 8px 20px !important;
+      border-radius: 0 !important;
+      margin-right: 15px !important;
+      transition: none !important;
+    }
+    
+    .nav-menu-wrapper .no-underline::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-color: white;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+    
+    .nav-menu-wrapper .no-underline:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    
+    /* Mobile menu styles */
+    .mob-menu-ul {
+      border: none !important;
+      padding: 12px 20px !important;
+      margin-bottom: 15px !important;
+      border-radius: 0 !important;
+      position: relative;
+    }
+    
+    .mob-menu-ul::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  </style>
 </head>
 
 <body data-w-id="63bc4b7578495e8f545d970f" class="body">

@@ -282,6 +282,65 @@
       background: #fff;
     }
   </style>
+  <style>
+    /* Navbar hover underline animation */
+    .nav-menu-wrapper .no-underline {
+      position: relative;
+      border: none !important;
+      padding: 8px 20px !important;
+      border-radius: 0 !important;
+      margin-right: 15px !important;
+      transition: none !important;
+    }
+    
+    /* Force white text color for all nav links */
+    .nav-link {
+      color: #ffffff !important;
+    }
+    
+    .nav-menu-wrapper a {
+      color: #ffffff !important;
+    }
+    
+    .mob-menu-link {
+      color: #ffffff !important;
+    }
+    
+    .nav-menu-wrapper .no-underline::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-color: white;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+    
+    .nav-menu-wrapper .no-underline:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    
+    /* Mobile menu styles */
+    .mob-menu-ul {
+      border: none !important;
+      padding: 12px 20px !important;
+      margin-bottom: 15px !important;
+      border-radius: 0 !important;
+      position: relative;
+    }
+    
+    .mob-menu-ul::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  </style>
 </head>
 
 <body data-w-id="63bc4b7578495e8f545d970f" class="body">
@@ -300,33 +359,35 @@
               loading="lazy"
               src="princyplnav.png"
               class="logo" /></a>
-              <nav role="navigation" class="nav-menu-wrapper w-nav-menu"><a data-w-id="c8d246f3-4c00-8361-959b-8140bc5a99a5"
-                href="index.html" class="no-underline w-inline-block">
-                <div data-w-id="f15cd412-a5ab-db1a-44ea-5affc4d8e21b" class="nav-link">SERVICES</div>
-                <div class="underline"></div>
-              </a><a data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459e9" href="contact.html"
-                class="no-underline w-inline-block">
-                <div data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459ea" class="nav-link">CONTACT US</div>
-                <div class="underline-4"></div>
-              </a><a data-w-id="304186d9-4009-2d18-07ca-cec32c0af0c8" 
-                target="_blank" class="no-underline hide w-inline-block">
-                <div class="underline-2"></div>
-              </a></nav>
+          <nav role="navigation" class="nav-menu-wrapper w-nav-menu"><a data-w-id="c8d246f3-4c00-8361-959b-8140bc5a99a5"
+              href="index.html#services-list" class="no-underline w-inline-block">
+              <div data-w-id="f15cd412-a5ab-db1a-44ea-5affc4d8e21b" class="nav-link">SERVICES</div>
+            </a><a data-w-id="about-us-nav-button" href="aboutus.html"
+              class="no-underline w-inline-block">
+              <div data-w-id="about-us-nav-text" class="nav-link">ABOUT US</div>
+            </a><a href="blog.html"
+              class="no-underline w-inline-block">
+              <div class="nav-link">INSIGHTS</div>
+            </a><a data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459e9" href="contact.html"
+              class="no-underline w-inline-block">
+              <div data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459ea" class="nav-link">CONTACT US</div>
+            </a></nav>
           <div scroll="both" data-w-id="44d38401-4d1b-8108-ea17-38dd2916b280" class="_14px-link grey hide-from-desktop">
-            <a data-w-id="189f0706-79dd-6214-4742-009113fde886" href="brand.html#"
-              class="link close">close</a><a data-w-id="a15b7c3f-a0ab-15ee-35c5-6dc55cf41e99"
-              href="brand.html#" class="link">menu</a>
+            <a data-w-id="189f0706-79dd-6214-4742-009113fde886"  class="link close">close</a><a
+              data-w-id="a15b7c3f-a0ab-15ee-35c5-6dc55cf41e99"  class="link">menu</a>
           </div>
         </div>
       </div>
     </div>
     <div class="menu-mobile">
-      <div class="mob-menu-list"><a href="index.html" class="mob-menu-ul w-inline-block">
-        <div class="mob-menu-link">SERVICES</div>
-        <div data-w-id="f9a96755-95c6-a6c5-2e50-5a98894227d4" class="line menu"></div>
-      </a><a href="contact.html" class="mob-menu-ul w-inline-block">
-        <div class="mob-menu-link">CONTACT US</div>
-        <div data-w-id="f5ed9ebc-80c7-aaf2-b7a5-da1713d751a7" class="line menu"></div>
+      <div class="mob-menu-list"><a href="index.html#services-list" class="mob-menu-ul w-inline-block">
+          <div class="mob-menu-link">SERVICES</div>
+        </a><a href="aboutus.html" class="mob-menu-ul w-inline-block">
+          <div class="mob-menu-link">ABOUT US</div>
+        </a><a href="blog.html" class="mob-menu-ul w-inline-block">
+          <div class="mob-menu-link">INSIGHTS</div>
+        </a><a href="contact.html" class="mob-menu-ul w-inline-block">
+          <div class="mob-menu-link">CONTACT US</div>
       </a><a href="https://insights.netrixdigital.com/" target="_blank" class="mob-menu-ul hide w-inline-block">
         <div class="line menu"></div>
       </a></div>

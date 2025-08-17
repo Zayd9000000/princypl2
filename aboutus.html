@@ -314,17 +314,18 @@
     .geo-square {
       width: 70px;
       height: 70px;
-      border: 1px solid rgba(255,255,255,0.4);
-      background: transparent;
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
     }
 
     /* Circle shape */
     .geo-circle {
       width: 65px;
       height: 65px;
-      border: 1px solid rgba(255,255,255,0.4);
+      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 50%;
-      background: transparent;
     }
 
     /* Triangle shape - hollow */
@@ -362,16 +363,18 @@
     .geo-rect {
       width: 90px;
       height: 45px;
-      border: 1px solid rgba(255,255,255,0.4);
-      background: transparent;
+      background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 20px;
     }
 
     /* Diamond shape */
     .geo-diamond {
       width: 55px;
       height: 55px;
-      border: 1px solid rgba(255,255,255,0.4);
-      background: transparent;
+      background: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.13);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
       transform: rotate(45deg);
     }
 
@@ -492,6 +495,19 @@
       transition: none !important;
     }
     
+    /* Force white text color for all nav links */
+    .nav-link {
+      color: #ffffff !important;
+    }
+    
+    .nav-menu-wrapper a {
+      color: #ffffff !important;
+    }
+    
+    .mob-menu-link {
+      color: #ffffff !important;
+    }
+    
     .nav-menu-wrapper .no-underline::after {
       content: '';
       position: absolute;
@@ -546,6 +562,9 @@
             </a><a data-w-id="about-us-nav-button" href="aboutus.html"
               class="no-underline w-inline-block">
               <div data-w-id="about-us-nav-text" class="nav-link">ABOUT US</div>
+            </a><a href="blog.html"
+              class="no-underline w-inline-block">
+              <div class="nav-link">INSIGHTS</div>
             </a><a data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459e9" href="contact.html"
               class="no-underline w-inline-block">
               <div data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459ea" class="nav-link">CONTACT US</div>
@@ -561,6 +580,8 @@
           <div class="mob-menu-link">SERVICES</div>
         </a><a href="aboutus.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">ABOUT US</div>
+        </a><a href="blog.html" class="mob-menu-ul w-inline-block">
+          <div class="mob-menu-link">INSIGHTS</div>
         </a><a href="contact.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">CONTACT US</div>
         </a></div>
