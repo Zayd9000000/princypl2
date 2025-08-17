@@ -1,0 +1,561 @@
+<!-- Floating UI Cards Container -->
+<div class="floating-ui-cards">
+  <!-- Profile Card - Top Left -->
+  <div class="ui-card profile-card" style="top: 15%; left: 8%; transform: rotate(-12deg);">
+    <div class="card-avatar"></div>
+    <div class="card-content">
+      <div class="card-name">Alex Chen</div>
+      <div class="card-role">Product Designer</div>
+      <div class="card-tags">
+        <span class="tag">UI/UX</span>
+        <span class="tag">Figma</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Card - Top Right -->
+  <div class="ui-card stats-card" style="top: 12%; right: 10%; transform: rotate(8deg);">
+    <div class="stats-header">Performance</div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-value">98%</div>
+        <div class="stat-label">Success</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">2.4s</div>
+        <div class="stat-label">Load Time</div>
+      </div>
+    </div>
+    <div class="mini-chart">
+      <svg viewBox="0 0 100 40" style="width: 100%; height: 40px;">
+        <polyline points="0,35 20,25 40,28 60,15 80,20 100,10" fill="none" stroke="url(#gradient)" stroke-width="2"/>
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Notification Card - Mid Left -->
+  <div class="ui-card notification-card" style="top: 35%; left: 5%; transform: rotate(5deg);">
+    <div class="notif-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 11l3 3L22 4"></path>
+        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+      </svg>
+    </div>
+    <div class="notif-content">
+      <div class="notif-title">Task Completed</div>
+      <div class="notif-desc">Design system updated</div>
+    </div>
+  </div>
+
+  <!-- Code Snippet Card - Mid Right -->
+  <div class="ui-card code-card" style="top: 38%; right: 6%; transform: rotate(-6deg);">
+    <div class="code-header">
+      <span class="code-lang">React</span>
+      <div class="code-dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <pre class="code-content"><code><span class="code-keyword">const</span> <span class="code-var">Button</span> = () => {
+  <span class="code-keyword">return</span> (
+    <span class="code-tag">&lt;button&gt;</span>
+      Click me
+    <span class="code-tag">&lt;/button&gt;</span>
+  );
+};</code></pre>
+  </div>
+
+  <!-- Dashboard Card - Bottom Left -->
+  <div class="ui-card dashboard-card" style="bottom: 25%; left: 12%; transform: rotate(10deg);">
+    <div class="dash-title">Analytics</div>
+    <div class="dash-metrics">
+      <div class="metric">
+        <div class="metric-bar" style="height: 60%;"></div>
+      </div>
+      <div class="metric">
+        <div class="metric-bar" style="height: 80%;"></div>
+      </div>
+      <div class="metric">
+        <div class="metric-bar" style="height: 45%;"></div>
+      </div>
+      <div class="metric">
+        <div class="metric-bar" style="height: 70%;"></div>
+      </div>
+      <div class="metric">
+        <div class="metric-bar" style="height: 90%;"></div>
+      </div>
+    </div>
+    <div class="dash-footer">
+      <span class="dash-label">Weekly Report</span>
+      <span class="dash-value">+24%</span>
+    </div>
+  </div>
+
+  <!-- Message Card - Bottom Right -->
+  <div class="ui-card message-card" style="bottom: 20%; right: 8%; transform: rotate(-8deg);">
+    <div class="msg-header">
+      <div class="msg-avatar"></div>
+      <div class="msg-info">
+        <div class="msg-name">Sarah Miller</div>
+        <div class="msg-time">2 min ago</div>
+      </div>
+    </div>
+    <div class="msg-content">
+      Great work on the new feature! The animations are smooth.
+    </div>
+    <div class="msg-actions">
+      <button class="msg-btn">Reply</button>
+      <button class="msg-btn primary">View</button>
+    </div>
+  </div>
+
+  <!-- Calendar Card - Top Center -->
+  <div class="ui-card calendar-card" style="top: 8%; left: 45%; transform: rotate(-4deg);">
+    <div class="cal-header">
+      <span class="cal-month">December</span>
+      <span class="cal-year">2024</span>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-day">M</div>
+      <div class="cal-day">T</div>
+      <div class="cal-day">W</div>
+      <div class="cal-day">T</div>
+      <div class="cal-day">F</div>
+      <div class="cal-date"></div>
+      <div class="cal-date"></div>
+      <div class="cal-date">1</div>
+      <div class="cal-date">2</div>
+      <div class="cal-date active">3</div>
+    </div>
+  </div>
+
+  <!-- Payment Card - Bottom Center -->
+  <div class="ui-card payment-card" style="bottom: 15%; left: 42%; transform: rotate(6deg);">
+    <div class="pay-header">
+      <svg width="32" height="20" viewBox="0 0 32 20" fill="none">
+        <rect width="32" height="20" rx="4" fill="url(#card-gradient)"/>
+        <defs>
+          <linearGradient id="card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#667EEA;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#764BA2;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="pay-type">Premium</span>
+    </div>
+    <div class="pay-number">•••• •••• •••• 4242</div>
+    <div class="pay-footer">
+      <span class="pay-name">JOHN DOE</span>
+      <span class="pay-exp">12/25</span>
+    </div>
+  </div>
+</div>
+
+<!-- Floating UI Cards Styles -->
+<style>
+  .floating-ui-cards {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .ui-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    animation: float 20s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(var(--rotation)); }
+    25% { transform: translateY(-15px) rotate(calc(var(--rotation) + 2deg)); }
+    50% { transform: translateY(10px) rotate(calc(var(--rotation) - 2deg)); }
+    75% { transform: translateY(-8px) rotate(calc(var(--rotation) + 1deg)); }
+  }
+
+  /* Profile Card */
+  .profile-card {
+    width: 220px;
+    --rotation: -12deg;
+    animation-delay: 0s;
+  }
+
+  .card-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin-bottom: 12px;
+  }
+
+  .card-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .card-role {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 12px;
+  }
+
+  .card-tags {
+    display: flex;
+    gap: 8px;
+  }
+
+  .tag {
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Stats Card */
+  .stats-card {
+    width: 240px;
+    --rotation: 8deg;
+    animation-delay: 2s;
+  }
+
+  .stats-header {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 4px;
+  }
+
+  /* Notification Card */
+  .notification-card {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    --rotation: 5deg;
+    animation-delay: 4s;
+  }
+
+  .notif-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(34, 197, 94, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #22c55e;
+  }
+
+  .notif-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .notif-desc {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Code Card */
+  .code-card {
+    width: 280px;
+    padding: 0;
+    overflow: hidden;
+    --rotation: -6deg;
+    animation-delay: 6s;
+  }
+
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .code-lang {
+    font-size: 11px;
+    color: #60a5fa;
+    font-weight: 500;
+  }
+
+  .code-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .code-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .code-content {
+    padding: 16px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Monaco', 'Menlo', monospace;
+    margin: 0;
+  }
+
+  .code-keyword {
+    color: #c084fc;
+  }
+
+  .code-var {
+    color: #60a5fa;
+  }
+
+  .code-tag {
+    color: #f472b6;
+  }
+
+  /* Dashboard Card */
+  .dashboard-card {
+    width: 200px;
+    --rotation: 10deg;
+    animation-delay: 8s;
+  }
+
+  .dash-title {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .dash-metrics {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 60px;
+    margin-bottom: 16px;
+  }
+
+  .metric {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .metric-bar {
+    width: 100%;
+    background: linear-gradient(to top, #3b82f6, #8b5cf6);
+    border-radius: 4px 4px 0 0;
+  }
+
+  .dash-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+  }
+
+  .dash-label {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .dash-value {
+    color: #22c55e;
+    font-weight: 600;
+  }
+
+  /* Message Card */
+  .message-card {
+    width: 280px;
+    --rotation: -8deg;
+    animation-delay: 10s;
+  }
+
+  .msg-header {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .msg-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f472b6 0%, #fb923c 100%);
+  }
+
+  .msg-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .msg-time {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .msg-content {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .msg-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .msg-btn {
+    padding: 6px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .msg-btn.primary {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Calendar Card */
+  .calendar-card {
+    width: 180px;
+    --rotation: -4deg;
+    animation-delay: 12s;
+  }
+
+  .cal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .cal-day {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+  }
+
+  .cal-date {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .cal-date.active {
+    background: rgba(99, 102, 241, 0.3);
+    color: #fff;
+  }
+
+  /* Payment Card */
+  .payment-card {
+    width: 240px;
+    --rotation: 6deg;
+    animation-delay: 14s;
+  }
+
+  .pay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .pay-type {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .pay-number {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    font-family: 'Monaco', monospace;
+  }
+
+  .pay-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+  }
+
+  .pay-name {
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .pay-exp {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Hide cards on mobile for better performance */
+  @media (max-width: 767px) {
+    .floating-ui-cards {
+      display: none;
+    }
+  }
+
+  /* Reduced motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .ui-card {
+      animation: none;
+    }
+  }
+</style>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Skyline Animation - Reusable Component</title>
+</head>
+<body style="margin: 0; padding: 0; background: #000; overflow: hidden;">
+
+<!-- 
+================================================================================
+CITY SKYLINE ANIMATION COMPONENT
+================================================================================
+
+DESCRIPTION:
+A dynamic, animated city skyline that builds up from the bottom using small white blocks.
+Perfect for hero sections, backgrounds, or loading screens.
+
+FEATURES:
+- Pixel-perfect rendering with crisp, sharp blocks
+- Pure white blocks on dark backgrounds
+- Dense cityscape with 100+ buildings
+- Height distribution: tallest buildings on edges, varied heights in center
+- Width variation: mix of narrow, medium, and wide buildings
+- Smooth build-up animation from bottom to top at varying speeds
+- Fully responsive and regenerates on window resize
+- Lightweight canvas-based animation
+
+HOW IT WORKS:
+1. Generates a random city skyline based on screen width
+2. Each building is composed of small white blocks (3x3px)
+3. Buildings animate by "building up" row by row from bottom to top
+4. Different buildings have different animation speeds for organic feel
+5. Taller buildings tend to be on the periphery for realistic city skyline
+
+USAGE:
+1. Copy the entire <div class="city-skyline"> element including the script
+2. Place it in your HTML where you want the animation
+3. Adjust the container's height percentage (default 75%) as needed
+4. Adjust opacity (default 0.7) for transparency level
+5. The animation will automatically start and adapt to container size
+
+CUSTOMIZATION OPTIONS:
+- blockSize: Size of each block (default: 3px)
+- blockGap: Space between blocks (default: 1px)
+- numBuildings: Density of buildings (default: screenWidth / 12)
+- buildSpeed: Animation speed range (default: 8-28ms per row)
+- heightMultiplier: Adjust building height ranges
+- opacity: Overall transparency of the skyline
+
+================================================================================
+-->
+
+<!-- COPY THIS ENTIRE SECTION TO USE THE ANIMATION -->
+<div class="city-skyline" style="position: absolute; bottom: 0; left: 0; right: 0; height: 75%; z-index: 1; pointer-events: none;">
+    <canvas id="cityCanvas" style="width: 100%; height: 100%; opacity: 0.7;"></canvas>
+    <script>
+    (function() {
+        const canvas = document.getElementById('cityCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas size with pixel-perfect rendering
+        function resizeCanvas() {
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = canvas.offsetWidth * dpr;
+            canvas.height = canvas.offsetHeight * dpr;
+            ctx.scale(dpr, dpr);
+            ctx.imageSmoothingEnabled = false;
+        }
+        resizeCanvas();
+        
+        // Building configuration
+        const buildings = [];
+        const blockSize = 3; // Size of each block in pixels
+        const blockGap = 1;  // Gap between blocks
+        const totalBlockSize = blockSize + blockGap;
+        
+        // Generate buildings with proper distribution
+        function generateBuildings() {
+            buildings.length = 0;
+            const screenWidth = canvas.width / (window.devicePixelRatio || 1);
+            const screenHeight = canvas.height / (window.devicePixelRatio || 1);
+            
+            // Number of buildings based on screen width
+            const numBuildings = Math.floor(screenWidth / 12);
+            
+            for (let i = 0; i < numBuildings; i++) {
+                const position = i / numBuildings;
+                const x = position * screenWidth;
+                
+                // Calculate height based on position - taller on edges
+                let heightMultiplier;
+                const distFromCenter = Math.abs(position - 0.5) * 2;
+                
+                if (distFromCenter > 0.8) {
+                    // Very tall buildings on far edges (60-85% of screen)
+                    heightMultiplier = 0.6 + Math.random() * 0.25;
+                } else if (distFromCenter > 0.6) {
+                    // Tall buildings (45-70% of screen)
+                    heightMultiplier = 0.45 + Math.random() * 0.25;
+                } else if (distFromCenter > 0.4) {
+                    // Medium-tall buildings (35-55% of screen)
+                    heightMultiplier = 0.35 + Math.random() * 0.2;
+                } else if (distFromCenter > 0.2) {
+                    // Medium buildings (25-45% of screen)
+                    heightMultiplier = 0.25 + Math.random() * 0.2;
+                } else {
+                    // Central area - shorter but varied (15-35% of screen)
+                    heightMultiplier = 0.15 + Math.random() * 0.2;
+                }
+                
+                // Add some occasional tall buildings in middle for variety
+                if (Math.random() < 0.1 && distFromCenter < 0.6) {
+                    heightMultiplier = 0.4 + Math.random() * 0.2;
+                }
+                
+                const maxHeight = Math.floor((screenHeight * heightMultiplier) / totalBlockSize);
+                const height = Math.max(5, maxHeight);
+                
+                // Varied widths - mostly narrow with some wide
+                let width;
+                const widthRand = Math.random();
+                if (widthRand < 0.6) {
+                    width = Math.floor(Math.random() * 2) + 1; // 1-2 blocks (narrow)
+                } else if (widthRand < 0.85) {
+                    width = Math.floor(Math.random() * 3) + 2; // 2-4 blocks (medium)
+                } else {
+                    width = Math.floor(Math.random() * 4) + 4; // 4-7 blocks (wide)
+                }
+                
+                // Varying build speeds for different animation rates
+                const buildSpeed = 8 + Math.random() * 20; // 8-28ms per row
+                
+                buildings.push({
+                    x: x + (Math.random() - 0.5) * 8,
+                    width: width,
+                    height: height,
+                    blocks: [],
+                    currentRow: 0,
+                    buildSpeed: buildSpeed,
+                    startDelay: Math.random() * 800,
+                    buildInterval: null
+                });
+                
+                // Initialize empty blocks array
+                for (let row = 0; row < height; row++) {
+                    buildings[buildings.length - 1].blocks[row] = [];
+                    for (let col = 0; col < width; col++) {
+                        buildings[buildings.length - 1].blocks[row][col] = {
+                            built: false
+                        };
+                    }
+                }
+            }
+            
+            // Start building animations
+            buildings.forEach(building => {
+                setTimeout(() => {
+                    building.buildInterval = setInterval(() => {
+                        if (building.currentRow >= building.height) {
+                            clearInterval(building.buildInterval);
+                            return;
+                        }
+                        
+                        // Build entire row at once
+                        for (let col = 0; col < building.width; col++) {
+                            building.blocks[building.currentRow][col].built = true;
+                        }
+                        building.currentRow++;
+                    }, building.buildSpeed);
+                }, building.startDelay);
+            });
+        }
+        
+        // Animation loop
+        function animate() {
+            const screenWidth = canvas.width / (window.devicePixelRatio || 1);
+            const screenHeight = canvas.height / (window.devicePixelRatio || 1);
+            
+            ctx.clearRect(0, 0, screenWidth, screenHeight);
+            
+            // Draw all buildings
+            buildings.forEach(building => {
+                for (let row = 0; row < building.height; row++) {
+                    for (let col = 0; col < building.width; col++) {
+                        if (building.blocks[row] && building.blocks[row][col] && building.blocks[row][col].built) {
+                            const blockX = Math.floor(building.x + (col * totalBlockSize));
+                            const blockY = Math.floor(screenHeight - ((row + 1) * totalBlockSize) - 5);
+                            
+                            // Pure white blocks
+                            ctx.fillStyle = '#FFFFFF';
+                            ctx.fillRect(blockX, blockY, blockSize, blockSize);
+                        }
+                    }
+                }
+            });
+            
+            requestAnimationFrame(animate);
+        }
+        
+        // Initialize and start
+        generateBuildings();
+        animate();
+        
+        // Regenerate on resize
+        window.addEventListener('resize', () => {
+            // Clear existing intervals
+            buildings.forEach(b => {
+                if (b.buildInterval) clearInterval(b.buildInterval);
+            });
+            resizeCanvas();
+            generateBuildings();
+        });
+    })();
+    </script>
+</div>
+<!-- END OF ANIMATION COMPONENT -->
+
+<!-- Demo container to show the animation -->
+<div style="position: relative; width: 100vw; height: 100vh; background: linear-gradient(135deg, #1a1a2e, #0f0f1e);">
+    <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: Arial; font-size: 4rem; z-index: 10; margin: 0; text-align: center;">
+        CITY SKYLINE<br>
+        <span style="font-size: 1rem; opacity: 0.7;">Animated Background Component</span>
+    </h1>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1142 @@
+<!-- Professional Floating UI Cards Container -->
+<div class="floating-ui-cards-pro">
+  
+  <!-- Analytics Dashboard Card - Top Left -->
+  <div class="ui-card-pro analytics-card" style="top: 10%; left: 5%; transform: rotate(-8deg);">
+    <div class="card-header">
+      <h3 class="card-title">Revenue Analytics</h3>
+      <span class="card-badge">Live</span>
+    </div>
+    <div class="revenue-metrics">
+      <div class="metric-primary">
+        <span class="metric-value">$847,392</span>
+        <span class="metric-change positive">+12.5%</span>
+      </div>
+      <div class="metric-period">This Quarter</div>
+    </div>
+    <div class="chart-container">
+      <svg viewBox="0 0 280 100" class="revenue-chart">
+        <defs>
+          <linearGradient id="revenueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+            <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0" />
+          </linearGradient>
+        </defs>
+        <path d="M 0 80 Q 70 60 140 45 T 280 30" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+        <path d="M 0 80 Q 70 60 140 45 T 280 30 L 280 100 L 0 100 Z" fill="url(#revenueGradient)"/>
+        <circle cx="140" cy="45" r="4" fill="#8B5CF6"/>
+        <circle cx="280" cy="30" r="4" fill="#8B5CF6"/>
+      </svg>
+    </div>
+    <div class="chart-labels">
+      <span>Jan</span>
+      <span>Feb</span>
+      <span>Mar</span>
+      <span>Apr</span>
+    </div>
+  </div>
+
+  <!-- Project Progress Card - Top Right -->
+  <div class="ui-card-pro project-card" style="top: 8%; right: 7%; transform: rotate(6deg);">
+    <div class="card-header">
+      <h3 class="card-title">Project Status</h3>
+      <button class="view-all-btn">View All</button>
+    </div>
+    <div class="project-item">
+      <div class="project-info">
+        <div class="project-name">Mobile App Redesign</div>
+        <div class="project-meta">
+          <span class="team-size">8 members</span>
+          <span class="deadline">Due in 3 days</span>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 78%;"></div>
+        </div>
+        <span class="progress-text">78%</span>
+      </div>
+    </div>
+    <div class="project-item">
+      <div class="project-info">
+        <div class="project-name">Backend Migration</div>
+        <div class="project-meta">
+          <span class="team-size">5 members</span>
+          <span class="deadline">Due in 2 weeks</span>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 45%;"></div>
+        </div>
+        <span class="progress-text">45%</span>
+      </div>
+    </div>
+    <div class="team-avatars">
+      <div class="avatar"></div>
+      <div class="avatar"></div>
+      <div class="avatar"></div>
+      <div class="avatar-more">+5</div>
+    </div>
+  </div>
+
+  <!-- Performance Metrics Card - Mid Left -->
+  <div class="ui-card-pro performance-card" style="top: 32%; left: 3%; transform: rotate(4deg);">
+    <div class="card-header">
+      <h3 class="card-title">System Performance</h3>
+      <div class="status-indicator active"></div>
+    </div>
+    <div class="perf-grid">
+      <div class="perf-metric">
+        <div class="perf-icon cpu"></div>
+        <div class="perf-data">
+          <div class="perf-label">CPU Usage</div>
+          <div class="perf-value">42%</div>
+        </div>
+        <div class="mini-spark">
+          <svg viewBox="0 0 50 20">
+            <polyline points="0,15 10,12 20,14 30,8 40,10 50,5" fill="none" stroke="#10B981" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="perf-metric">
+        <div class="perf-icon memory"></div>
+        <div class="perf-data">
+          <div class="perf-label">Memory</div>
+          <div class="perf-value">6.2 GB</div>
+        </div>
+        <div class="mini-spark">
+          <svg viewBox="0 0 50 20">
+            <polyline points="0,10 10,8 20,12 30,11 40,14 50,13" fill="none" stroke="#F59E0B" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="uptime-section">
+      <span class="uptime-label">Uptime</span>
+      <span class="uptime-value">99.98%</span>
+      <span class="uptime-duration">30 days</span>
+    </div>
+  </div>
+
+  <!-- Transaction History Card - Mid Right -->
+  <div class="ui-card-pro transaction-card" style="top: 35%; right: 4%; transform: rotate(-5deg);">
+    <div class="card-header">
+      <h3 class="card-title">Recent Transactions</h3>
+      <span class="card-count">243</span>
+    </div>
+    <div class="transaction-list">
+      <div class="transaction-item">
+        <div class="trans-icon income"></div>
+        <div class="trans-details">
+          <div class="trans-name">Payment Received</div>
+          <div class="trans-time">2 min ago</div>
+        </div>
+        <div class="trans-amount positive">+$3,420</div>
+      </div>
+      <div class="transaction-item">
+        <div class="trans-icon expense"></div>
+        <div class="trans-details">
+          <div class="trans-name">AWS Services</div>
+          <div class="trans-time">1 hour ago</div>
+        </div>
+        <div class="trans-amount negative">-$892</div>
+      </div>
+      <div class="transaction-item">
+        <div class="trans-icon income"></div>
+        <div class="trans-details">
+          <div class="trans-name">Client Invoice</div>
+          <div class="trans-time">3 hours ago</div>
+        </div>
+        <div class="trans-amount positive">+$12,500</div>
+      </div>
+    </div>
+    <div class="trans-summary">
+      <span>Today's Total</span>
+      <span class="summary-amount">+$15,028</span>
+    </div>
+  </div>
+
+  <!-- User Activity Card - Bottom Left -->
+  <div class="ui-card-pro activity-card" style="bottom: 22%; left: 8%; transform: rotate(7deg);">
+    <div class="card-header">
+      <h3 class="card-title">User Activity</h3>
+      <div class="time-filter">
+        <button class="filter-btn active">Day</button>
+        <button class="filter-btn">Week</button>
+        <button class="filter-btn">Month</button>
+      </div>
+    </div>
+    <div class="activity-stats">
+      <div class="stat-block">
+        <div class="stat-number">2,847</div>
+        <div class="stat-label">Active Users</div>
+        <div class="stat-trend up">↑ 18%</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number">423</div>
+        <div class="stat-label">New Signups</div>
+        <div class="stat-trend up">↑ 32%</div>
+      </div>
+    </div>
+    <div class="activity-chart">
+      <div class="bar-chart">
+        <div class="bar" style="height: 40%;"></div>
+        <div class="bar" style="height: 65%;"></div>
+        <div class="bar" style="height: 45%;"></div>
+        <div class="bar" style="height: 80%;"></div>
+        <div class="bar" style="height: 72%;"></div>
+        <div class="bar" style="height: 90%;"></div>
+        <div class="bar active" style="height: 95%;"></div>
+      </div>
+      <div class="chart-times">
+        <span>12am</span>
+        <span>6am</span>
+        <span>12pm</span>
+        <span>6pm</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- API Status Card - Bottom Right -->
+  <div class="ui-card-pro api-card" style="bottom: 18%; right: 6%; transform: rotate(-7deg);">
+    <div class="card-header">
+      <h3 class="card-title">API Health</h3>
+      <div class="health-badge operational">Operational</div>
+    </div>
+    <div class="api-metrics">
+      <div class="api-metric">
+        <div class="metric-label">Response Time</div>
+        <div class="metric-main">
+          <span class="metric-number">124</span>
+          <span class="metric-unit">ms</span>
+        </div>
+        <div class="metric-bar">
+          <div class="bar-fill good" style="width: 85%;"></div>
+        </div>
+      </div>
+      <div class="api-metric">
+        <div class="metric-label">Success Rate</div>
+        <div class="metric-main">
+          <span class="metric-number">99.7</span>
+          <span class="metric-unit">%</span>
+        </div>
+        <div class="metric-bar">
+          <div class="bar-fill excellent" style="width: 99.7%;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="api-endpoints">
+      <div class="endpoint">
+        <span class="endpoint-name">/api/users</span>
+        <span class="endpoint-calls">48.2k calls</span>
+      </div>
+      <div class="endpoint">
+        <span class="endpoint-name">/api/data</span>
+        <span class="endpoint-calls">31.5k calls</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deployment Pipeline Card - Top Center -->
+  <div class="ui-card-pro deployment-card" style="top: 5%; left: 40%; transform: rotate(-3deg);">
+    <div class="card-header">
+      <h3 class="card-title">Deployment Pipeline</h3>
+      <span class="pipeline-id">#4523</span>
+    </div>
+    <div class="pipeline-stages">
+      <div class="stage completed">
+        <div class="stage-icon">✓</div>
+        <div class="stage-name">Build</div>
+        <div class="stage-time">2m 14s</div>
+      </div>
+      <div class="stage-connector"></div>
+      <div class="stage completed">
+        <div class="stage-icon">✓</div>
+        <div class="stage-name">Test</div>
+        <div class="stage-time">5m 32s</div>
+      </div>
+      <div class="stage-connector"></div>
+      <div class="stage in-progress">
+        <div class="stage-icon">
+          <div class="spinner"></div>
+        </div>
+        <div class="stage-name">Deploy</div>
+        <div class="stage-time">1m 45s</div>
+      </div>
+    </div>
+    <div class="deploy-info">
+      <span class="branch">main</span>
+      <span class="commit">feat: update dashboard</span>
+    </div>
+  </div>
+
+  <!-- Customer Satisfaction Card - Bottom Center -->
+  <div class="ui-card-pro satisfaction-card" style="bottom: 12%; left: 38%; transform: rotate(5deg);">
+    <div class="card-header">
+      <h3 class="card-title">Customer Satisfaction</h3>
+      <div class="score-badge">4.8</div>
+    </div>
+    <div class="satisfaction-visual">
+      <div class="circular-progress">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(139, 92, 246, 0.1)" stroke-width="8"/>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#8B5CF6" stroke-width="8" 
+                  stroke-dasharray="283" stroke-dashoffset="42" stroke-linecap="round"
+                  transform="rotate(-90 50 50)"/>
+        </svg>
+        <div class="progress-text">
+          <span class="progress-value">85%</span>
+          <span class="progress-label">Satisfied</span>
+        </div>
+      </div>
+    </div>
+    <div class="feedback-stats">
+      <div class="feedback-item">
+        <span class="feedback-emoji">😊</span>
+        <span class="feedback-count">1,234</span>
+      </div>
+      <div class="feedback-item">
+        <span class="feedback-emoji">😐</span>
+        <span class="feedback-count">156</span>
+      </div>
+      <div class="feedback-item">
+        <span class="feedback-emoji">😔</span>
+        <span class="feedback-count">23</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Professional Floating UI Cards Styles -->
+<style>
+  .floating-ui-cards-pro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .ui-card-pro {
+    position: absolute;
+    background: rgba(17, 17, 17, 0.6);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 24px;
+    animation: floatSmooth 25s ease-in-out infinite;
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes floatSmooth {
+    0%, 100% { 
+      transform: translateY(0) rotate(var(--rotation)); 
+    }
+    20% { 
+      transform: translateY(-12px) rotate(calc(var(--rotation) + 1deg)); 
+    }
+    40% { 
+      transform: translateY(8px) rotate(calc(var(--rotation) - 1deg)); 
+    }
+    60% { 
+      transform: translateY(-6px) rotate(calc(var(--rotation) + 0.5deg)); 
+    }
+    80% { 
+      transform: translateY(10px) rotate(calc(var(--rotation) - 0.5deg)); 
+    }
+  }
+
+  /* Card Header Styles */
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .card-badge {
+    padding: 4px 10px;
+    background: rgba(34, 197, 94, 0.15);
+    color: #10B981;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Analytics Card */
+  .analytics-card {
+    width: 320px;
+    --rotation: -8deg;
+    animation-delay: 0s;
+  }
+
+  .revenue-metrics {
+    margin-bottom: 20px;
+  }
+
+  .metric-primary {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .metric-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.02em;
+  }
+
+  .metric-change {
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .metric-change.positive {
+    background: rgba(34, 197, 94, 0.15);
+    color: #10B981;
+  }
+
+  .metric-period {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .chart-container {
+    height: 100px;
+    margin-bottom: 8px;
+  }
+
+  .revenue-chart {
+    width: 100%;
+    height: 100%;
+  }
+
+  .chart-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  /* Project Card */
+  .project-card {
+    width: 340px;
+    --rotation: 6deg;
+    animation-delay: 3s;
+  }
+
+  .view-all-btn {
+    padding: 6px 12px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: #A78BFA;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .project-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .project-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+
+  .project-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 12px;
+  }
+
+  .progress-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .progress-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8B5CF6, #A78BFA);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+
+  .progress-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #A78BFA;
+    min-width: 35px;
+  }
+
+  .team-avatars {
+    display: flex;
+    align-items: center;
+    gap: -8px;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: 2px solid rgba(17, 17, 17, 0.8);
+    margin-left: -8px;
+  }
+
+  .avatar:first-child {
+    margin-left: 0;
+  }
+
+  .avatar-more {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #A78BFA;
+    font-weight: 600;
+    margin-left: -8px;
+  }
+
+  /* Performance Card */
+  .performance-card {
+    width: 300px;
+    --rotation: 4deg;
+    animation-delay: 6s;
+  }
+
+  .status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10B981;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .perf-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .perf-metric {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+  }
+
+  .perf-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+  }
+
+  .perf-data {
+    flex: 1;
+  }
+
+  .perf-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 2px;
+  }
+
+  .perf-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .mini-spark {
+    width: 50px;
+    height: 20px;
+  }
+
+  .uptime-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(34, 197, 94, 0.05);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 12px;
+  }
+
+  .uptime-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .uptime-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #10B981;
+  }
+
+  .uptime-duration {
+    margin-left: auto;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  /* Transaction Card */
+  .transaction-card {
+    width: 320px;
+    --rotation: -5deg;
+    animation-delay: 9s;
+  }
+
+  .card-count {
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .transaction-list {
+    margin-bottom: 16px;
+  }
+
+  .transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .transaction-item:last-child {
+    border-bottom: none;
+  }
+
+  .trans-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trans-icon.income {
+    background: rgba(34, 197, 94, 0.15);
+  }
+
+  .trans-icon.income::before {
+    content: "↓";
+    color: #10B981;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .trans-icon.expense {
+    background: rgba(239, 68, 68, 0.15);
+  }
+
+  .trans-icon.expense::before {
+    content: "↑";
+    color: #EF4444;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .trans-details {
+    flex: 1;
+  }
+
+  .trans-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+
+  .trans-time {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .trans-amount {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .trans-amount.positive {
+    color: #10B981;
+  }
+
+  .trans-amount.negative {
+    color: #EF4444;
+  }
+
+  .trans-summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 12px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .summary-amount {
+    font-weight: 600;
+    color: #A78BFA;
+  }
+
+  /* Activity Card */
+  .activity-card {
+    width: 340px;
+    --rotation: 7deg;
+    animation-delay: 12s;
+  }
+
+  .time-filter {
+    display: flex;
+    gap: 4px;
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+
+  .filter-btn {
+    padding: 4px 10px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-btn.active {
+    background: rgba(139, 92, 246, 0.2);
+    color: #A78BFA;
+  }
+
+  .activity-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .stat-block {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 8px;
+  }
+
+  .stat-trend {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .stat-trend.up {
+    background: rgba(34, 197, 94, 0.15);
+    color: #10B981;
+  }
+
+  .bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 80px;
+    margin-bottom: 8px;
+  }
+
+  .bar {
+    flex: 1;
+    background: rgba(139, 92, 246, 0.3);
+    border-radius: 4px 4px 0 0;
+    transition: all 0.3s;
+  }
+
+  .bar.active {
+    background: linear-gradient(to top, #8B5CF6, #A78BFA);
+  }
+
+  .chart-times {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  /* API Card */
+  .api-card {
+    width: 300px;
+    --rotation: -7deg;
+    animation-delay: 15s;
+  }
+
+  .health-badge {
+    padding: 4px 10px;
+    background: rgba(34, 197, 94, 0.15);
+    color: #10B981;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .api-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .api-metric {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+  }
+
+  .metric-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 8px;
+  }
+
+  .metric-main {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+
+  .metric-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .metric-unit {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .metric-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+  }
+
+  .bar-fill.good {
+    background: #F59E0B;
+  }
+
+  .bar-fill.excellent {
+    background: #10B981;
+  }
+
+  .api-endpoints {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .endpoint {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    font-size: 11px;
+  }
+
+  .endpoint-name {
+    color: #A78BFA;
+    font-family: monospace;
+  }
+
+  .endpoint-calls {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Deployment Card */
+  .deployment-card {
+    width: 360px;
+    --rotation: -3deg;
+    animation-delay: 18s;
+  }
+
+  .pipeline-id {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    font-family: monospace;
+  }
+
+  .pipeline-stages {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .stage {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+  }
+
+  .stage-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .stage.completed .stage-icon {
+    background: rgba(34, 197, 94, 0.2);
+    color: #10B981;
+  }
+
+  .stage.in-progress .stage-icon {
+    background: rgba(139, 92, 246, 0.2);
+  }
+
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-top-color: #8B5CF6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .stage-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .stage-time {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .stage-connector {
+    width: 20px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .deploy-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+  }
+
+  .branch {
+    padding: 4px 8px;
+    background: rgba(139, 92, 246, 0.2);
+    color: #A78BFA;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: monospace;
+  }
+
+  .commit {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Satisfaction Card */
+  .satisfaction-card {
+    width: 280px;
+    --rotation: 5deg;
+    animation-delay: 21s;
+  }
+
+  .score-badge {
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .satisfaction-visual {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .circular-progress {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .circular-progress svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .progress-value {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .progress-label {
+    display: block;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 2px;
+  }
+
+  .feedback-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+  }
+
+  .feedback-item {
+    text-align: center;
+  }
+
+  .feedback-emoji {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .feedback-count {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 767px) {
+    .floating-ui-cards-pro {
+      display: none;
+    }
+  }
+
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .ui-card-pro {
+      animation: none;
+    }
+    .spinner {
+      animation: none;
+    }
+    .status-indicator {
+      animation: none;
+    }
+  }
+</style>

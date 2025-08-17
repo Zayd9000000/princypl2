@@ -1,0 +1,237 @@
+<!-- Complete City Skyline with White Blocks -->
+<svg viewBox="0 0 120 60" preserveAspectRatio="none" style="width: 100%; height: 100%; opacity: 0.3;">
+  
+  <!-- Building 1 - 3x10 blocks (left) -->
+  <!-- Rows 1-10 -->
+  <!-- Row 1 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;56" dur="0.04s" begin="0s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;56" dur="0.04s" begin="0.01s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.01s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;56" dur="0.04s" begin="0.02s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.02s" fill="freeze"/>
+  </rect>
+  <!-- Row 2 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;52" dur="0.04s" begin="0.03s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.03s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;52" dur="0.04s" begin="0.04s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.04s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;52" dur="0.04s" begin="0.05s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.05s" fill="freeze"/>
+  </rect>
+  <!-- Row 3 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;48" dur="0.04s" begin="0.06s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.06s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;48" dur="0.04s" begin="0.07s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.07s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;48" dur="0.04s" begin="0.08s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.08s" fill="freeze"/>
+  </rect>
+  <!-- Row 4 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;44" dur="0.04s" begin="0.09s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.09s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;44" dur="0.04s" begin="0.1s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.1s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;44" dur="0.04s" begin="0.11s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.11s" fill="freeze"/>
+  </rect>
+  <!-- Row 5 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;40" dur="0.04s" begin="0.12s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.12s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;40" dur="0.04s" begin="0.13s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.13s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;40" dur="0.04s" begin="0.14s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.14s" fill="freeze"/>
+  </rect>
+  <!-- Row 6 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;36" dur="0.04s" begin="0.15s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.15s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;36" dur="0.04s" begin="0.16s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.16s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;36" dur="0.04s" begin="0.17s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.17s" fill="freeze"/>
+  </rect>
+  <!-- Row 7 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;32" dur="0.04s" begin="0.18s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.18s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;32" dur="0.04s" begin="0.19s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.19s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;32" dur="0.04s" begin="0.2s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.2s" fill="freeze"/>
+  </rect>
+  <!-- Row 8 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;28" dur="0.04s" begin="0.21s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.21s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;28" dur="0.04s" begin="0.22s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.22s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;28" dur="0.04s" begin="0.23s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.23s" fill="freeze"/>
+  </rect>
+  <!-- Row 9 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;24" dur="0.04s" begin="0.24s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.24s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;24" dur="0.04s" begin="0.25s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.25s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;24" dur="0.04s" begin="0.26s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.26s" fill="freeze"/>
+  </rect>
+  <!-- Row 10 -->
+  <rect x="2" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;20" dur="0.04s" begin="0.27s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.27s" fill="freeze"/>
+  </rect>
+  <rect x="5" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;20" dur="0.04s" begin="0.28s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.28s" fill="freeze"/>
+  </rect>
+  <rect x="8" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;20" dur="0.04s" begin="0.29s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.29s" fill="freeze"/>
+  </rect>
+  
+  <!-- Building 2 - 2x6 blocks -->
+  <!-- Row 1 -->
+  <rect x="13" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;56" dur="0.04s" begin="0.1s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.1s" fill="freeze"/>
+  </rect>
+  <rect x="16" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;56" dur="0.04s" begin="0.11s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.11s" fill="freeze"/>
+  </rect>
+  <!-- Row 2 -->
+  <rect x="13" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;52" dur="0.04s" begin="0.12s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.12s" fill="freeze"/>
+  </rect>
+  <rect x="16" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;52" dur="0.04s" begin="0.13s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.13s" fill="freeze"/>
+  </rect>
+  <!-- Row 3 -->
+  <rect x="13" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;48" dur="0.04s" begin="0.14s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.14s" fill="freeze"/>
+  </rect>
+  <rect x="16" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;48" dur="0.04s" begin="0.15s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.15s" fill="freeze"/>
+  </rect>
+  <!-- Row 4 -->
+  <rect x="13" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;44" dur="0.04s" begin="0.16s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.16s" fill="freeze"/>
+  </rect>
+  <rect x="16" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;44" dur="0.04s" begin="0.17s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.17s" fill="freeze"/>
+  </rect>
+  <!-- Row 5 -->
+  <rect x="13" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;40" dur="0.04s" begin="0.18s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.18s" fill="freeze"/>
+  </rect>
+  <rect x="16" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;40" dur="0.04s" begin="0.19s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.19s" fill="freeze"/>
+  </rect>
+  <!-- Row 6 -->
+  <rect x="13" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;36" dur="0.04s" begin="0.2s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.2s" fill="freeze"/>
+  </rect>
+  <rect x="16" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;36" dur="0.04s" begin="0.21s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.21s" fill="freeze"/>
+  </rect>
+  
+  <!-- Building 3 - 4x14 blocks (tallest) -->
+  <!-- Rows 1-14 -->
+  <!-- Row 1 -->
+  <rect x="21" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;56" dur="0.04s" begin="0.2s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.2s" fill="freeze"/>
+  </rect>
+  <rect x="24" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;56" dur="0.04s" begin="0.21s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.21s" fill="freeze"/>
+  </rect>
+  <rect x="27" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;56" dur="0.04s" begin="0.22s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.22s" fill="freeze"/>
+  </rect>
+  <rect x="30" y="60" width="2.5" height="0" fill="rgba(255,255,255,0.9)" stroke="none" rx="0.2">
+    <animate attributeName="y" values="60;56" dur="0.04s" begin="0.23s" fill="freeze"/>
+    <animate attributeName="height" values="0;3.5" dur="0.04s" begin="0.23s" fill="freeze"/>
+  </rect>
+  <!-- Continue with rows 2-14 for building 3... -->
+  
+  <!-- Building 4 - 3x8 blocks -->
+  <!-- Starting at x=35 -->
+  
+  <!-- Building 5 - 2x12 blocks -->
+  <!-- Starting at x=42 -->
+  
+  <!-- Building 6 - 5x5 blocks -->
+  <!-- Starting at x=47 -->
+  
+  <!-- Building 7 - 3x9 blocks -->
+  <!-- Starting at x=55 -->
+  
+  <!-- Building 8 - 4x7 blocks -->
+  <!-- Starting at x=62 -->
+  
+  <!-- Building 9 - 2x11 blocks -->
+  <!-- Starting at x=70 -->
+  
+  <!-- Building 10 - 3x6 blocks -->
+  <!-- Starting at x=75 -->
+  
+  <!-- Additional buildings continue to fill the skyline -->
+  
+</svg>

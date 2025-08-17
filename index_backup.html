@@ -1962,12 +1962,12 @@
       </h1>
       
       <!-- Subtitle directly below BUILDED -->
-      <p class="hero-subtitle" style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.4; color: rgba(255,255,255,0.7); font-weight: 400; margin: 0 60px 50px 60px; animation: fadeInUp 1s forwards; animation-delay: 0.8s; opacity: 0;">
+      <p class="hero-subtitle" style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.4; color: rgba(255,255,255,0.7); font-weight: 400; margin: 0 60px 20px 60px; animation: fadeInUp 1s forwards; animation-delay: 0.8s; opacity: 0;">
         An integrated design and engineering team for every step of the creative process. We build alongside you from concept to launch with the dedication of an in-house team and the expertise of seasoned specialists.
       </p>
       
       <!-- CTA Buttons below subtitle -->
-      <div class="hero-cta-buttons" style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 20px; animation: fadeInUp 1.2s forwards; animation-delay: 1s; opacity: 0;">
+      <div class="hero-cta-buttons" style="display: flex; justify-content: center; gap: 1.5rem; animation: fadeInUp 1.2s forwards; animation-delay: 1s; opacity: 0;">
       <a href="#case-studies" class="hero-btn hero-btn-primary" onclick="smoothScrollToSection(event, '.product-list-sec')">
         <span>EXPLORE OUR WORK</span>
         <svg class="hero-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px; opacity: 0.7; transition: all 0.3s ease;">
@@ -2334,8 +2334,25 @@
       scroll-margin-top: 100px;
     }
     
+    /* Case Studies Grid Hover Effects */
+    .products-list .product-con:hover {
+      transform: translateY(-10px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+      backdrop-filter: blur(30px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+      box-shadow: 0 16px 48px rgba(255,255,255,0.1), 0 4px 12px rgba(255,255,255,0.15) !important;
+    }
+    
+    .products-list .product-con:hover img {
+      transform: scale(1.08);
+    }
+    
     .products-list .product-con .video-product-wrapper {
       position: relative;
+    }
+    
+    .products-list .product-con:hover .product-name-txt {
+      color: rgba(255,255,255,1);
     }
     
     /* Responsive Grid Layout */
@@ -2799,102 +2816,126 @@
     </div>
     <div class="products-list-grid" style="display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 40px; max-width: 1200px; margin: 0 auto; padding: 0 40px;">
       <a href="lumina.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0b3"
-         class="product-con w-inline-block" style="display: flex; flex-direction: column; text-decoration: none; transform: translateY(0);">
-        <div class="tags-wrapper" style="padding-bottom: 12px;">
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">WEB</span>
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">DESIGN</span>
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">BRANDING</span>
-        </div>
+         class="product-con w-inline-block" style="display: flex; flex-direction: column; text-decoration: none;">
         <div class="video-product-wrapper" style="height: 280px; overflow: hidden; position: relative;">
           <img src="1.png" alt="LUMINA HOUSE" style="width: 100%; height: 100%; object-fit: cover;" />
         </div>
         <div class="product-name-wrapper" style="padding: 20px 0;">
-          <h4 class="product-name-txt" style="font-size: 1.1rem; margin-bottom: 8px; color: #ffffff; font-weight: 300;">LUMINA HOUSE</h4>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 300; line-height: 1.4; margin: 0; margin-top: 4px;">Modular brand system for Europe's all-female hacker house</p>
+          <h4 class="product-name-txt" style="font-size: 1.1rem; margin-bottom: 8px; color: #ffffff; font-weight: 600;">LUMINA HOUSE</h4>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 400; line-height: 1.4; margin: 0;">Modular brand system for Europe's all-female hacker house</p>
         </div>
       </a>
       <a href="smarter.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0c2"
-        class="product-con w-inline-block" style="display: flex; flex-direction: column; text-decoration: none; transform: translateY(0);">
-        <div class="tags-wrapper" style="padding-bottom: 12px;">
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">UI/UX</span>
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">WEB</span>
+        class="product-con w-inline-block" style="display: flex; flex-direction: column; background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border-radius: 10px; overflow: hidden; transition: all 0.3s ease; backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); box-shadow: 0 8px 32px rgba(255,255,255,0.05), 0 1px 3px rgba(255,255,255,0.1);">
+        <div class="video-product-wrapper" style="height: 140px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 15px;">
+          <img src="2.png" alt="SMARTER.AI" style="width: 90%; max-height: 100%; object-fit: contain; transition: transform 0.5s ease;" />
         </div>
-        <div class="video-product-wrapper" style="height: 280px; overflow: hidden; position: relative;">
-          <img src="2.png" alt="SMARTER.AI" style="width: 100%; height: 280px; object-fit: cover;" />
-        </div>
-        <div class="product-name-wrapper" style="padding: 20px 0;">
-          <h4 class="product-name-txt" style="font-size: 1.1rem; margin-bottom: 8px; color: #ffffff; font-weight: 300;">SMARTER.AI</h4>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 300; line-height: 1.4; margin: 0; margin-top: 4px;">Unified interface system for AI recruitment platform</p>
+        <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.1);"></div>
+        <div class="product-name-wrapper" style="padding: 20px; display: flex; flex-direction: column; min-height: 140px;">
+          <div class="product-name" style="flex: 1;">
+            <h4 class="product-name-txt" style="font-size: 1.05rem; margin-bottom: 8px; color: #fff; font-weight: 600;">SMARTER.AI</h4>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75); font-weight: 400; line-height: 1.45; margin: 0;">Unified interface system for AI recruitment platform</p>
+          </div>
+          <div class="tags-con" style="display: flex; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06);">
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">UI/UX</span>
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">WEB</span>
+          </div>
         </div>
       </a>
-      <a href="ternion.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0d1"
-        class="product-con w-inline-block" style="display: flex; flex-direction: column; text-decoration: none; transform: translateY(40px);">
-        <div class="tags-wrapper" style="padding-bottom: 12px;">
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">WEB</span>
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">DESIGN</span>
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">BRANDING</span>
+      <a href="ternion.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0d1"  
+        class="product-con w-inline-block" style="display: flex; flex-direction: column; background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border-radius: 10px; overflow: hidden; transition: all 0.3s ease; backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); box-shadow: 0 8px 32px rgba(255,255,255,0.05), 0 1px 3px rgba(255,255,255,0.1);">
+        <div class="video-product-wrapper" style="height: 140px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 15px;">
+          <img src="3.png" alt="TERNION INTELLIGENCE" style="width: 90%; max-height: 100%; object-fit: contain; transition: transform 0.5s ease;" />
         </div>
-        <div class="video-product-wrapper" style="height: 280px; overflow: hidden; position: relative;">
-          <img src="3.png" alt="TERNION INTELLIGENCE" style="width: 100%; height: 280px; object-fit: cover;" />
-        </div>
-        <div class="product-name-wrapper" style="padding: 20px 0;">
-          <h4 class="product-name-txt" style="font-size: 1.1rem; margin-bottom: 8px; color: #ffffff; font-weight: 300;">TERNION INTELLIGENCE</h4>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 300; line-height: 1.4; margin: 0; margin-top: 4px;">Scalable identity framework for geopolitical risk analysis</p>
+        <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.1);"></div>
+        <div class="product-name-wrapper" style="padding: 20px; display: flex; flex-direction: column; min-height: 140px;">
+          <div class="product-name" style="flex: 1;">
+            <h4 class="product-name-txt" style="font-size: 1.05rem; margin-bottom: 8px; color: #fff; font-weight: 600;">TERNION INTELLIGENCE</h4>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75); font-weight: 400; line-height: 1.45; margin: 0;">Scalable identity framework for geopolitical risk analysis</p>
+          </div>
+          <div class="tags-con" style="display: flex; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06);">
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">WEB</span>
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">DESIGN</span>
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">BRANDING</span>
+          </div>
         </div>
       </a>
 
 
       <a href="cyrcl.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0e3" 
-         class="product-con w-inline-block" style="display: flex; flex-direction: column; text-decoration: none; transform: translateY(40px);">
-        <div class="tags-wrapper" style="padding-bottom: 12px;">
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">UI/UX</span>
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">WEB</span>
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">BRANDING</span>
+         class="product-con w-inline-block staggered-right" style="display: flex; flex-direction: column; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; transition: all 0.3s ease; backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); position: relative; transform: translateY(80px);">
+        <div class="video-product-wrapper" style="height: 140px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 15px;">
+          <img src="4.png" alt="CYRCL" style="width: 90%; max-height: 100%; object-fit: contain; transition: transform 0.5s ease;" />
         </div>
-        <div class="video-product-wrapper" style="height: 280px; overflow: hidden;">
-          <img src="4.png" alt="CYRCL" style="width: 100%; height: 100%; object-fit: cover;" />
-        </div>
-        <div class="product-name-wrapper" style="padding: 20px 0;">
-          <h4 class="product-name-txt" style="font-size: 1.1rem; margin-bottom: 8px; color: #ffffff; font-weight: 300;">CYRCL</h4>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 300; line-height: 1.4; margin: 0; margin-top: 4px;">Gesture-driven interface design for social presence app</p>
+        <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.1);"></div>
+        <div class="product-name-wrapper" style="padding: 20px; display: flex; flex-direction: column; min-height: 140px;">
+          <div class="product-name" style="flex: 1;">
+            <h4 class="product-name-txt" style="font-size: 1.05rem; margin-bottom: 8px; color: #fff; font-weight: 600;">CYRCL</h4>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75); font-weight: 400; line-height: 1.45; margin: 0;">Gesture-driven interface design for social presence app</p>
+          </div>
+          <div class="tags-con" style="display: flex; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06);">
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">UI/UX</span>
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">WEB</span>
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">BRANDING</span>
+          </div>
         </div>
       </a>
       
       
       <a href="circles.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0f5" 
-         class="product-con w-inline-block" style="display: flex; flex-direction: column; text-decoration: none; transform: translateY(80px);">
-        <div class="tags-wrapper" style="padding-bottom: 12px;">
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">WEB</span>
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">DESIGN</span>
+         class="product-con w-inline-block staggered-right" style="display: flex; flex-direction: column; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; transition: all 0.3s ease; backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); position: relative; transform: translateY(80px);">
+        <div class="video-product-wrapper" style="height: 140px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 15px;">
+          <img src="5.png" alt="CIRCLES INITIATIVE" style="width: 90%; max-height: 100%; object-fit: contain; transition: transform 0.5s ease;" />
         </div>
-        <div class="video-product-wrapper" style="height: 280px; overflow: hidden;">
-          <img src="5.png" alt="CIRCLES INITIATIVE" style="width: 100%; height: 100%; object-fit: cover;" />
-        </div>
-        <div class="product-name-wrapper" style="padding: 20px 0;">
-          <h4 class="product-name-txt" style="font-size: 1.1rem; margin-bottom: 8px; color: #ffffff; font-weight: 300;">CIRCLES INITIATIVE</h4>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 300; line-height: 1.4; margin: 0; margin-top: 4px;">Systematic brand architecture for global think-tank network</p>
+        <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.1);"></div>
+        <div class="product-name-wrapper" style="padding: 20px; display: flex; flex-direction: column; min-height: 140px;">
+          <div class="product-name" style="flex: 1;">
+            <h4 class="product-name-txt" style="font-size: 1.05rem; margin-bottom: 8px; color: #fff; font-weight: 600;">CIRCLES INITIATIVE</h4>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75); font-weight: 400; line-height: 1.45; margin: 0;">Systematic brand architecture for global think-tank network</p>
+          </div>
+          <div class="tags-con" style="display: flex; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06);">
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">WEB</span>
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">DESIGN</span>
+          </div>
         </div>
       </a>
       
       <a href="contact.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c106" 
-         class="product-con w-inline-block" style="display: flex; flex-direction: column; text-decoration: none; transform: translateY(80px);">
-        <div class="tags-wrapper" style="padding-bottom: 12px;">
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">CONSULTATION</span>
-          <span style="font-size: 0.65rem; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; display: inline-block; margin-right: 8px; color: #ffffff;">PORTFOLIO</span>
-        </div>
-        <div class="video-product-wrapper" style="height: 280px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+         class="product-con w-inline-block staggered-right" style="display: flex; flex-direction: column; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; transition: all 0.3s ease; backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); position: relative; transform: translateY(80px);">
+        <div class="video-product-wrapper" style="height: 120px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
           <div style="width: 60px; height: 60px; position: relative; display: flex; align-items: center; justify-content: center;">
             <div style="width: 2px; height: 40px; background: linear-gradient(180deg, #6366f1, #8b5cf6); border-radius: 2px; position: absolute;"></div>
             <div style="width: 40px; height: 2px; background: linear-gradient(90deg, #6366f1, #8b5cf6); border-radius: 2px; position: absolute;"></div>
           </div>
         </div>
-        <div class="product-name-wrapper" style="padding: 20px 0;">
-          <h4 class="product-name-txt" style="font-size: 1.1rem; margin-bottom: 8px; color: #ffffff; font-weight: 300;">Want to see more?</h4>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 300; line-height: 1.4; margin: 0; margin-top: 4px;">Connect with our team to view additional case studies and project prototypes</p>
+        <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.1);"></div>
+        <div class="product-name-wrapper" style="padding: 20px; display: flex; flex-direction: column; min-height: 140px;">
+          <div class="product-name" style="flex: 1;">
+            <h4 class="product-name-txt" style="font-size: 1.05rem; margin-bottom: 8px; color: #fff; font-weight: 600;">Want to see more?</h4>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75); font-weight: 400; line-height: 1.45; margin: 0;">Connect with our team to view additional case studies and project prototypes</p>
+          </div>
+          <div class="tags-con" style="display: flex; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06);">
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">CONSULTATION</span>
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em;">PORTFOLIO</span>
+          </div>
         </div>
       </a>
     </div>
     <style>
+      /* Simple Staggered Grid Hover Effects */
+      .product-con:hover {
+        transform: translateY(-5px) !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+        box-shadow: 0 16px 48px rgba(255,255,255,0.1), 0 4px 12px rgba(255,255,255,0.15) !important;
+      }
+      
+      .product-con.staggered-right:hover {
+        transform: translateY(95px) !important;
+      }
+      
+      .product-con:hover img {
+        transform: scale(1.05);
+      }
       
       /* Staggered Layout Mobile Responsiveness */
       @media (max-width: 991px) {
@@ -2907,6 +2948,9 @@
           transform: translateY(50px) !important;
         }
         
+        .product-con.staggered-right:hover {
+          transform: translateY(45px) !important;
+        }
       }
 
       @media (max-width: 768px) {
@@ -2920,6 +2964,9 @@
           transform: translateY(0) !important;
         }
         
+        .product-con.staggered-right:hover {
+          transform: translateY(-5px) !important;
+        }
       }
 
       @media (max-width: 480px) {
