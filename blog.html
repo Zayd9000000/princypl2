@@ -87,129 +87,6 @@
       transform: translateY(-2px);
     }
 
-    /* Geometric shapes container */
-    .shapes-container {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 300px;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .shape {
-      position: absolute;
-      bottom: 0;
-      transition: transform 0.3s ease;
-    }
-
-    /* Individual shapes - creating a pile effect */
-    .shape-1 {
-      width: 120px;
-      height: 120px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-      border: 1px solid rgba(255,255,255,0.1);
-      left: 10%;
-      transform: rotate(15deg);
-      border-radius: 8px;
-    }
-
-    .shape-2 {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.08);
-      left: 18%;
-      bottom: 60px;
-      transform: rotate(-25deg);
-      border-radius: 50%;
-    }
-
-    .shape-3 {
-      width: 150px;
-      height: 150px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.06);
-      left: 25%;
-      transform: rotate(45deg);
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    }
-
-    .shape-4 {
-      width: 100px;
-      height: 100px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
-      border: 1px solid rgba(255,255,255,0.09);
-      right: 35%;
-      bottom: 20px;
-      transform: rotate(60deg);
-      border-radius: 12px;
-    }
-
-    .shape-5 {
-      width: 140px;
-      height: 70px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.07);
-      right: 20%;
-      bottom: 80px;
-      transform: rotate(-15deg);
-      border-radius: 35px;
-    }
-
-    .shape-6 {
-      width: 90px;
-      height: 90px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.05);
-      right: 15%;
-      transform: rotate(30deg);
-      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    }
-
-    .shape-7 {
-      width: 110px;
-      height: 110px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.08);
-      left: 40%;
-      bottom: 40px;
-      transform: rotate(-45deg);
-      border-radius: 50% 0;
-    }
-
-    .shape-8 {
-      width: 60px;
-      height: 120px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.06);
-      left: 50%;
-      transform: rotate(20deg);
-      border-radius: 30px;
-    }
-
-    .shape-9 {
-      width: 130px;
-      height: 130px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-      border: 1px solid rgba(255,255,255,0.04);
-      right: 8%;
-      bottom: 30px;
-      transform: rotate(-30deg);
-      clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    }
-
-    .shape-10 {
-      width: 100px;
-      height: 50px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.07);
-      left: 60%;
-      bottom: 90px;
-      transform: rotate(10deg) skewX(20deg);
-      border-radius: 10px;
-    }
 
     /* Logo styling */
     .logo {
@@ -224,35 +101,8 @@
         max-width: 140px;
       }
       
-      .shapes-container {
-        height: 200px;
-      }
-      
-      .shape {
-        transform: scale(0.7);
-      }
     }
 
-    /* Subtle animation */
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(var(--rotation)); }
-      50% { transform: translateY(-10px) rotate(var(--rotation)); }
-    }
-
-    .shape:hover {
-      animation: float 2s ease-in-out infinite;
-    }
-
-    .shape-1 { --rotation: 15deg; }
-    .shape-2 { --rotation: -25deg; }
-    .shape-3 { --rotation: 45deg; }
-    .shape-4 { --rotation: 60deg; }
-    .shape-5 { --rotation: -15deg; }
-    .shape-6 { --rotation: 30deg; }
-    .shape-7 { --rotation: -45deg; }
-    .shape-8 { --rotation: 20deg; }
-    .shape-9 { --rotation: -30deg; }
-    .shape-10 { --rotation: 10deg; }
   </style>
 </head>
 
@@ -315,19 +165,6 @@
       </div>
     </div>
 
-    <!-- Geometric shapes piled at the bottom -->
-    <div class="shapes-container">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-      <div class="shape shape-4"></div>
-      <div class="shape shape-5"></div>
-      <div class="shape shape-6"></div>
-      <div class="shape shape-7"></div>
-      <div class="shape shape-8"></div>
-      <div class="shape shape-9"></div>
-      <div class="shape shape-10"></div>
-    </div>
   </div>
 
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63ef85bbe954cc6863a77eab" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
