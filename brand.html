@@ -444,6 +444,128 @@
       cursor: pointer;
     }
   </style>
+  
+  <!-- Content Section Styling -->
+  <style>
+    .content-section {
+      margin-bottom: 80px;
+      text-align: left;
+    }
+    
+    .section-line {
+      width: 60px;
+      height: 2px;
+      background-color: #ffffff;
+      margin-bottom: 24px;
+    }
+    
+    /* Main section headings (h3) - Larger than subsection titles */
+    .section-heading {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #ffffff;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+    }
+    
+    /* General h3 styling for standalone h3 elements */
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    
+    .section-content {
+      max-width: 100%;
+    }
+    
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px 32px;
+      margin-top: 32px;
+    }
+    
+    .approach-item {
+      margin-bottom: 32px;
+    }
+    
+    /* Subsection titles (h4) - Smaller than main section headings */
+    .approach-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    
+    .approach-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #b8b8b8;
+      margin: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .content-section {
+        margin-bottom: 60px;
+      }
+      
+      .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      
+      .section-heading {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+      
+      h3 {
+        font-size: 1.25rem;
+      }
+      
+      .section-line {
+        width: 40px;
+        margin-bottom: 20px;
+      }
+      
+      .approach-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      
+      .approach-text {
+        font-size: 15px;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .approach-item {
+        margin-bottom: 24px;
+      }
+      
+      .section-heading {
+        font-size: 18px;
+        letter-spacing: 1.5px;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+      
+      .approach-title {
+        font-size: 15px;
+      }
+      
+      .approach-text {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body data-w-id="63bc4b7578495e8f545d970f" class="body">
@@ -476,7 +598,7 @@
                 <a href="aboutus.html" class="nav-dropdown-item">About Us</a>
                 <a href="team.html" class="nav-dropdown-item">Our Team</a>
               </div>
-            </div><a href="blog.html"
+            </div><a href="insights.html"
               class="no-underline w-inline-block">
               <div class="nav-link">INSIGHTS</div>
             </a><a data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459e9" href="contact.html"
@@ -499,7 +621,7 @@
             <a href="aboutus.html" class="mob-dropdown-item">About Us</a>
             <a href="team.html" class="mob-dropdown-item">Our Team</a>
           </div>
-        </div><a href="blog.html" class="mob-menu-ul w-inline-block">
+        </div><a href="insights.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">INSIGHTS</div>
         </a><a href="contact.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">CONTACT US</div>
@@ -589,30 +711,115 @@
         <h2>BRAND IDENTITY        </h2>
       </div>
       <div class="_30px-space"></div>
-      <h5>Scalable brand systems delivered in 1-3 weeks<br />with modular design tokens.</h5>
+      <h5>Brand systems that work everywhere, delivered in 14 days.</h5>
     </div>
   </div>
   <div id="top" data-w-id="a2b9abaf-a57f-f78f-09ae-ca01563d730b" class="brand-identity-secondary-hero">
     <div class="main-con w-container">
       <div class="div-block-32">
-        
         <div class="brand-identity-text-wrapper-v _100px-padding-top">
-          <div class="text-block-under-hero-desktop">We build comprehensive brand systems using modular design tokens, scalable logo variants, and systematic color palettes that work across digital and print. Our approach delivers complete brand packages in 1-3 weeks: logo suites, color systems, typography hierarchies, iconography, and usage guidelines. Every element ships as CSS variables, SVG assets, and Figma libraries, ensuring consistent implementation across your entire product ecosystem.
+          <!-- Problem Section -->
+          <div class="content-section problem-section">
+            <div class="section-line"></div>
+            <h3 class="section-heading">THE PROBLEM</h3>
+            <div class="section-content">
+              <p class="text-block-under-hero-desktop">Most brands fail because they look generic or break when applied across different platforms. Companies waste time with inconsistent visual systems that don't scale from digital to print.</p>
+            </div>
           </div>
-          <div class="_24px-space"></div>
-          <div class="text-block-under-hero-desktop">Teams receive brand strategy and core identity within 5 days, complete visual systems within 10 days, and production-ready assets within 3 weeks. Our systematic delivery includes brand guidelines, design tokens, component libraries, and technical documentation—all optimized for fast deployment and seamless collaboration between design and development teams.
+          
+          <div class="_60px-space"></div>
+          
+          <!-- How We Fix Section -->
+          <div class="content-section solution-section">
+            <div class="section-line"></div>
+            <h3 class="section-heading">HOW WE FIX IT</h3>
+            <div class="section-content">
+              <p class="text-block-under-hero-desktop">We build systematic brand identities using modular design tokens and scalable asset libraries. Every element works consistently across digital interfaces, print materials, and future applications.</p>
+            </div>
           </div>
+          
+          <div class="_60px-space"></div>
+          
+          <!-- What We Do Section -->
+          <div class="content-section approach-section">
+            <div class="section-line"></div>
+            <h3 class="section-heading">WHAT WE DO</h3>
+            <div class="section-content">
+              <div class="approach-grid">
+                <div class="approach-item">
+                  <h4 class="approach-title">Logo Systems</h4>
+                  <p class="approach-text">Scalable logo variants, icon families, and mark applications for every use case</p>
+                </div>
+                <div class="approach-item">
+                  <h4 class="approach-title">Color & Typography</h4>
+                  <p class="approach-text">Systematic color palettes and typography hierarchies with CSS variables included</p>
+                </div>
+                <div class="approach-item">
+                  <h4 class="approach-title">Brand Guidelines</h4>
+                  <p class="approach-text">Comprehensive usage documentation and implementation rules for consistent application</p>
+                </div>
+                <div class="approach-item">
+                  <h4 class="approach-title">Asset Libraries</h4>
+                  <p class="approach-text">Ready-to-use Figma libraries, SVG exports, and design token packages for development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="_100px-space"></div>
         </div>
       </div>
     </div>
     <div class="main-con mobile w-container">
       <div class="div-block-32">
-       
         <div class="brand-identity-text-wrapper-v _100px-padding-top">
-          <div class="text-block-under-hero-desktop">We build comprehensive brand systems using modular design tokens, scalable logo variants, and systematic color palettes that work across digital and print. Our approach delivers complete brand packages in 1-3 weeks: logo suites, color systems, typography hierarchies, iconography, and usage guidelines. Every element ships as CSS variables, SVG assets, and Figma libraries, ensuring consistent implementation across your entire product ecosystem.
+          <!-- Problem Section -->
+          <div class="content-section problem-section">
+            <div class="section-line"></div>
+            <h3 class="section-heading">THE PROBLEM</h3>
+            <div class="section-content">
+              <p class="text-block-under-hero-desktop">Most brands fail because they look generic or break when applied across different platforms. Companies waste time with inconsistent visual systems that don't scale from digital to print.</p>
+            </div>
           </div>
-          <div class="_24px-space"></div>
-          <div class="text-block-under-hero-desktop">Teams receive brand strategy and core identity within 5 days, complete visual systems within 10 days, and production-ready assets within 3 weeks. Our systematic delivery includes brand guidelines, design tokens, component libraries, and technical documentation—all optimized for fast deployment and seamless collaboration between design and development teams.</div>
+          
+          <div class="_40px-space"></div>
+          
+          <!-- How We Fix Section -->
+          <div class="content-section solution-section">
+            <div class="section-line"></div>
+            <h3 class="section-heading">HOW WE FIX IT</h3>
+            <div class="section-content">
+              <p class="text-block-under-hero-desktop">We build systematic brand identities using modular design tokens and scalable asset libraries. Every element works consistently across digital interfaces, print materials, and future applications.</p>
+            </div>
+          </div>
+          
+          <div class="_40px-space"></div>
+          
+          <!-- What We Do Section -->
+          <div class="content-section approach-section">
+            <div class="section-line"></div>
+            <h3 class="section-heading">WHAT WE DO</h3>
+            <div class="section-content">
+              <div class="approach-item">
+                <h4 class="approach-title">Logo Systems</h4>
+                <p class="approach-text">Scalable logo variants, icon families, and mark applications for every use case</p>
+              </div>
+              <div class="approach-item">
+                <h4 class="approach-title">Color & Typography</h4>
+                <p class="approach-text">Systematic color palettes and typography hierarchies with CSS variables included</p>
+              </div>
+              <div class="approach-item">
+                <h4 class="approach-title">Brand Guidelines</h4>
+                <p class="approach-text">Comprehensive usage documentation and implementation rules for consistent application</p>
+              </div>
+              <div class="approach-item">
+                <h4 class="approach-title">Asset Libraries</h4>
+                <p class="approach-text">Ready-to-use Figma libraries, SVG exports, and design token packages for development</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="_60px-space"></div>
         </div>
       </div>
     </div>

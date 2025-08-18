@@ -55,12 +55,118 @@
       }
     }
     
+    /* ===== MOBILE OPTIMIZATION - CONSOLIDATED ===== */
     @media (max-width: 767px) {
+      /* Body & Layout */
       body {
         padding-top: 120px !important;
+        font-size: 16px !important; /* Prevent iOS zoom */
       }
+      
       .wide-container {
-        padding: 0 24px;
+        padding: 0 20px;
+      }
+      
+      /* Navigation */
+      .navbar-logo-left-container {
+        padding-bottom: 12px !important;
+      }
+      
+      .navbar-logo-left-container .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+      
+      /* Hero Section */
+      .hero-section {
+        min-height: 70vh !important;
+        padding: 40px 0 60px 0 !important;
+      }
+      
+      .hero-title {
+        font-size: clamp(2.5rem, 8vw, 4rem) !important;
+        line-height: 0.9 !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .hero-subtitle {
+        font-size: clamp(1rem, 3vw, 1.2rem) !important;
+        line-height: 1.5 !important;
+        margin-top: 16px !important;
+        padding: 0 10px !important;
+      }
+      
+      /* Process Section */
+      .process-section {
+        padding: 40px 0 30px 0 !important;
+      }
+      
+      .section-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+        margin-bottom: 30px !important;
+      }
+      
+      .process-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      
+      .process-step {
+        padding: 24px 20px !important;
+        text-align: center !important;
+      }
+      
+      .step-number {
+        font-size: 1.5rem !important;
+        margin-bottom: 12px !important;
+      }
+      
+      .step-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 8px !important;
+      }
+      
+      .step-description {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+      }
+      
+      /* Values Grid */
+      .values-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      
+      .value-card {
+        padding: 20px 16px !important;
+        text-align: center !important;
+      }
+      
+      .value-icon {
+        width: 40px !important;
+        height: 40px !important;
+        margin-bottom: 12px !important;
+      }
+      
+      .value-title {
+        font-size: 1.1rem !important;
+        margin-bottom: 8px !important;
+      }
+      
+      .value-description {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+      }
+      
+      /* Footer */
+      .footer-con {
+        padding: 0 20px !important;
+      }
+      
+      /* Touch-friendly elements */
+      a, button {
+        min-height: 44px !important;
+        min-width: 44px !important;
       }
     }
 
@@ -291,11 +397,6 @@
       color: rgba(255,255,255,0.7);
     }
     
-    @media (max-width: 767px) {
-      .values-grid {
-        grid-template-columns: 1fr;
-      }
-    }
 
     /* Hero Cards Container */
     .hero-cards-container {
@@ -1085,18 +1186,6 @@
       }
     }
     
-    @media (max-width: 767px) {
-      .navbar-logo-left-container {
-        padding-bottom: 12px !important;
-      }
-      .navbar-logo-left-container .container {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-      }
-      body {
-        padding-top: 80px !important;
-      }
-    }
 
     /* Footer Styles from Index */
     .footer {
@@ -1137,11 +1226,6 @@
       color: white;
     }
     
-    @media (max-width: 767px) {
-      .footer-con {
-        padding: 0 24px;
-      }
-    }
   </style>
 </head>
 
@@ -1233,7 +1317,7 @@
                 </svg>
               </a>
               <div class="nav-dropdown-menu">
-                <a href="blog.html" class="nav-dropdown-item">Insights</a>
+                <a href="insights.html" class="nav-dropdown-item">Insights</a>
                 <a href="index.html#courses" class="nav-dropdown-item">Courses</a>
               </div>
             </div>

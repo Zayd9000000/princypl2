@@ -364,6 +364,128 @@
       cursor: pointer;
     }
   </style>
+  
+  <!-- Content Section Styling -->
+  <style>
+    .content-section {
+      margin-bottom: 80px;
+      text-align: left;
+    }
+    
+    .section-line {
+      width: 60px;
+      height: 2px;
+      background-color: #ffffff;
+      margin-bottom: 24px;
+    }
+    
+    /* Main section headings (h3) - Larger than subsection titles */
+    .section-heading {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #ffffff;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+    }
+    
+    /* General h3 styling for standalone h3 elements */
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    
+    .section-content {
+      max-width: 100%;
+    }
+    
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px 32px;
+      margin-top: 32px;
+    }
+    
+    .approach-item {
+      margin-bottom: 32px;
+    }
+    
+    /* Subsection titles (h4) - Smaller than main section headings */
+    .approach-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    
+    .approach-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #b8b8b8;
+      margin: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .content-section {
+        margin-bottom: 60px;
+      }
+      
+      .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      
+      .section-heading {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+      
+      h3 {
+        font-size: 1.25rem;
+      }
+      
+      .section-line {
+        width: 40px;
+        margin-bottom: 20px;
+      }
+      
+      .approach-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      
+      .approach-text {
+        font-size: 15px;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .approach-item {
+        margin-bottom: 24px;
+      }
+      
+      .section-heading {
+        font-size: 18px;
+        letter-spacing: 1.5px;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+      
+      .approach-title {
+        font-size: 15px;
+      }
+      
+      .approach-text {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body data-w-id="63bc4b7578495e8f545d970f" class="body">
@@ -396,7 +518,7 @@
                 <a href="aboutus.html" class="nav-dropdown-item">About Us</a>
                 <a href="team.html" class="nav-dropdown-item">Our Team</a>
               </div>
-            </div><a href="blog.html"
+            </div><a href="insights.html"
               class="no-underline w-inline-block">
               <div class="nav-link">INSIGHTS</div>
             </a><a data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459e9" href="contact.html"
@@ -419,7 +541,7 @@
             <a href="aboutus.html" class="mob-dropdown-item">About Us</a>
             <a href="team.html" class="mob-dropdown-item">Our Team</a>
           </div>
-        </div><a href="blog.html" class="mob-menu-ul w-inline-block">
+        </div><a href="insights.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">INSIGHTS</div>
         </a><a href="contact.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">CONTACT US</div>
@@ -537,19 +659,107 @@
   <div id="top" class="text-block-under-hero">
     <div class="main-con w-container">
       <div class="text-wrapper-v">
-        <div class="text-block-under-hero-desktop">Motion assets shipped production-ready in 72 hours. Every animation includes WebP/MP4 exports under 50KB, 60fps playback benchmarks, and GPU-optimized code. We deliver Lottie files with 90% compression, CSS keyframes for critical path loading, and GSAP modules with tree-shaking support. All exports include mobile fallbacks, loading states, and performance monitoring hooks that trigger at render time.
-          <br /></div>
-        <div class="_24px-space"></div>
-      
+        <!-- Problem Section -->
+        <div class="content-section problem-section">
+          <div class="section-line"></div>
+          <h3 class="section-heading">THE PROBLEM</h3>
+          <div class="section-content">
+            <p class="text-block-under-hero-desktop">Most animations hurt performance with large file sizes and poor mobile optimization. Teams struggle with choppy frame rates, slow loading times, and motion that breaks on different devices and browsers.</p>
+          </div>
+        </div>
+        
+        <div class="_60px-space"></div>
+        
+        <!-- How We Fix Section -->
+        <div class="content-section solution-section">
+          <div class="section-line"></div>
+          <h3 class="section-heading">HOW WE FIX IT</h3>
+          <div class="section-content">
+            <p class="text-block-under-hero-desktop">We create performance-optimized motion systems with sub-50KB file sizes and 60fps guarantees. Every animation includes mobile fallbacks and GPU optimization for smooth playback everywhere.</p>
+          </div>
+        </div>
+        
+        <div class="_60px-space"></div>
+        
+        <!-- What We Do Section -->
+        <div class="content-section approach-section">
+          <div class="section-line"></div>
+          <h3 class="section-heading">WHAT WE DO</h3>
+          <div class="section-content">
+            <div class="approach-grid">
+              <div class="approach-item">
+                <h4 class="approach-title">Optimized Exports</h4>
+                <p class="approach-text">Lottie files with 90% compression, WebP/MP4 variants, and CSS keyframes for critical loading</p>
+              </div>
+              <div class="approach-item">
+                <h4 class="approach-title">Performance Testing</h4>
+                <p class="approach-text">60fps benchmarks, GPU optimization, and performance monitoring hooks built into every asset</p>
+              </div>
+              <div class="approach-item">
+                <h4 class="approach-title">GSAP Integration</h4>
+                <p class="approach-text">Tree-shaking compatible modules and timeline systems for complex interactive animations</p>
+              </div>
+              <div class="approach-item">
+                <h4 class="approach-title">Cross-Device Support</h4>
+                <p class="approach-text">Mobile fallbacks, reduced motion support, and loading states for accessibility compliance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="_100px-space"></div>
       </div>
-      <div class="_60px-space"></div>
-      <div class="_60px-space"></div>
       <div class="line"></div>
     </div>
     <div class="main-con mobile w-container">
       <div class="text-wrapper-v">
-        <div class="text-block-under-hero-desktop">Motion assets shipped production-ready in 72 hours. Every animation includes WebP/MP4 exports under 50KB, 60fps playback benchmarks, and GPU-optimized code. We deliver Lottie files with 90% compression, CSS keyframes for critical path loading, and GSAP modules with tree-shaking support. All exports include mobile fallbacks, loading states, and performance monitoring hooks that trigger at render time.        </div>
+        <!-- Problem Section -->
+        <div class="content-section problem-section">
+          <div class="section-line"></div>
+          <h3 class="section-heading">THE PROBLEM</h3>
+          <div class="section-content">
+            <p class="text-block-under-hero-desktop">Most animations hurt performance with large file sizes and poor mobile optimization. Teams struggle with choppy frame rates, slow loading times, and motion that breaks on different devices and browsers.</p>
+          </div>
+        </div>
         
+        <div class="_40px-space"></div>
+        
+        <!-- How We Fix Section -->
+        <div class="content-section solution-section">
+          <div class="section-line"></div>
+          <h3 class="section-heading">HOW WE FIX IT</h3>
+          <div class="section-content">
+            <p class="text-block-under-hero-desktop">We create performance-optimized motion systems with sub-50KB file sizes and 60fps guarantees. Every animation includes mobile fallbacks and GPU optimization for smooth playback everywhere.</p>
+          </div>
+        </div>
+        
+        <div class="_40px-space"></div>
+        
+        <!-- What We Do Section -->
+        <div class="content-section approach-section">
+          <div class="section-line"></div>
+          <h3 class="section-heading">WHAT WE DO</h3>
+          <div class="section-content">
+            <div class="approach-item">
+              <h4 class="approach-title">Optimized Exports</h4>
+              <p class="approach-text">Lottie files with 90% compression, WebP/MP4 variants, and CSS keyframes for critical loading</p>
+            </div>
+            <div class="approach-item">
+              <h4 class="approach-title">Performance Testing</h4>
+              <p class="approach-text">60fps benchmarks, GPU optimization, and performance monitoring hooks built into every asset</p>
+            </div>
+            <div class="approach-item">
+              <h4 class="approach-title">GSAP Integration</h4>
+              <p class="approach-text">Tree-shaking compatible modules and timeline systems for complex interactive animations</p>
+            </div>
+            <div class="approach-item">
+              <h4 class="approach-title">Cross-Device Support</h4>
+              <p class="approach-text">Mobile fallbacks, reduced motion support, and loading states for accessibility compliance</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="_60px-space"></div>
       </div>
     </div>
   </div>
@@ -736,7 +946,7 @@
           <div class="website-prj-left-content-sticky">
             <div class="website-prj-name-desc-wrapper">
               <h2 class="h3-mob">A TECH COMPANY'S WEBSITE BUILT WITH WEBFLOW</h2>
-              <div class="body-text-16px grey">We helped IPSecure to create a clean and intuitive website and web
+              <div class="body-text-16px grey">We helped IPSecure to create a clean and functional website and web
                 application for a SaaS brand protection solution for Amazon sellers.</div>
             </div>
             <div class="year-view-site-wrapper">
@@ -953,7 +1163,7 @@
             </div>
             <div class="website-prj-name-desc-wrapper">
               <h3>A TECH COMPANY'S WEBSITE BUILT WITH WEBFLOW</h3>
-              <div class="body-text-16px grey">We helped IPSecure to create a clean and intuitive website and web
+              <div class="body-text-16px grey">We helped IPSecure to create a clean and functional website and web
                 application for a SaaS brand protection solution for Amazon sellers.</div>
             </div>
           </div><a href="https://www.ipsecure.com/" target="_blank" class="view-site-link websites w-inline-block">

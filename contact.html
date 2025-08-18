@@ -263,25 +263,7 @@
     transform: translateY(0);
   }
   
-  .nav-dropdown-item {
-    display: block;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .nav-dropdown-item:last-child {
-    border-bottom: none;
-  }
-  
-  .nav-dropdown-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    text-decoration: none;
-  }
+  /* Old dropdown styles - removed to prevent conflicts with modern navbar */
   
   /* Mobile dropdown styles */
   .mob-dropdown {
@@ -305,11 +287,6 @@
     padding: 10px 30px;
     text-decoration: none;
     font-size: 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .mob-dropdown-item:last-child {
-    border-bottom: none;
   }
   
   .mob-dropdown-item:hover {
@@ -320,6 +297,458 @@
   
   .mob-dropdown-toggle {
     cursor: pointer;
+  }
+
+  /* Modern Navbar Styles from Index.html */
+  .nav-menu-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+    justify-content: flex-end;
+    margin-right: 0;
+    flex: 1;
+    padding-left: 50px;
+  }
+  
+  /* Create visual grouping with spacing */
+  .nav-item:nth-child(6) {
+    margin-right: 3rem; /* Space after Resources, before Pricing */
+  }
+  
+  .nav-menu-wrapper .nav-item {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  /* Prevent text wrapping in nav items */
+  .nav-menu-wrapper .nav-item,
+  .nav-menu-wrapper .nav-link,
+  .nav-menu-wrapper .nav-button {
+    white-space: nowrap !important;
+  }
+  
+  .nav-menu-wrapper .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .nav-menu-wrapper .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Underline animation for regular nav items */
+  .nav-item:not(.has-dropdown) .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav-item:not(.has-dropdown) .nav-link:hover::after {
+    width: calc(100% - 32px);
+    left: 16px;
+  }
+  
+  /* Dropdown caret styles */
+  .dropdown-caret {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+  }
+  
+  .nav-item.has-dropdown:hover .dropdown-caret {
+    transform: rotate(180deg);
+  }
+  
+  /* Modern Dropdown Menu Styles */
+  .nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.98) 0%, rgba(10, 10, 10, 0.98) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    min-width: 200px;
+    padding: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-item.has-dropdown:hover .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  /* Dropdown arrow */
+  .nav-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: rgba(15, 15, 15, 0.98);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-dropdown-item {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .nav-dropdown-item:hover {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    color: white;
+    transform: translateX(4px);
+  }
+  
+  .nav-dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 0;
+    background: linear-gradient(180deg, #3B82F6 0%, #8B5CF6 100%);
+    transition: height 0.3s ease;
+  }
+  
+  .nav-dropdown-item:hover::before {
+    height: 60%;
+  }
+  
+  /* Button Styles */
+  .nav-button {
+    background: transparent;
+    color: white;
+    border: 1.5px solid rgba(59, 130, 246, 0.5);
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .nav-button:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  }
+  
+  .nav-button.primary {
+    background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    border: none;
+    color: white;
+  }
+  
+  .nav-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  }
+  
+  .navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .brand.w-nav-brand {
+    margin-right: 0 !important;
+    margin-left: -15px !important;
+    flex-shrink: 0 !important;
+    position: relative !important;
+    left: 0 !important;
+  }
+
+  /* Mobile Menu Styles */
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(5, 5, 5, 0.98) 100%);
+    backdrop-filter: blur(20px);
+    z-index: 9998;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    padding-top: 120px;
+  }
+
+  .menu-mobile.active {
+    right: 0;
+  }
+
+  .mob-menu-list {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mob-menu-ul {
+    border: none !important;
+    padding: 16px 0 !important;
+    margin-bottom: 0 !important;
+    border-radius: 12px !important;
+    position: relative;
+    display: block !important;
+    text-decoration: none;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+  }
+
+  .mob-menu-ul:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(8px);
+  }
+
+  .mob-menu-link {
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .dropdown-caret-mobile {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+  }
+
+  .mob-dropdown.active .dropdown-caret-mobile {
+    transform: rotate(180deg);
+  }
+
+  .mob-dropdown {
+    width: 100%;
+  }
+
+  .mob-dropdown-menu {
+    display: none;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: 12px;
+    border-radius: 8px;
+    padding: 12px 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mob-dropdown.active .mob-dropdown-menu {
+    display: block;
+    animation: slideDown 0.3s ease;
+  }
+
+  .mob-dropdown-item {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px 32px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    margin: 4px 8px;
+  }
+
+  .mob-dropdown-item:hover {
+    background: rgba(59, 130, 246, 0.1);
+    color: white;
+    transform: translateX(8px);
+  }
+
+  .mob-menu-buttons {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 20px;
+  }
+
+  .mob-menu-button {
+    display: block;
+    text-align: center;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1.5px solid rgba(59, 130, 246, 0.5);
+    color: white;
+    background: transparent;
+  }
+
+  .mob-menu-button:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.8);
+    transform: translateY(-2px);
+  }
+
+  .mob-menu-button.primary {
+    background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    border: none;
+    color: white;
+  }
+
+  .mob-menu-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  }
+
+  /* Mobile overlay */
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9997;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Close button in menu */
+  .mobile-close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-close-btn::before,
+  .mobile-close-btn::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+  }
+
+  .mobile-close-btn::before {
+    transform: rotate(45deg);
+  }
+
+  .mobile-close-btn::after {
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: 992px) {
+    .menu-mobile {
+      display: none;
+    }
+    
+    .hamburger-menu {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .nav-menu-wrapper {
+      display: none;
+    }
   }
 </style>
 </head>
@@ -337,52 +766,191 @@
       class="navbar-logo-left-container shadow-three w-nav">
       <div class="container">
         <div class="navbar-wrapper">
-          <a href="index.html" class="brand w-nav-brand" style="display: flex !important; align-items: center !important; width: auto !important;">
+          <a href="./index.html" class="brand w-nav-brand" style="display: flex !important; align-items: center !important; width: auto !important; cursor: pointer !important;">
             <img alt=""
               loading="lazy"
               src="princyplnav.png"
               class="logo" style="max-width: 120px !important; height: 120px !important; width: 120px !important; flex-shrink: 0 !important; margin: 0 !important;" />
           </a>
-          <nav role="navigation" class="nav-menu-wrapper w-nav-menu"><a data-w-id="c8d246f3-4c00-8361-959b-8140bc5a99a5"
-              href="index.html#services-list" class="no-underline w-inline-block">
-              <div data-w-id="f15cd412-a5ab-db1a-44ea-5affc4d8e21b" class="nav-link">SERVICES</div>
-            </a><div class="nav-dropdown">
-              <a href="#" class="no-underline w-inline-block">
-                <div class="nav-link">ABOUT ▼</div>
+          <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+            <!-- Services -->
+            <div class="nav-item">
+              <a href="index.html#services-list" class="nav-link">SERVICES</a>
+            </div>
+            
+            <!-- About Us Dropdown -->
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                ABOUT US
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
               <div class="nav-dropdown-menu">
-                <a href="aboutus.html" class="nav-dropdown-item">About Us</a>
+                <a href="aboutus.html" class="nav-dropdown-item">How We Build</a>
                 <a href="team.html" class="nav-dropdown-item">Our Team</a>
               </div>
-            </div><a href="blog.html"
-              class="no-underline w-inline-block">
-              <div class="nav-link">INSIGHTS</div>
-            </a><a data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459e9" href="contact.html" aria-current="page"
-              class="no-underline w-inline-block w--current">
-              <div data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459ea" class="nav-link">CONTACT US</div>
-            </a></nav>
-          <div scroll="both" data-w-id="44d38401-4d1b-8108-ea17-38dd2916b280" class="_14px-link grey hide-from-desktop">
-            <a data-w-id="189f0706-79dd-6214-4742-009113fde886" href="contact.html#" class="link close">close</a><a
-              data-w-id="a15b7c3f-a0ab-15ee-35c5-6dc55cf41e99" href="contact.html#" class="link">menu</a></div>
+            </div>
+            
+            <!-- Our Work Dropdown -->
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                OUR WORK
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="index.html#case-studies" class="nav-dropdown-item">Case Studies</a>
+                <a href="index.html#showcase" class="nav-dropdown-item">Showcase</a>
+              </div>
+            </div>
+            
+            <!-- Solutions Dropdown -->
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                SOLUTIONS
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="index.html#b2b-saas" class="nav-dropdown-item">B2B SaaS</a>
+                <a href="index.html#startup" class="nav-dropdown-item">Startup</a>
+                <a href="index.html#product-dev" class="nav-dropdown-item">Product Development</a>
+              </div>
+            </div>
+            
+            <!-- Products Dropdown -->
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                PRODUCTS
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="index.html#design-member" class="nav-dropdown-item">Design Member</a>
+                <a href="index.html#full-techstack" class="nav-dropdown-item">Full Techstack</a>
+                <a href="index.html#free-screening" class="nav-dropdown-item">Free Screening</a>
+              </div>
+            </div>
+            
+            <!-- Resources Dropdown -->
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                RESOURCES
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="insights.html" class="nav-dropdown-item">Insights</a>
+                <a href="index.html#courses" class="nav-dropdown-item">Courses</a>
+              </div>
+            </div>
+            
+            <!-- Pricing Button -->
+            <a href="index.html#pricing" class="nav-button">Pricing</a>
+            
+            <!-- Contact Us Button -->
+            <a href="contact.html" class="nav-button primary">Contact Us</a>
+          </nav>
+          <div class="mobile-menu-toggle hide-from-desktop">
+            <div class="hamburger-menu" onclick="openMobileMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="menu-mobile">
-      <div class="mob-menu-list"><a href="index.html#services-list" class="mob-menu-ul w-inline-block">
-          <div class="mob-menu-link">SERVICES</div>
-        </a><div class="mob-dropdown mob-menu-ul w-inline-block">
-          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">ABOUT ▼</div>
+      <div class="mobile-close-btn" onclick="closeMobileMenu()"></div>
+      <div class="mob-menu-list">
+        <!-- Services -->
+        <a href="index.html#services-list" class="mob-menu-ul w-inline-block">
+          <div class="mob-menu-link">Services</div>
+        </a>
+        
+        <!-- About Us Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            About Us
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <div class="mob-dropdown-menu">
-            <a href="aboutus.html" class="mob-dropdown-item">About Us</a>
+            <a href="aboutus.html" class="mob-dropdown-item">How We Build</a>
             <a href="team.html" class="mob-dropdown-item">Our Team</a>
           </div>
-        </div><a href="blog.html" class="mob-menu-ul w-inline-block">
-          <div class="mob-menu-link">INSIGHTS</div>
-        </a><a href="contact.html" aria-current="page" class="mob-menu-ul w-inline-block w--current">
-          <div class="mob-menu-link">CONTACT US</div>
-        </a></div>
-      <div class="social-container mobile-menu">
+        </div>
+
+        <!-- Our Work Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            Our Work
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="mob-dropdown-menu">
+            <a href="index.html#case-studies" class="mob-dropdown-item">Case Studies</a>
+            <a href="index.html#showcase" class="mob-dropdown-item">Showcase</a>
+          </div>
+        </div>
+
+        <!-- Solutions Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            Solutions
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="mob-dropdown-menu">
+            <a href="index.html#b2b-saas" class="mob-dropdown-item">B2B SaaS</a>
+            <a href="index.html#startup" class="mob-dropdown-item">Startup</a>
+            <a href="index.html#product-dev" class="mob-dropdown-item">Product Development</a>
+          </div>
+        </div>
+
+        <!-- Products Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            Products
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="mob-dropdown-menu">
+            <a href="index.html#design-member" class="mob-dropdown-item">Design Member</a>
+            <a href="index.html#full-techstack" class="mob-dropdown-item">Full Techstack</a>
+            <a href="index.html#free-screening" class="mob-dropdown-item">Free Screening</a>
+          </div>
+        </div>
+
+        <!-- Resources Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            Resources
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="mob-dropdown-menu">
+            <a href="insights.html" class="mob-dropdown-item">Insights</a>
+            <a href="index.html#courses" class="mob-dropdown-item">Courses</a>
+          </div>
+        </div>
         
+        <!-- Mobile Buttons -->
+        <div class="mob-menu-buttons">
+          <a href="index.html#pricing" class="mob-menu-button">Pricing</a>
+          <a href="contact.html" class="mob-menu-button primary">Contact Us</a>
+        </div>
       </div>
     </div>
   </div>
@@ -730,7 +1298,47 @@
       const dropdown = element.parentElement;
       dropdown.classList.toggle('active');
     }
+
+    // Mobile menu functionality
+    function openMobileMenu() {
+      const mobileMenu = document.querySelector('.menu-mobile');
+      const hamburger = document.querySelector('.hamburger-menu');
+      const overlay = document.querySelector('.mobile-overlay');
+      
+      mobileMenu.classList.add('active');
+      hamburger.classList.add('active');
+      if (overlay) overlay.classList.add('active');
+      
+      // Prevent body scrolling
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      const mobileMenu = document.querySelector('.menu-mobile');
+      const hamburger = document.querySelector('.hamburger-menu');
+      const overlay = document.querySelector('.mobile-overlay');
+      
+      mobileMenu.classList.remove('active');
+      hamburger.classList.remove('active');
+      if (overlay) overlay.classList.remove('active');
+      
+      // Restore body scrolling
+      document.body.style.overflow = '';
+    }
+
+    // Close menu when clicking on menu items
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuLinks = document.querySelectorAll('.mob-menu-ul:not(.mob-dropdown), .mob-dropdown-item, .mob-menu-button');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          closeMobileMenu();
+        });
+      });
+    });
   </script>
+
+  <!-- Mobile overlay -->
+  <div class="mobile-overlay" onclick="closeMobileMenu()"></div>
 </body>
 
 </html>

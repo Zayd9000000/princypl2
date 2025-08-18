@@ -55,9 +55,116 @@
       }
     }
     
+    /* ===== MOBILE OPTIMIZATION - CONSOLIDATED ===== */
     @media (max-width: 767px) {
+      /* Body & Layout */
+      body {
+        font-size: 16px !important; /* Prevent iOS zoom */
+      }
+      
       .container-tight {
-        padding: 0 24px;
+        padding: 0 20px;
+      }
+      
+      /* Navigation */
+      .navbar-logo-left-container {
+        padding-bottom: 12px !important;
+      }
+      
+      .navbar-logo-left-container .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+      
+      /* Hero Section */
+      .hero-compact {
+        min-height: 50vh !important;
+        margin-bottom: 30px !important;
+      }
+      
+      .hero-heading {
+        font-size: clamp(2.5rem, 8vw, 4rem) !important;
+        line-height: 0.85 !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .hero-description {
+        font-size: clamp(1rem, 3vw, 1.2rem) !important;
+        line-height: 1.5 !important;
+        padding: 0 10px !important;
+      }
+      
+      /* Team Grid */
+      .team-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        padding: 0 !important;
+      }
+      
+      .team-member {
+        padding: 24px 20px !important;
+        text-align: center !important;
+      }
+      
+      .member-image {
+        width: 120px !important;
+        height: 120px !important;
+        margin: 0 auto 16px auto !important;
+      }
+      
+      .member-name {
+        font-size: 1.3rem !important;
+        margin-bottom: 8px !important;
+      }
+      
+      .member-title {
+        font-size: 1rem !important;
+        margin-bottom: 12px !important;
+      }
+      
+      .member-bio {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+      }
+      
+      /* Join Section */
+      .join-section {
+        padding: 60px 0 40px 0 !important;
+      }
+      
+      .join-card {
+        padding: 32px 20px !important;
+        margin: 0 20px !important;
+        text-align: center !important;
+      }
+      
+      .join-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 16px !important;
+      }
+      
+      .join-description {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 24px !important;
+      }
+      
+      /* Footer */
+      .footer-con {
+        padding: 0 20px !important;
+      }
+      
+      /* Touch-friendly elements */
+      a, button {
+        min-height: 44px !important;
+        min-width: 44px !important;
+      }
+      
+      .cta-button {
+        padding: 14px 24px !important;
+        font-size: 16px !important;
+        width: auto !important;
+        display: inline-block !important;
       }
     }
 
@@ -875,18 +982,6 @@
       }
     }
     
-    @media (max-width: 767px) {
-      .navbar-logo-left-container {
-        padding-bottom: 12px !important;
-      }
-      .navbar-logo-left-container .container {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-      }
-      body {
-        padding-top: 80px !important;
-      }
-    }
 
     /* Join Section - Reduced spacing */
     .join-section {
@@ -947,12 +1042,6 @@
       box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
     }
     
-    @media (max-width: 767px) {
-      .join-card {
-        padding: 40px 24px;
-        margin: 0 20px;
-      }
-    }
 
     /* Footer Styles from Index */
     .footer {
@@ -992,11 +1081,6 @@
       color: white;
     }
     
-    @media (max-width: 767px) {
-      .footer-con {
-        padding: 0 24px;
-      }
-    }
   </style>
 </head>
 
@@ -1088,7 +1172,7 @@
                 </svg>
               </a>
               <div class="nav-dropdown-menu">
-                <a href="blog.html" class="nav-dropdown-item">Insights</a>
+                <a href="insights.html" class="nav-dropdown-item">Insights</a>
                 <a href="index.html#courses" class="nav-dropdown-item">Courses</a>
               </div>
             </div>

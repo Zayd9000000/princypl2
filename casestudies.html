@@ -263,7 +263,7 @@
       }
     }
 
-    /* Navbar styling - copied from other pages */
+    /* Navbar styling - complete from other pages */
     .navbar-logo-left-container {
       background: linear-gradient(180deg, 
         rgba(0, 0, 0, 1) 0%, 
@@ -281,6 +281,165 @@
       padding: 15px 0 !important;
       min-height: auto !important;
       height: auto !important;
+    }
+
+    .navbar-wrapper {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+      padding: 0 40px !important;
+      width: 100% !important;
+    }
+    
+    .nav-menu-wrapper {
+      display: flex !important;
+      align-items: center !important;
+      gap: 40px !important;
+      margin: 0 !important;
+      position: static !important;
+      background: transparent !important;
+    }
+    
+    .nav-menu-wrapper .nav-item {
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    
+    .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+      text-decoration: none !important;
+      font-size: 0.85rem !important;
+      font-weight: 500 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.1em !important;
+      transition: all 0.3s ease !important;
+      padding: 12px 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      cursor: pointer !important;
+    }
+    
+    .nav-link:hover {
+      color: rgba(255, 255, 255, 1) !important;
+    }
+    
+    .nav-item:not(.has-dropdown) .nav-link:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Dropdown caret styles */
+    .dropdown-caret {
+      display: inline-block;
+      margin-left: 6px;
+      transition: transform 0.3s ease;
+      vertical-align: middle;
+    }
+    
+    .nav-item:hover .dropdown-caret {
+      transform: rotate(180deg);
+    }
+    
+    /* Dropdown menu styles */
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-10px);
+      background: linear-gradient(135deg, rgba(15, 15, 15, 0.98) 0%, rgba(10, 10, 10, 0.98) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 8px 0;
+      min-width: 180px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+    
+    .nav-item:hover .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    /* Arrow for dropdown */
+    .nav-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 12px;
+      height: 12px;
+      background: rgba(15, 15, 15, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-dropdown-item {
+      display: block;
+      padding: 12px 20px;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-dropdown-item:hover {
+      background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+      color: white;
+      transform: translateX(4px);
+    }
+    
+    .nav-dropdown-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 0;
+      background: linear-gradient(180deg, #3B82F6 0%, #8B5CF6 100%);
+      transition: height 0.3s ease;
+    }
+    
+    .nav-dropdown-item:hover::before {
+      height: 60%;
+    }
+    
+    /* Navigation buttons */
+    .nav-button {
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    
+    .nav-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+    }
+    
+    .nav-button.primary {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      border: none;
+      color: white;
     }
 
     /* Logo fixes */
@@ -346,16 +505,87 @@
             <img alt="" loading="lazy" src="princyplnav.png" class="logo" style="max-width: 120px !important; height: 120px !important; width: 120px !important; flex-shrink: 0 !important; margin: 0 !important;" />
           </a>
           <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+            <!-- Services -->
             <div class="nav-item">
               <a href="index.html#services-list" class="nav-link">SERVICES</a>
             </div>
+            
+            <!-- About Us Dropdown -->
             <div class="nav-item has-dropdown">
-              <a href="#" class="nav-link">ABOUT US</a>
+              <a href="#" class="nav-link">
+                ABOUT US
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="aboutus.html" class="nav-dropdown-item">How We Build</a>
+                <a href="team.html" class="nav-dropdown-item">Our Team</a>
+              </div>
             </div>
+            
+            <!-- Our Work Dropdown -->
             <div class="nav-item has-dropdown">
-              <a href="#" class="nav-link">OUR WORK</a>
+              <a href="#" class="nav-link">
+                OUR WORK
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="casestudies.html" class="nav-dropdown-item">Case Studies</a>
+                <a href="index.html#showcase" class="nav-dropdown-item">Showcase</a>
+              </div>
             </div>
+            
+            <!-- Solutions Dropdown -->
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                SOLUTIONS
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="index.html#b2b-saas" class="nav-dropdown-item">B2B SaaS</a>
+                <a href="index.html#startup" class="nav-dropdown-item">Startup</a>
+                <a href="index.html#product-dev" class="nav-dropdown-item">Product Development</a>
+              </div>
+            </div>
+            
+            <!-- Products Dropdown -->
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                PRODUCTS
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="index.html#design-member" class="nav-dropdown-item">Design Member</a>
+                <a href="index.html#full-techstack" class="nav-dropdown-item">Full Techstack</a>
+                <a href="index.html#free-screening" class="nav-dropdown-item">Free Screening</a>
+              </div>
+            </div>
+            
+            <!-- Resources Dropdown -->
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">
+                RESOURCES
+                <svg class="dropdown-caret" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="insights.html" class="nav-dropdown-item">Insights</a>
+                <a href="index.html#courses" class="nav-dropdown-item">Courses</a>
+              </div>
+            </div>
+            
+            <!-- Pricing Button -->
             <a href="index.html#pricing" class="nav-button">Pricing</a>
+            
+            <!-- Contact Us Button -->
             <a href="contact.html" class="nav-button primary">Contact Us</a>
           </nav>
         </div>
