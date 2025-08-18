@@ -344,22 +344,25 @@
     }
     
     .step-dot {
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.3);
       transition: all 0.3s ease;
       flex-shrink: 0;
     }
     
     .timeline-step.complete .step-dot {
-      background: #4ade80;
-      box-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
+      background: #6ee7b7;
+      border-color: #4ade80;
+      box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
     }
     
     .timeline-step.current .step-dot {
-      background: #3B82F6;
-      box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+      background: #60a5fa;
+      border-color: #3B82F6;
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.7);
       animation: pulse 2s infinite;
     }
     
@@ -373,12 +376,12 @@
     }
     
     .timeline-step.complete .step-label {
-      color: #4ade80;
+      color: #86efac;
     }
     
     .timeline-step.current .step-label {
-      color: #3B82F6;
-      font-weight: 600;
+      color: #93c5fd;
+      font-weight: 500;
     }
     
     .timeline-arrow {
