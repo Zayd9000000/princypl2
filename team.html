@@ -59,11 +59,13 @@
     @media (max-width: 767px) {
       /* Body & Layout */
       body {
+        padding-top: 100px !important;
         font-size: 16px !important; /* Prevent iOS zoom */
       }
       
       .container-tight {
-        padding: 0 20px;
+        padding: 0 24px !important;
+        max-width: 100% !important;
       }
       
       /* Navigation */
@@ -78,64 +80,98 @@
       
       /* Hero Section */
       .hero-compact {
-        min-height: 50vh !important;
-        margin-bottom: 30px !important;
+        min-height: 40vh !important;
+        margin-bottom: 40px !important;
+        padding: 30px 0 !important;
       }
       
       .hero-heading {
-        font-size: clamp(2.5rem, 8vw, 4rem) !important;
-        line-height: 0.85 !important;
-        margin-bottom: 20px !important;
+        font-size: clamp(2rem, 7vw, 3.5rem) !important;
+        line-height: 1 !important;
+        margin-bottom: 24px !important;
+        text-align: left !important;
       }
       
       .hero-description {
-        font-size: clamp(1rem, 3vw, 1.2rem) !important;
+        font-size: clamp(0.95rem, 2.5vw, 1.1rem) !important;
         line-height: 1.5 !important;
-        padding: 0 10px !important;
+        padding: 0 !important;
+        text-align: left !important;
+        max-width: 100% !important;
       }
       
       /* Team Grid */
+      .team-section {
+        padding: 50px 0 40px 0 !important;
+      }
+      
       .team-grid {
         grid-template-columns: 1fr !important;
-        gap: 24px !important;
+        gap: 20px !important;
         padding: 0 !important;
       }
       
       .team-member {
-        padding: 24px 20px !important;
-        text-align: center !important;
+        display: flex !important;
+        flex-direction: row !important;
+        padding: 16px !important;
+        border-radius: 12px !important;
+        overflow: visible !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
       }
       
       .member-image {
-        width: 120px !important;
-        height: 120px !important;
-        margin: 0 auto 16px auto !important;
+        width: 100px !important;
+        height: 100px !important;
+        min-width: 100px !important;
+        margin: 0 !important;
+        aspect-ratio: 1/1 !important;
+        border-radius: 8px !important;
+        object-fit: cover !important;
+      }
+      
+      .member-info {
+        position: static !important;
+        background: none !important;
+        padding: 0 !important;
+        flex: 1 !important;
       }
       
       .member-name {
-        font-size: 1.3rem !important;
+        font-size: 1.2rem !important;
+        margin-bottom: 4px !important;
+        color: #fff !important;
+      }
+      
+      .member-role {
+        font-size: 0.9rem !important;
         margin-bottom: 8px !important;
+        color: #60A5FA !important;
       }
       
-      .member-title {
-        font-size: 1rem !important;
-        margin-bottom: 12px !important;
+      .member-skills {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 4px !important;
       }
       
-      .member-bio {
-        font-size: 0.95rem !important;
-        line-height: 1.5 !important;
+      .skill-tag {
+        font-size: 0.65rem !important;
+        padding: 2px 5px !important;
       }
       
       /* Join Section */
       .join-section {
-        padding: 60px 0 40px 0 !important;
+        padding: 80px 0 40px 0 !important;
+        margin-top: 40px !important;
       }
       
       .join-card {
-        padding: 32px 20px !important;
-        margin: 0 20px !important;
-        text-align: center !important;
+        padding: 32px 24px !important;
+        margin: 0 !important;
+        text-align: left !important;
+        border-radius: 20px !important;
       }
       
       .join-title {
@@ -143,15 +179,60 @@
         margin-bottom: 16px !important;
       }
       
-      .join-description {
+      .join-text {
         font-size: 1rem !important;
         line-height: 1.6 !important;
         margin-bottom: 24px !important;
       }
       
+      /* Culture Section */
+      .culture-section {
+        padding: 50px 0 40px 0 !important;
+      }
+      
+      .culture-content {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+      
+      .culture-text h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem) !important;
+        margin-bottom: 20px !important;
+        text-align: left !important;
+      }
+      
+      .culture-text p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+      }
+      
+      .culture-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+      }
+      
+      .stat-block {
+        text-align: center !important;
+      }
+      
+      .stat-number {
+        font-size: 2.5rem !important;
+      }
+      
       /* Footer */
+      .footer {
+        padding: 40px 0 30px 0 !important;
+        margin-top: 60px !important;
+      }
+      
       .footer-con {
-        padding: 0 20px !important;
+        padding: 0 24px !important;
+      }
+      
+      .footer-mail {
+        font-size: 1rem !important;
+        margin: 20px 0 !important;
       }
       
       /* Touch-friendly elements */
@@ -357,12 +438,9 @@
     }
     
     .stat-number {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       font-weight: 900;
-      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #3B82F6;
       margin-bottom: 5px;
       line-height: 1.2;
       padding: 8px 0;
@@ -1081,6 +1159,228 @@
       color: white;
     }
     
+    /* ========== NAVBAR CSS FROM INDEX.HTML ========== */
+    
+    /* MOBILE BREAKPOINT - MAXIMUM SPECIFICITY */
+    @media screen and (max-width: 767px) {
+      /* Body & Navigation */
+      html body.body {
+        padding-top: 120px !important;
+        font-size: 16px !important; /* Prevent iOS zoom */
+      }
+      
+      html body .navbar-logo-left-container {
+        padding: 10px 0 !important;
+        height: 80px !important;
+      }
+      
+      html body .navbar-logo-left-container .container {
+        padding: 0 8px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        height: 100% !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+      
+      html body .brand.w-nav-brand {
+        display: flex !important;
+        align-items: center !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      
+      html body .brand.w-nav-brand img.logo {
+        max-width: 50px !important;
+        height: 50px !important;
+        width: 50px !important;
+        object-fit: contain !important;
+        display: block !important;
+      }
+      
+      /* Mobile Menu */
+      html body .menu-mobile {
+        background: rgba(0, 0, 0, 0.98) !important;
+        backdrop-filter: blur(10px) !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 100% !important;
+        max-width: 400px !important;
+        height: 100vh !important;
+        z-index: 9999 !important;
+        transition: right 0.3s ease !important;
+        display: none !important;
+      }
+      
+      html body .menu-mobile.active {
+        right: 0 !important;
+        display: block !important;
+      }
+      
+      html body .mob-menu-link {
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        padding: 16px 20px !important;
+        min-height: 44px !important;
+      }
+      
+      html body .mob-dropdown-item {
+        font-size: 14px !important;
+        padding: 12px 40px !important;
+        min-height: 44px !important;
+      }
+    }
+
+    /* Hamburger Menu Button - 3 clear lines */
+    .hamburger-menu {
+      display: none;
+      width: 44px;
+      height: 44px;
+      position: relative;
+      cursor: pointer;
+      z-index: 10002;
+      background: transparent !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .hamburger-menu:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    .hamburger-menu span {
+      display: block !important;
+      position: absolute !important;
+      height: 2px !important;
+      width: 20px !important;
+      background: #ffffff !important;
+      border-radius: 1px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      opacity: 1 !important;
+    }
+
+    .hamburger-menu span:nth-child(1) {
+      top: 16px;
+    }
+
+    .hamburger-menu span:nth-child(2) {
+      top: 26px;
+    }
+
+    .hamburger-menu.active span:nth-child(1) {
+      transform: translateX(-50%) rotate(45deg);
+      top: 21px;
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+      transform: translateX(-50%) rotate(-45deg);
+      top: 21px;
+    }
+
+    /* Third line using ::after */
+    .hamburger-menu::after {
+      content: '';
+      display: block !important;
+      position: absolute !important;
+      height: 2px !important;
+      width: 20px !important;
+      background: #ffffff !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      bottom: 16px !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 1px !important;
+    }
+
+    .hamburger-menu.active::after {
+      opacity: 0;
+    }
+
+    @media (max-width: 991px) {
+      .hamburger-menu {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      
+      /* Mobile Navbar Layout */
+      .navbar-wrapper {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        position: relative !important;
+        gap: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      
+      /* Position logo on left with proper spacing */
+      .brand.w-nav-brand {
+        margin: 0 !important;
+        order: 1 !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+      }
+      
+      /* Position hamburger menu on right with proper spacing */
+      .hamburger-menu {
+        order: 3 !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      
+      /* Hide desktop nav menu */
+      .nav-menu-wrapper {
+        display: none !important;
+      }
+    }
+
+    /* Mobile CTA Button Styles */
+    .mob-menu-ul[href="#pricing"] {
+      margin: 15px 20px 8px 20px !important; /* Extra top margin for spacing */
+    }
+
+    .mob-menu-ul[href="#pricing"] .mob-menu-link {
+      border: 1.5px solid rgba(59, 130, 246, 0.5) !important;
+      border-radius: 8px !important;
+      text-align: center !important;
+      justify-content: center !important;
+      min-height: 52px !important; /* Slightly taller for CTA buttons */
+      font-weight: 600 !important;
+    }
+
+    .mob-menu-ul[href="contact.html"] {
+      margin: 8px 20px 15px 20px !important; /* Extra bottom margin */
+    }
+
+    .mob-menu-ul[href="contact.html"] .mob-menu-link {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%) !important;
+      border-radius: 8px !important;
+      text-align: center !important;
+      justify-content: center !important;
+      color: white !important;
+      min-height: 52px !important; /* Slightly taller for CTA buttons */
+      font-weight: 600 !important;
+    }
+    
   </style>
 </head>
 
@@ -1209,43 +1509,28 @@
   <!-- Team Grid -->
   <section class="container-tight">
     <div class="team-grid">
-      <!-- Team Member 1 -->
+      <!-- Team Member 1 - Ali -->
       <div class="team-member">
         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" 
-             alt="Alex Chen" class="member-image" />
+             alt="Ali" class="member-image" />
         <div class="member-info">
-          <h3 class="member-name">Alex Chen</h3>
-          <p class="member-role">Creative Director</p>
-          <div class="member-skills">
-            <span class="skill-tag">Strategy</span>
-            <span class="skill-tag">Branding</span>
-            <span class="skill-tag">Vision</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 2 -->
-      <div class="team-member">
-        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=500&fit=crop" 
-             alt="Sarah Johnson" class="member-image" />
-        <div class="member-info">
-          <h3 class="member-name">Sarah Johnson</h3>
-          <p class="member-role">Lead Designer</p>
+          <h3 class="member-name">Ali</h3>
+          <p class="member-role">Design Lead</p>
           <div class="member-skills">
             <span class="skill-tag">UI/UX</span>
-            <span class="skill-tag">Figma</span>
             <span class="skill-tag">Systems</span>
+            <span class="skill-tag">Strategy</span>
           </div>
         </div>
       </div>
 
-      <!-- Team Member 3 -->
+      <!-- Team Member 2 - Zac -->
       <div class="team-member">
         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=500&fit=crop" 
-             alt="Michael Torres" class="member-image" />
+             alt="Zac" class="member-image" />
         <div class="member-info">
-          <h3 class="member-name">Michael Torres</h3>
-          <p class="member-role">Tech Lead</p>
+          <h3 class="member-name">Zac</h3>
+          <p class="member-role">Lead Developer</p>
           <div class="member-skills">
             <span class="skill-tag">React</span>
             <span class="skill-tag">Node</span>
@@ -1254,72 +1539,27 @@
         </div>
       </div>
 
-      <!-- Team Member 4 -->
+      <!-- Team Member 3 - Raffa -->
       <div class="team-member">
-        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop" 
-             alt="Emma Davis" class="member-image" />
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=500&fit=crop" 
+             alt="Raffa" class="member-image" />
         <div class="member-info">
-          <h3 class="member-name">Emma Davis</h3>
-          <p class="member-role">UX Researcher</p>
+          <h3 class="member-name">Raffa</h3>
+          <p class="member-role">Director of Operations</p>
           <div class="member-skills">
-            <span class="skill-tag">Research</span>
-            <span class="skill-tag">Testing</span>
-            <span class="skill-tag">Analytics</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 5 -->
-      <div class="team-member">
-        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop" 
-             alt="James Wilson" class="member-image" />
-        <div class="member-info">
-          <h3 class="member-name">James Wilson</h3>
-          <p class="member-role">Senior Dev</p>
-          <div class="member-skills">
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Go</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 6 -->
-      <div class="team-member">
-        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=500&fit=crop" 
-             alt="Maya Patel" class="member-image" />
-        <div class="member-info">
-          <h3 class="member-name">Maya Patel</h3>
-          <p class="member-role">Brand Strategist</p>
-          <div class="member-skills">
-            <span class="skill-tag">Identity</span>
-            <span class="skill-tag">Content</span>
+            <span class="skill-tag">Operations</span>
+            <span class="skill-tag">Strategy</span>
             <span class="skill-tag">Growth</span>
           </div>
         </div>
       </div>
 
-      <!-- Team Member 7 -->
+      <!-- Team Member 4 - Sam -->
       <div class="team-member">
-        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop" 
-             alt="David Kim" class="member-image" />
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop" 
+             alt="Sam" class="member-image" />
         <div class="member-info">
-          <h3 class="member-name">David Kim</h3>
-          <p class="member-role">Motion Designer</p>
-          <div class="member-skills">
-            <span class="skill-tag">Animation</span>
-            <span class="skill-tag">3D</span>
-            <span class="skill-tag">WebGL</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 8 -->
-      <div class="team-member">
-        <img src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?w=400&h=500&fit=crop" 
-             alt="Lisa Anderson" class="member-image" />
-        <div class="member-info">
-          <h3 class="member-name">Lisa Anderson</h3>
+          <h3 class="member-name">Sam</h3>
           <p class="member-role">Project Manager</p>
           <div class="member-skills">
             <span class="skill-tag">Agile</span>
@@ -1329,17 +1569,32 @@
         </div>
       </div>
 
-      <!-- Team Member 9 -->
+      <!-- Team Member 5 - Sil -->
       <div class="team-member">
-        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop" 
-             alt="Robert Martinez" class="member-image" />
+        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=500&fit=crop" 
+             alt="Sil" class="member-image" />
         <div class="member-info">
-          <h3 class="member-name">Robert Martinez</h3>
-          <p class="member-role">Full Stack Dev</p>
+          <h3 class="member-name">Sil</h3>
+          <p class="member-role">Brand Strategist</p>
           <div class="member-skills">
-            <span class="skill-tag">Vue</span>
-            <span class="skill-tag">Laravel</span>
-            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Identity</span>
+            <span class="skill-tag">Content</span>
+            <span class="skill-tag">Vision</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 6 - Layla -->
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop" 
+             alt="Layla" class="member-image" />
+        <div class="member-info">
+          <h3 class="member-name">Layla</h3>
+          <p class="member-role">UX Researcher</p>
+          <div class="member-skills">
+            <span class="skill-tag">Research</span>
+            <span class="skill-tag">Testing</span>
+            <span class="skill-tag">Analytics</span>
           </div>
         </div>
       </div>

@@ -1,0 +1,95 @@
+  <script>
+    function toggleMobDropdown(element) {
+      const dropdown = element.parentElement;
+      const allDropdowns = document.querySelectorAll('.mob-dropdown');
+      
+      // Close other dropdowns with smooth animation
+      allDropdowns.forEach(dd => {
+        if (dd !== dropdown && dd.classList.contains('active')) {
+          dd.classList.remove('active');
+        }
+      });
+      
+      // Toggle current dropdown
+      dropdown.classList.toggle('active');
+    }
+    
+    function openMobileMenu() {
+      const menu = document.querySelector('.menu-mobile');
+      if (menu) {
+        menu.style.display = 'block';
+        setTimeout(() => {
+          menu.classList.add('active');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    
+    function closeMobileMenu() {
+      const menu = document.querySelector('.menu-mobile');
+      if (menu) {
+        menu.classList.remove('active');
+        setTimeout(() => {
+          menu.style.display = 'none';
+        }, 300);
+        document.body.style.overflow = '';
+        
+        // Reset all dropdowns
+        document.querySelectorAll('.mob-dropdown').forEach(dd => {
+          dd.classList.remove('active');
+        });
+      }
+    }
+    
+    // Mobile menu initialization
+    document.addEventListener('DOMContentLoaded', function() {
+      // Create overlay if it doesn't exist
+      if (!document.querySelector('.mobile-menu-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.className = 'mobile-menu-overlay';
+        overlay.onclick = closeMobileMenu;
+        document.body.appendChild(overlay);
+      }
+      
+      // Force add event listener to close button as fallback
+      const closeButton = document.querySelector('.mob-menu-close');
+      if (closeButton) {
+        closeButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('Close button clicked!');
+          closeMobileMenu();
+        });
+      }
+      
+      // Hamburger menu is now added directly in HTML, no need to create it dynamically
+      
+      // Handle old Webflow menu links if they still exist
+      const oldCloseLink = document.querySelector('.link.close');
+      if (oldCloseLink) {
+        oldCloseLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          closeMobileMenu();
+        });
+      }
+      
+      const oldMenuLink = document.querySelector('.link:not(.close)');
+      if (oldMenuLink && oldMenuLink.textContent === 'menu') {
+        oldMenuLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          openMobileMenu();
+        });
+      }
+      
+      // Handle menu link clicks with anchors
+      document.querySelectorAll('.menu-mobile .mob-menu-ul').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          const href = link.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            // Let the existing smooth scroll handle it, just close menu after delay
+            setTimeout(closeMobileMenu, 400);
+          }
+        });
+      });
+    });
+  </script>

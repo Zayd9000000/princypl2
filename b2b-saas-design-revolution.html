@@ -25,7 +25,7 @@
     }
     
     body {
-      padding-top: 140px;
+      padding-top: 40px;
     }
     
     /* Container System */
@@ -203,16 +203,7 @@
       font-style: italic;
     }
     
-    /* Navigation */
-    .navbar-logo-left-container {
-      background: linear-gradient(180deg, 
-        rgba(0, 0, 0, 1) 0%, 
-        rgba(0, 0, 0, 0.95) 50%, 
-        rgba(0, 0, 0, 0.8) 80%, 
-        rgba(0, 0, 0, 0.4) 95%, 
-        rgba(0, 0, 0, 0) 100%
-      ) !important;
-      backdrop-filter: blur(10px) !important;
+    /* Article Styles */
       position: fixed !important;
       top: 0 !important;
       left: 0 !important;
@@ -228,7 +219,7 @@
       align-items: center;
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0 25px;
     }
     
     .logo {
@@ -239,8 +230,12 @@
     .nav-menu-wrapper {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
-      padding-left: 40px;
+      gap: 1rem;
+      white-space: nowrap;
+      justify-content: flex-end;
+      margin-right: 0;
+      flex: 1;
+      padding-left: 50px;
     }
     
     .nav-item {
@@ -481,7 +476,7 @@
 </head>
 
 <body>
-  <!-- Navigation from insights.html -->
+  <!-- Article Header insights.html -->
   <div id="top-menu" class="top"></div>
   <div data-w-id="7df614b2-ecb9-cd82-82c3-8ec8130949d5" class="navbar-logo-left">
     <div data-w-id="7df614b2-ecb9-cd82-82c3-8ec8130949d6" data-animation="default" data-collapse="none"
@@ -534,9 +529,9 @@
                 </svg>
               </a>
               <div class="nav-dropdown-menu">
-                <a href="index.html#b2b-saas" class="nav-dropdown-item">B2B SaaS</a>
-                <a href="index.html#startup" class="nav-dropdown-item">Startup</a>
-                <a href="index.html#product-dev" class="nav-dropdown-item">Product Development</a>
+                <a href="b2b-saas.html" class="nav-dropdown-item">B2B SaaS</a>
+                <a href="startup.html" class="nav-dropdown-item">Startup</a>
+                <a href="product-development.html" class="nav-dropdown-item">Product Development</a>
               </div>
             </div>
             
@@ -548,9 +543,9 @@
                 </svg>
               </a>
               <div class="nav-dropdown-menu">
-                <a href="index.html#design-member" class="nav-dropdown-item">Design Member</a>
-                <a href="index.html#full-techstack" class="nav-dropdown-item">Full Techstack</a>
-                <a href="index.html#free-screening" class="nav-dropdown-item">Free Screening</a>
+                <a href="design-member.html" class="nav-dropdown-item">Design Member</a>
+                <a href="full-techstack.html" class="nav-dropdown-item">Full Techstack</a>
+                <a href="free-screening.html" class="nav-dropdown-item">Free Screening</a>
               </div>
             </div>
             
@@ -570,7 +565,108 @@
             <a href="index.html#pricing" class="nav-button">Pricing</a>
             <a href="contact.html" class="nav-button primary">Contact Us</a>
           </nav>
+          <!-- Hamburger Menu Button -->
+          <div class="hamburger-menu" onclick="openMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="menu-mobile" style="display: none;">
+      <div class="mob-menu-header">
+        <div class="mob-menu-close" onclick="closeMobileMenu()">
+          <span>×</span>
+        </div>
+      </div>
+      <div class="mob-menu-list">
+        <!-- Services -->
+        <a href="index.html#services-list" class="mob-menu-ul w-inline-block">
+          <div class="mob-menu-link">Services</div>
+        </a>
+        
+        <!-- About Us Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            About Us
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="mob-dropdown-menu">
+            <a href="aboutus.html" class="mob-dropdown-item">How We Build</a>
+            <a href="team.html" class="mob-dropdown-item">Our Team</a>
+          </div>
+        </div>
+        
+        <!-- Our Work Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            Our Work
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="mob-dropdown-menu">
+            <a href="index.html#case-studies" class="mob-dropdown-item">Case Studies</a>
+            <a href="index.html#showcase" class="mob-dropdown-item">Showcase</a>
+          </div>
+        </div>
+        
+        <!-- Solutions Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            Solutions
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="mob-dropdown-menu">
+            <a href="b2b-saas.html" class="mob-dropdown-item">B2B SaaS</a>
+            <a href="startup.html" class="mob-dropdown-item">Startup</a>
+            <a href="product-development.html" class="mob-dropdown-item">Product Development</a>
+          </div>
+        </div>
+        
+        <!-- Products Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            Products
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="mob-dropdown-menu">
+            <a href="design-member.html" class="mob-dropdown-item">Design Member</a>
+            <a href="full-techstack.html" class="mob-dropdown-item">Full Techstack</a>
+            <a href="free-screening.html" class="mob-dropdown-item">Free Screening</a>
+          </div>
+        </div>
+        
+        <!-- Resources Dropdown -->
+        <div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">
+            Resources
+            <svg class="dropdown-caret-mobile" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="mob-dropdown-menu">
+            <a href="insights.html" class="mob-dropdown-item">Insights</a>
+            <a href="index.html#courses" class="mob-dropdown-item">Courses</a>
+          </div>
+        </div>
+        
+        <!-- Pricing -->
+        <a href="index.html#pricing" class="mob-menu-ul w-inline-block">
+          <div class="mob-menu-link">Pricing</div>
+        </a>
+        
+        <!-- Contact Us -->
+        <a href="contact.html" class="mob-menu-ul w-inline-block" style="background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); border-radius: 8px; margin: 15px 20px;">
+          <div class="mob-menu-link" style="color: white;">Contact Us</div>
+        </a>
       </div>
     </div>
   </div>

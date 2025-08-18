@@ -72,27 +72,34 @@
       }
       
       html body .navbar-logo-left-container {
-        padding: 8px 0 !important;
+        padding: 10px 0 !important;
+        height: 80px !important;
       }
       
       html body .navbar-logo-left-container .container {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-      }
-      
-      html body .brand.w-nav-brand img.logo {
-        max-width: 100px !important;
-        height: 100px !important;
-        width: 100px !important;
-        object-fit: contain !important;
-        vertical-align: middle !important;
+        padding: 0 8px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        height: 100% !important;
+        margin: 0 !important;
+        max-width: 100% !important;
       }
       
       html body .brand.w-nav-brand {
         display: flex !important;
         align-items: center !important;
-        justify-content: flex-start !important;
-        height: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      
+      html body .brand.w-nav-brand img.logo {
+        max-width: 50px !important;
+        height: 50px !important;
+        width: 50px !important;
+        object-fit: contain !important;
+        display: block !important;
       }
       
       /* Mobile Menu */
@@ -1746,6 +1753,16 @@
       margin: 0 auto !important;
     }
     
+    /* Mobile: Add proper padding for icon spacing */
+    @media (max-width: 991px) {
+      .navbar-logo-left-container .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+    }
+    
     /* Ensure navbar content has proper spacing */
     .navbar-wrapper {
       position: relative !important;
@@ -1760,7 +1777,7 @@
     /* Responsive navbar adjustments */
     @media (max-width: 991px) {
       .navbar-logo-left-container {
-        padding-bottom: 15px !important;
+        padding: 10px 0 !important;
       }
       .navbar-logo-left-container .container {
         padding-left: 20px !important;
@@ -1773,14 +1790,14 @@
     
     @media (max-width: 767px) {
       .navbar-logo-left-container {
-        padding-bottom: 12px !important;
+        padding: 8px 0 !important;
       }
       .navbar-logo-left-container .container {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
       }
       body {
-        padding-top: 80px !important;
+        padding-top: 70px !important;
       }
     }
   </style>
@@ -2187,7 +2204,6 @@
           <div class="hamburger-menu" onclick="openMobileMenu()">
             <span></span>
             <span></span>
-            <span></span>
           </div>
         </div>
       </div>
@@ -2241,9 +2257,9 @@
             </svg>
           </div>
           <div class="mob-dropdown-menu">
-            <a href="#b2b-saas" class="mob-dropdown-item">B2B SaaS</a>
-            <a href="#startup" class="mob-dropdown-item">Startup</a>
-            <a href="#product-dev" class="mob-dropdown-item">Product Development</a>
+            <a href="b2b-saas.html" class="mob-dropdown-item">B2B SaaS</a>
+            <a href="startup.html" class="mob-dropdown-item">Startup</a>
+            <a href="product-development.html" class="mob-dropdown-item">Product Development</a>
           </div>
         </div>
         
@@ -2256,9 +2272,9 @@
             </svg>
           </div>
           <div class="mob-dropdown-menu">
-            <a href="#design-member" class="mob-dropdown-item">Design Member</a>
-            <a href="#full-techstack" class="mob-dropdown-item">Full Techstack</a>
-            <a href="#free-screening" class="mob-dropdown-item">Free Screening</a>
+            <a href="design-member.html" class="mob-dropdown-item">Design Member</a>
+            <a href="full-techstack.html" class="mob-dropdown-item">Full Techstack</a>
+            <a href="free-screening.html" class="mob-dropdown-item">Free Screening</a>
           </div>
         </div>
         
@@ -2272,12 +2288,12 @@
           </div>
           <div class="mob-dropdown-menu">
             <a href="insights.html" class="mob-dropdown-item">Insights</a>
-            <a href="#courses" class="mob-dropdown-item">Courses</a>
+            <a href="contact.html" class="mob-dropdown-item">Courses</a>
           </div>
         </div>
         
         <!-- Pricing -->
-        <a href="#pricing" class="mob-menu-ul w-inline-block">
+        <a href="contact.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">Pricing</div>
         </a>
         
@@ -4768,7 +4784,7 @@
       }
       .about-image-container {
         max-width: 90%;
-        height: 200px !important;
+        height: 120px !important;
         margin: 0 auto;
       }
       .about-image-container img {
@@ -4903,8 +4919,8 @@
       }
       .what-we-do-image-container {
         max-width: 90%;
-        height: 200px !important;
-        margin: 0 auto;
+        height: 120px !important;
+        margin: 0 auto 15px auto;
       }
       .what-we-do-image-container > div {
         border-radius: 4px !important;
@@ -4912,7 +4928,7 @@
       }
       .what-we-do-image-container img {
         object-fit: contain !important;
-        min-height: 200px !important;
+        min-height: 120px !important;
       }
     }
 
@@ -5660,43 +5676,39 @@
       transform: translateX(0) !important;
     }
     
-    /* Hamburger Menu Button */
+    /* Hamburger Menu Button - 3 clear lines */
     .hamburger-menu {
       display: none;
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       position: relative;
       cursor: pointer;
       z-index: 10002;
+      background: transparent !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
       justify-content: center;
       align-items: center;
-      /* Touch-friendly sizing */
-      min-width: 44px;
-      min-height: 44px;
       flex-shrink: 0;
     }
     
     .hamburger-menu:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.2);
-      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.1) !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
     }
     
     .hamburger-menu span {
-      display: block;
-      position: absolute;
-      height: 2px;
-      width: 24px;
-      background: white;
-      border-radius: 1px;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: block !important;
+      position: absolute !important;
+      height: 2px !important;
+      width: 20px !important;
+      background: #ffffff !important;
+      border-radius: 1px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      opacity: 1 !important;
     }
     
     .hamburger-menu span:nth-child(1) {
@@ -5704,25 +5716,36 @@
     }
     
     .hamburger-menu span:nth-child(2) {
-      top: 23px;
-    }
-    
-    .hamburger-menu span:nth-child(3) {
-      top: 30px;
+      top: 26px;
     }
     
     .hamburger-menu.active span:nth-child(1) {
       transform: translateX(-50%) rotate(45deg);
-      top: 23px;
+      top: 21px;
     }
     
     .hamburger-menu.active span:nth-child(2) {
-      opacity: 0;
+      transform: translateX(-50%) rotate(-45deg);
+      top: 21px;
     }
     
-    .hamburger-menu.active span:nth-child(3) {
-      transform: translateX(-50%) rotate(-45deg);
-      top: 23px;
+    /* Third line using ::after */
+    .hamburger-menu::after {
+      content: '';
+      display: block !important;
+      position: absolute !important;
+      height: 2px !important;
+      width: 20px !important;
+      background: #ffffff !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      bottom: 16px !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 1px !important;
+    }
+    
+    .hamburger-menu.active::after {
+      opacity: 0;
     }
     
     @media (max-width: 991px) {
@@ -5739,25 +5762,26 @@
         align-items: center !important;
         width: 100% !important;
         position: relative !important;
-        gap: 20px !important;
+        gap: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
       }
       
-      /* Position logo on far left */
+      /* Position logo on left with proper spacing */
       .brand.w-nav-brand {
-        margin-left: 0 !important;
-        margin-right: auto !important;
+        margin: 0 !important;
         order: 1 !important;
         flex-shrink: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: flex-start !important;
+        padding: 0 !important;
       }
       
-      /* Position hamburger menu on far right */
+      /* Position hamburger menu on right with proper spacing */
       .hamburger-menu {
         order: 3 !important;
-        margin-left: auto !important;
-        margin-right: 0 !important;
+        margin: 0 !important;
         flex-shrink: 0 !important;
         display: flex !important;
         justify-content: center !important;
@@ -5796,6 +5820,679 @@
       color: white !important;
       min-height: 52px !important; /* Slightly taller for CTA buttons */
       font-weight: 600 !important;
+    }
+  </style>
+  
+  <style>
+    /* CRITICAL MOBILE FIXES FOR SCREENSHOTS */
+    @media (max-width: 767px) {
+      /* Fix all card layouts and proportions - much smaller compact cards */
+      .ui-card,
+      .component-card,
+      .profile-card,
+      .post-card,
+      .software-card,
+      .app-card,
+      .card-item,
+      .card {
+        width: calc(100vw - 60px) !important;
+        max-width: 280px !important;
+        margin: 8px auto !important;
+        padding: 12px !important;
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-sizing: border-box !important;
+        background: white !important;
+        border-radius: 6px !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+      }
+      
+      /* Profile cards specific fixes */
+      .profile-card {
+        align-items: center !important;
+        text-align: center !important;
+        padding: 25px 20px !important;
+        min-height: 250px !important;
+      }
+      
+      .profile-card img,
+      .profile-card .avatar,
+      .profile-image {
+        width: 80px !important;
+        height: 80px !important;
+        border-radius: 50% !important;
+        margin: 0 auto 15px auto !important;
+        object-fit: cover !important;
+        display: block !important;
+      }
+      
+      .profile-card h3,
+      .profile-card .name,
+      .profile-name {
+        font-size: 18px !important;
+        margin: 10px 0 5px 0 !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+      }
+      
+      .profile-card p,
+      .profile-card .role,
+      .profile-role {
+        font-size: 14px !important;
+        color: #666 !important;
+        margin: 5px 0 !important;
+        text-align: center !important;
+      }
+      
+      .profile-card .actions,
+      .profile-card .buttons,
+      .profile-actions {
+        display: flex !important;
+        gap: 10px !important;
+        margin-top: 15px !important;
+        width: 100% !important;
+        justify-content: center !important;
+      }
+      
+      .profile-card button,
+      .profile-card .button,
+      .profile-button {
+        padding: 8px 16px !important;
+        font-size: 14px !important;
+        border-radius: 20px !important;
+        flex: 1 !important;
+        max-width: 120px !important;
+        min-height: 36px !important;
+      }
+      
+      /* Post detail cards fixes */
+      .post-card,
+      .content-card {
+        padding: 20px !important;
+        min-height: 200px !important;
+      }
+      
+      .post-card .header,
+      .post-header {
+        display: flex !important;
+        align-items: center !important;
+        margin-bottom: 15px !important;
+        gap: 12px !important;
+      }
+      
+      .post-card .header img,
+      .post-avatar {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50% !important;
+        flex-shrink: 0 !important;
+      }
+      
+      .post-card .header .info,
+      .post-info {
+        flex: 1 !important;
+        min-width: 0 !important;
+      }
+      
+      .post-card .header .name,
+      .post-author {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        margin-bottom: 2px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+      }
+      
+      .post-card .header .time,
+      .post-time {
+        font-size: 12px !important;
+        color: #999 !important;
+      }
+      
+      .post-card .content,
+      .post-content {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+        word-wrap: break-word !important;
+      }
+      
+      .post-card .actions,
+      .post-actions {
+        display: flex !important;
+        justify-content: space-around !important;
+        padding-top: 15px !important;
+        border-top: 1px solid #eee !important;
+      }
+      
+      /* Component cards layout fixes */
+      .component-card,
+      .feature-card {
+        min-height: 180px !important;
+      }
+      
+      .component-card .icon,
+      .feature-icon {
+        width: 48px !important;
+        height: 48px !important;
+        margin-bottom: 15px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #f0f0f0 !important;
+        border-radius: 12px !important;
+      }
+      
+      .component-card h3,
+      .feature-title {
+        font-size: 18px !important;
+        margin-bottom: 8px !important;
+        font-weight: 600 !important;
+      }
+      
+      .component-card p,
+      .feature-description {
+        font-size: 14px !important;
+        color: #666 !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+      }
+      
+      /* Software application cards */
+      .software-card,
+      .app-card,
+      .application-card {
+        min-height: 220px !important;
+      }
+      
+      .software-card .header,
+      .app-card .header,
+      .app-header {
+        display: flex !important;
+        align-items: center !important;
+        margin-bottom: 15px !important;
+        gap: 15px !important;
+      }
+      
+      .software-card .icon,
+      .app-card .icon,
+      .app-icon {
+        width: 48px !important;
+        height: 48px !important;
+        border-radius: 10px !important;
+        flex-shrink: 0 !important;
+      }
+      
+      .software-card .title,
+      .app-card .title,
+      .app-title {
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        line-height: 1.2 !important;
+      }
+      
+      .software-card .subtitle,
+      .app-card .subtitle,
+      .app-subtitle {
+        font-size: 12px !important;
+        color: #999 !important;
+        margin-top: 2px !important;
+      }
+      
+      /* Calendar widget specific fixes */
+      .calendar-widget,
+      .calendar-card {
+        background: white !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+        min-height: 320px !important;
+      }
+      
+      .calendar-widget .header,
+      .calendar-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 20px !important;
+        padding: 0 5px !important;
+      }
+      
+      .calendar-widget .month,
+      .calendar-month {
+        font-size: 18px !important;
+        font-weight: 600 !important;
+      }
+      
+      .calendar-widget .days,
+      .calendar-grid {
+        display: grid !important;
+        grid-template-columns: repeat(7, 1fr) !important;
+        gap: 5px !important;
+      }
+      
+      .calendar-widget .day,
+      .calendar-day {
+        aspect-ratio: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 14px !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        min-height: 35px !important;
+        background: #f9f9f9 !important;
+      }
+      
+      .calendar-widget .day.active,
+      .calendar-day.active {
+        background: #007AFF !important;
+        color: white !important;
+      }
+      
+      /* Fix all grid layouts */
+      .cards-grid,
+      .grid-layout,
+      .ui-components-grid,
+      .features-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 20px !important;
+      }
+      
+      /* Ensure proper text wrapping */
+      .card h1,
+      .card h2,
+      .card h3,
+      .card p,
+      .card-title,
+      .card-description {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+        max-width: 100% !important;
+      }
+      
+      /* Fix "OUR" text being cut off */
+      .section-title,
+      .big-text {
+        font-size: clamp(2.5rem, 10vw, 3.5rem) !important;
+        margin-bottom: 20px !important;
+        display: block !important;
+        width: 100% !important;
+      }
+    }
+  </style>
+  
+  <style>
+    /* ULTRA COMPACT MOBILE CARDS - FINAL OVERRIDE */
+    @media (max-width: 767px) {
+      /* Make ALL cards much smaller and compact */
+      .ui-card,
+      .component-card,
+      .profile-card,
+      .post-card,
+      .software-card,
+      .app-card,
+      .card-item,
+      .card,
+      .feature-card,
+      .content-card,
+      .application-card,
+      .calendar-widget,
+      .calendar-card {
+        width: calc(100vw - 80px) !important;
+        max-width: 200px !important;
+        margin: 4px auto !important;
+        padding: 6px !important;
+        min-height: auto !important;
+        border-radius: 3px !important;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+      }
+      
+      /* Ultra compact profile cards */
+      .profile-card {
+        max-width: 160px !important;
+        min-height: 90px !important;
+        padding: 6px 4px !important;
+      }
+      
+      .profile-card img,
+      .profile-card .avatar,
+      .profile-image {
+        width: 32px !important;
+        height: 32px !important;
+        margin: 0 auto 4px auto !important;
+      }
+      
+      .profile-card h3,
+      .profile-card .name,
+      .profile-name {
+        font-size: 10px !important;
+        margin: 3px 0 1px 0 !important;
+      }
+      
+      .profile-card p,
+      .profile-card .role,
+      .profile-role {
+        font-size: 8px !important;
+        margin: 1px 0 !important;
+      }
+      
+      .profile-card button,
+      .profile-card .button,
+      .profile-button {
+        padding: 3px 6px !important;
+        font-size: 8px !important;
+        border-radius: 10px !important;
+        max-width: 50px !important;
+        min-height: 18px !important;
+      }
+      
+      /* Ultra compact post cards */
+      .post-card,
+      .content-card {
+        max-width: 180px !important;
+        min-height: 80px !important;
+        padding: 6px !important;
+      }
+      
+      .post-card .header img,
+      .post-avatar {
+        width: 20px !important;
+        height: 20px !important;
+      }
+      
+      .post-card .header .name,
+      .post-author {
+        font-size: 9px !important;
+      }
+      
+      .post-card .content,
+      .post-content {
+        font-size: 8px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 4px !important;
+      }
+      
+      /* Ultra compact component cards */
+      .component-card,
+      .feature-card {
+        max-width: 170px !important;
+        min-height: 70px !important;
+      }
+      
+      .component-card .icon,
+      .feature-icon {
+        width: 20px !important;
+        height: 20px !important;
+        margin-bottom: 4px !important;
+        border-radius: 3px !important;
+      }
+      
+      .component-card h3,
+      .feature-title {
+        font-size: 10px !important;
+        margin-bottom: 3px !important;
+      }
+      
+      .component-card p,
+      .feature-description {
+        font-size: 7px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 4px !important;
+      }
+      
+      /* Ultra compact software cards */
+      .software-card,
+      .app-card,
+      .application-card {
+        max-width: 180px !important;
+        min-height: 80px !important;
+      }
+      
+      .software-card .icon,
+      .app-card .icon,
+      .app-icon {
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 3px !important;
+      }
+      
+      .software-card .title,
+      .app-card .title,
+      .app-title {
+        font-size: 10px !important;
+      }
+      
+      .software-card .subtitle,
+      .app-card .subtitle,
+      .app-subtitle {
+        font-size: 7px !important;
+      }
+      
+      /* Ultra compact calendar */
+      .calendar-widget,
+      .calendar-card {
+        max-width: 180px !important;
+        min-height: 120px !important;
+        padding: 6px !important;
+      }
+      
+      .calendar-widget .month,
+      .calendar-month {
+        font-size: 10px !important;
+      }
+      
+      .calendar-widget .day,
+      .calendar-day {
+        font-size: 7px !important;
+        min-height: 14px !important;
+        border-radius: 2px !important;
+      }
+      
+      /* Grid layout with very tight spacing */
+      .cards-grid,
+      .grid-layout,
+      .ui-components-grid,
+      .features-grid {
+        gap: 6px !important;
+        padding: 8px !important;
+      }
+      
+      /* FIX THE ACTUAL LAYOUT ARRANGEMENT ISSUES FROM SCREENSHOTS NOW */
+      
+      /* Fix messed.png - force proper 2x2 grid for profile cards */
+      .profile-section,
+      .user-profile-section,
+      .team-section,
+      .profiles-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 5px !important;
+      }
+      
+      .profile-cards-container,
+      .user-cards-grid,
+      .team-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 6px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+        justify-items: center !important;
+      }
+      
+      /* Fix post cards to stack vertically centered */
+      .post-section,
+      .content-section,
+      .feed-section,
+      .posts-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 5px !important;
+      }
+      
+      /* Fix Components section to be 2x2 grid */
+      .components-section,
+      .ui-components-section,
+      .components-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 5px !important;
+      }
+      
+      .components-grid,
+      .ui-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 6px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+        justify-items: center !important;
+      }
+      
+      /* Fix up.png - software applications grid */
+      .software-section,
+      .applications-section,
+      .apps-section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 5px !important;
+      }
+      
+      .software-grid,
+      .apps-grid,
+      .applications-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 6px !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+        justify-items: center !important;
+      }
+      
+      /* Fix calendar positioning - center it */
+      .calendar-section,
+      .calendar-container,
+      .calendar-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 8px !important;
+      }
+      
+      /* Force all main containers to stack properly */
+      .main-content,
+      .content-area,
+      .page-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 5px !important;
+        overflow-x: hidden !important;
+      }
+      
+      /* Hide any sidebars causing layout issues */
+      .sidebar,
+      .left-panel,
+      .right-panel,
+      .side-navigation {
+        display: none !important;
+      }
+      
+      /* Fix any flex containers with row direction */
+      .row,
+      .flex-row,
+      .horizontal-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+      }
+      
+      /* Fix images that don't fit properly in cards */
+      .card-image,
+      .profile-image,
+      .app-icon,
+      .component-icon {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 40px !important;
+        object-fit: contain !important;
+        margin: 0 auto !important;
+        display: block !important;
+      }
+      
+      /* Fix "OUR" text being cut off */
+      .hero-title,
+      .big-title,
+      .section-heading {
+        width: 100% !important;
+        text-align: center !important;
+        font-size: clamp(1.8rem, 7vw, 2.5rem) !important;
+        line-height: 1.1 !important;
+        margin: 8px 0 !important;
+        padding: 5px !important;
+        overflow: visible !important;
+        word-wrap: break-word !important;
+      }
+      
+      /* Force proper spacing between sections */
+      .section,
+      .content-section,
+      .page-section {
+        margin: 8px 0 !important;
+        padding: 5px !important;
+        width: 100% !important;
+        display: block !important;
+      }
+      
+      /* Fix any absolutely positioned elements */
+      .absolute,
+      .fixed-position {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+      }
+      
+      /* Ensure proper text alignment in all cards */
+      .card-title,
+      .card-header,
+      .card-name {
+        text-align: center !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+      
+      /* Fix any overlapping or floating elements */
+      .overlay,
+      .float-left,
+      .float-right {
+        position: relative !important;
+        float: none !important;
+        display: block !important;
+        margin: 0 auto !important;
+      }
     }
   </style>
   
