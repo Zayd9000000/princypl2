@@ -277,6 +277,92 @@
       height: 1px;
       background-color: rgba(255, 255, 255, 0.3);
     }
+    
+    /* Dropdown menu styles */
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #000;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-item {
+      display: block;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-dropdown-item:last-child {
+      border-bottom: none;
+    }
+    
+    .nav-dropdown-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      text-decoration: none;
+    }
+    
+    /* Mobile dropdown styles */
+    .mob-dropdown {
+      width: 100%;
+    }
+    
+    .mob-dropdown-menu {
+      display: none;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.05);
+      margin-top: 10px;
+    }
+    
+    .mob-dropdown.active .mob-dropdown-menu {
+      display: block;
+    }
+    
+    .mob-dropdown-item {
+      display: block;
+      color: white;
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mob-dropdown-item:last-child {
+      border-bottom: none;
+    }
+    
+    .mob-dropdown-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      text-decoration: none;
+    }
+    
+    .mob-dropdown-toggle {
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -302,10 +388,15 @@
           <nav role="navigation" class="nav-menu-wrapper w-nav-menu"><a data-w-id="c8d246f3-4c00-8361-959b-8140bc5a99a5"
               href="index.html#services-list" class="no-underline w-inline-block">
               <div data-w-id="f15cd412-a5ab-db1a-44ea-5affc4d8e21b" class="nav-link">SERVICES</div>
-            </a><a data-w-id="about-us-nav-button" href="aboutus.html"
-              class="no-underline w-inline-block">
-              <div data-w-id="about-us-nav-text" class="nav-link">ABOUT US</div>
-            </a><a href="blog.html"
+            </a><div class="nav-dropdown">
+              <a href="#" class="no-underline w-inline-block">
+                <div class="nav-link">ABOUT ▼</div>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="aboutus.html" class="nav-dropdown-item">About Us</a>
+                <a href="team.html" class="nav-dropdown-item">Our Team</a>
+              </div>
+            </div><a href="blog.html"
               class="no-underline w-inline-block">
               <div class="nav-link">INSIGHTS</div>
             </a><a data-w-id="8d5e91c9-4ef2-daf0-e166-6fffff7459e9" href="contact.html"
@@ -322,9 +413,13 @@
     <div class="menu-mobile">
       <div class="mob-menu-list"><a href="index.html#services-list" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">SERVICES</div>
-        </a><a href="aboutus.html" class="mob-menu-ul w-inline-block">
-          <div class="mob-menu-link">ABOUT US</div>
-        </a><a href="blog.html" class="mob-menu-ul w-inline-block">
+        </a><div class="mob-dropdown mob-menu-ul w-inline-block">
+          <div class="mob-menu-link mob-dropdown-toggle" onclick="toggleMobDropdown(this)">ABOUT ▼</div>
+          <div class="mob-dropdown-menu">
+            <a href="aboutus.html" class="mob-dropdown-item">About Us</a>
+            <a href="team.html" class="mob-dropdown-item">Our Team</a>
+          </div>
+        </div><a href="blog.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">INSIGHTS</div>
         </a><a href="contact.html" class="mob-menu-ul w-inline-block">
           <div class="mob-menu-link">CONTACT US</div>
@@ -1028,6 +1123,11 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(video);
   });
 });
+
+function toggleMobDropdown(element) {
+  const dropdown = element.parentElement;
+  dropdown.classList.toggle('active');
+}
 </script>
 </body>
 

@@ -1,0 +1,63 @@
+<!-- Perfect Circular Card Arrangement -->
+<!-- 
+  8 cards positioned at 45-degree intervals:
+  0° = top center
+  45° = top right
+  90° = right center
+  135° = bottom right
+  180° = bottom center
+  225° = bottom left
+  270° = left center
+  315° = top left
+-->
+
+<!-- Position calculations for perfect circle:
+  Radius from center: ~45% of viewport
+  Each card positioned using: 
+  - X = 50% + radius * sin(angle)
+  - Y = 50% - radius * cos(angle)
+-->
+
+<div class="floating-cards-container">
+  
+  <!-- Card 1: 3D Perspective (0° - Top) -->
+  <div class="float-card perspective-card" style="top: 5%; left: 44%; width: 180px;">
+    <!-- 3D browser mockup content -->
+  </div>
+
+  <!-- Card 2: Radial Progress (45° - Top Right) -->
+  <div class="float-card radial-card" style="top: 15%; right: 15%; width: 220px;">
+    <!-- Progress chart content -->
+  </div>
+
+  <!-- Card 3: Timeline (90° - Right) -->
+  <div class="float-card timeline-card" style="top: 42%; right: 5%; width: 280px;">
+    <!-- Timeline content -->
+  </div>
+
+  <!-- Card 4: Button Component (135° - Bottom Right) -->
+  <div class="float-card button-card" style="bottom: 15%; right: 15%; width: 200px;">
+    <!-- Button showcase content -->
+  </div>
+
+  <!-- Card 5: Data Flow (180° - Bottom) -->
+  <div class="float-card flow-card" style="bottom: 5%; left: 40%; width: 200px;">
+    <!-- API pipeline content -->
+  </div>
+
+  <!-- Card 6: Hexagon Grid (225° - Bottom Left) -->
+  <div class="float-card hex-card" style="bottom: 15%; left: 15%; width: 140px;">
+    <!-- Hex grid content -->
+  </div>
+
+  <!-- Card 7: Server Status (270° - Left) -->
+  <div class="float-card server-card" style="top: 42%; left: 5%; width: 160px;">
+    <!-- Server metrics content -->
+  </div>
+
+  <!-- Card 8: Wave Analytics (315° - Top Left) -->
+  <div class="float-card wave-card" style="top: 15%; left: 15%; width: 160px;">
+    <!-- Wave chart content -->
+  </div>
+
+</div>

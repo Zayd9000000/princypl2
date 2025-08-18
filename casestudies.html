@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html data-wf-domain="www.princypl.com" data-wf-page="63ef85bbe954ccee7aa77ead" data-wf-site="63ef85bbe954cc6863a77eab" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Case Studies - Builded Design Agency</title>
+  <meta content="Selected projects showcasing our end-to-end design and development capabilities across diverse industries." name="description" />
+  <meta content="Case Studies - Builded Design Agency" property="og:title" />
+  <meta property="og:type" content="website" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="https://cdn.prod.website-files.com/63ef85bbe954cc6863a77eab/css/netrix-1.webflow.59c85dd39.min.css" rel="stylesheet" type="text/css" />
+  
+  <style>
+    /* CRITICAL: Force black background */
+    * {
+      background-color: transparent !important;
+    }
+    html {
+      background: #000 !important;
+      background-color: #000 !important;
+    }
+    body, .body {
+      background: #000 !important;
+      background-color: #000 !important;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      padding-top: 100px !important;
+      color: #fff;
+    }
+    
+    /* Container */
+    .container-tight {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 60px;
+      position: relative;
+    }
+    
+    @media (max-width: 1200px) {
+      .container-tight {
+        padding: 0 40px;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .container-tight {
+        padding: 0 24px;
+      }
+    }
+
+    /* Hero Section */
+    .hero-compact {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 80px;
+    }
+    
+    .hero-inner {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+    }
+    
+    .hero-heading {
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 0.9;
+      margin: 0 0 30px 0;
+      text-transform: uppercase;
+    }
+    
+    .hero-heading span {
+      display: inline-block;
+      opacity: 0;
+      animation: dropIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    
+    .hero-heading span:nth-child(1) { animation-delay: 0.05s; }
+    .hero-heading span:nth-child(2) { animation-delay: 0.1s; }
+    .hero-heading span:nth-child(3) { animation-delay: 0.15s; }
+    .hero-heading span:nth-child(4) { animation-delay: 0.2s; }
+    .hero-heading span:nth-child(5) { animation-delay: 0.25s; }
+    .hero-heading span:nth-child(6) { animation-delay: 0.3s; }
+    .hero-heading span:nth-child(7) { animation-delay: 0.35s; }
+    .hero-heading span:nth-child(8) { animation-delay: 0.4s; }
+    .hero-heading span:nth-child(9) { animation-delay: 0.45s; }
+    .hero-heading span:nth-child(10) { animation-delay: 0.5s; }
+    .hero-heading span:nth-child(11) { animation-delay: 0.55s; }
+    .hero-heading span:nth-child(12) { animation-delay: 0.6s; }
+    
+    @keyframes dropIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    .hero-description {
+      font-size: clamp(1rem, 1.8vw, 1.3rem);
+      line-height: 1.5;
+      color: rgba(255,255,255,0.7);
+      max-width: 800px;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    /* Case Studies Grid */
+    .case-studies-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-bottom: 120px;
+    }
+    
+    /* Window-like case study cards */
+    .case-study-card {
+      background: linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(30, 30, 30, 0.8) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0; /* Sharp edges as requested */
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      aspect-ratio: 16/10; /* Window-like proportions */
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .case-study-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Image container */
+    .case-image {
+      flex: 1;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .case-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .case-study-card:hover .case-image::after {
+      opacity: 1;
+    }
+    
+    /* Content section */
+    .case-content {
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .case-tags {
+      margin-bottom: 12px;
+    }
+    
+    .case-tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 2px; /* Sharp but slightly rounded for readability */
+      display: inline-block;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.8);
+      letter-spacing: 0.05em;
+    }
+    
+    .case-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    
+    .case-description {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.4;
+      margin: 0;
+      font-weight: 300;
+    }
+    
+    /* Staggered layout - first row normal, second row offset */
+    .case-study-card:nth-child(5),
+    .case-study-card:nth-child(6),
+    .case-study-card:nth-child(7),
+    .case-study-card:nth-child(8) {
+      transform: translateY(60px);
+    }
+    
+    .case-study-card:nth-child(5):hover,
+    .case-study-card:nth-child(6):hover,
+    .case-study-card:nth-child(7):hover,
+    .case-study-card:nth-child(8):hover {
+      transform: translateY(52px);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .case-studies-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+      
+      .case-study-card:nth-child(4),
+      .case-study-card:nth-child(7),
+      .case-study-card:nth-child(8) {
+        transform: translateY(40px);
+      }
+      
+      .case-study-card:nth-child(4):hover,
+      .case-study-card:nth-child(7):hover,
+      .case-study-card:nth-child(8):hover {
+        transform: translateY(32px);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .case-studies-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .case-study-card:nth-child(n) {
+        transform: translateY(0) !important;
+      }
+      
+      .case-study-card:nth-child(n):hover {
+        transform: translateY(-8px) !important;
+      }
+      
+      .hero-compact {
+        margin-bottom: 60px;
+      }
+    }
+
+    /* Navbar styling - copied from other pages */
+    .navbar-logo-left-container {
+      background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 0.95) 50%, 
+        rgba(0, 0, 0, 0.8) 80%, 
+        rgba(0, 0, 0, 0.6) 100%);
+      backdrop-filter: blur(10px) !important;
+      -webkit-backdrop-filter: blur(10px) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      z-index: 9999 !important;
+      padding: 15px 0 !important;
+      min-height: auto !important;
+      height: auto !important;
+    }
+
+    /* Logo fixes */
+    .logo {
+      max-width: 100px !important;
+      height: 100px !important;
+      width: 100px !important;
+      object-fit: contain !important;
+      filter: brightness(1) !important;
+    }
+    
+    .brand.w-nav-brand {
+      margin-right: 0 !important;
+      margin-left: -15px !important;
+      flex-shrink: 0 !important;
+      position: relative !important;
+      left: 0 !important;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 40px 0 30px 0;
+      margin-top: 80px;
+    }
+    
+    .footer-con {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    
+    .footer-disclaimer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .footer-disclaimer h4 {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.4);
+      margin: 0;
+    }
+    
+    @media (max-width: 767px) {
+      .footer-con {
+        padding: 0 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="top-menu" class="top"></div>
+  
+  <!-- Navbar -->
+  <div data-w-id="7df614b2-ecb9-cd82-82c3-8ec8130949d5" class="navbar-logo-left">
+    <div data-w-id="7df614b2-ecb9-cd82-82c3-8ec8130949d6" data-animation="default" data-collapse="none"
+      data-duration="400" data-easing="ease" data-easing2="ease" role="banner"
+      class="navbar-logo-left-container shadow-three w-nav">
+      <div class="container">
+        <div class="navbar-wrapper">
+          <a href="index.html" class="brand w-nav-brand" style="display: flex !important; align-items: center !important; width: auto !important;">
+            <img alt="" loading="lazy" src="princyplnav.png" class="logo" style="max-width: 120px !important; height: 120px !important; width: 120px !important; flex-shrink: 0 !important; margin: 0 !important;" />
+          </a>
+          <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+            <div class="nav-item">
+              <a href="index.html#services-list" class="nav-link">SERVICES</a>
+            </div>
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">ABOUT US</a>
+            </div>
+            <div class="nav-item has-dropdown">
+              <a href="#" class="nav-link">OUR WORK</a>
+            </div>
+            <a href="index.html#pricing" class="nav-button">Pricing</a>
+            <a href="contact.html" class="nav-button primary">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-compact">
+    <div class="container-tight">
+      <div class="hero-inner">
+        <h1 class="hero-heading">
+          <span>C</span><span>A</span><span>S</span><span>E</span>
+          <span>S</span><span>T</span><span>U</span><span>D</span><span>I</span><span>E</span><span>S</span>
+        </h1>
+        <p class="hero-description">
+          Selected projects showcasing our end-to-end design and development capabilities across diverse industries. 
+          Each case study represents our commitment to crafting digital experiences that define and elevate brands.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Grid -->
+  <section class="container-tight">
+    <div class="case-studies-grid">
+      
+      <!-- Case Study 1: LUMINA HOUSE -->
+      <a href="lumina.html" class="case-study-card">
+        <div class="case-image"></div>
+        <div class="case-content">
+          <div class="case-tags">
+            <span class="case-tag">WEB</span>
+            <span class="case-tag">DESIGN</span>
+          </div>
+          <h3 class="case-title">LUMINA HOUSE</h3>
+          <p class="case-description">Modular brand system for Europe's all-female hacker house</p>
+        </div>
+      </a>
+
+      <!-- Case Study 2: SMARTER.AI -->
+      <a href="smarter.html" class="case-study-card">
+        <div class="case-image"></div>
+        <div class="case-content">
+          <div class="case-tags">
+            <span class="case-tag">UI/UX</span>
+            <span class="case-tag">WEB</span>
+          </div>
+          <h3 class="case-title">SMARTER.AI</h3>
+          <p class="case-description">Unified interface system for AI recruitment platform</p>
+        </div>
+      </a>
+
+      <!-- Case Study 3: TERNION INTELLIGENCE -->
+      <a href="ternion.html" class="case-study-card">
+        <div class="case-image"></div>
+        <div class="case-content">
+          <div class="case-tags">
+            <span class="case-tag">WEB</span>
+            <span class="case-tag">DESIGN</span>
+          </div>
+          <h3 class="case-title">TERNION INTELLIGENCE</h3>
+          <p class="case-description">Scalable identity framework for geopolitical risk analysis</p>
+        </div>
+      </a>
+
+      <!-- Case Study 4: CYRCL -->
+      <a href="cyrcl.html" class="case-study-card">
+        <div class="case-image"></div>
+        <div class="case-content">
+          <div class="case-tags">
+            <span class="case-tag">UI/UX</span>
+            <span class="case-tag">WEB</span>
+          </div>
+          <h3 class="case-title">CYRCL</h3>
+          <p class="case-description">Gesture-driven interface design for social presence app</p>
+        </div>
+      </a>
+
+      <!-- Case Study 5: CIRCLES INITIATIVE (Second row - staggered) -->
+      <a href="circles.html" class="case-study-card">
+        <div class="case-image"></div>
+        <div class="case-content">
+          <div class="case-tags">
+            <span class="case-tag">WEB</span>
+            <span class="case-tag">DESIGN</span>
+          </div>
+          <h3 class="case-title">CIRCLES INITIATIVE</h3>
+          <p class="case-description">Systematic brand architecture for global think-tank network</p>
+        </div>
+      </a>
+
+      <!-- Case Study 6: NEXUS LABS (Additional case study) -->
+      <a href="#" class="case-study-card">
+        <div class="case-image"></div>
+        <div class="case-content">
+          <div class="case-tags">
+            <span class="case-tag">PRODUCT</span>
+            <span class="case-tag">DESIGN</span>
+          </div>
+          <h3 class="case-title">NEXUS LABS</h3>
+          <p class="case-description">Research platform interface for quantum computing startup</p>
+        </div>
+      </a>
+
+      <!-- Case Study 7: ATLAS FINANCE -->
+      <a href="#" class="case-study-card">
+        <div class="case-image"></div>
+        <div class="case-content">
+          <div class="case-tags">
+            <span class="case-tag">FINTECH</span>
+            <span class="case-tag">UI/UX</span>
+          </div>
+          <h3 class="case-title">ATLAS FINANCE</h3>
+          <p class="case-description">Digital banking experience for next-generation investors</p>
+        </div>
+      </a>
+
+      <!-- Case Study 8: MERIDIAN HEALTH -->
+      <a href="#" class="case-study-card">
+        <div class="case-image"></div>
+        <div class="case-content">
+          <div class="case-tags">
+            <span class="case-tag">HEALTHCARE</span>
+            <span class="case-tag">PLATFORM</span>
+          </div>
+          <h3 class="case-title">MERIDIAN HEALTH</h3>
+          <p class="case-description">Patient portal redesign for integrated healthcare network</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-con w-container">
+      <div class="footer-disclaimer">
+        <h4 class="grey">2025 Builded agency. All rights reserved</h4>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
