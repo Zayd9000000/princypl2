@@ -114,13 +114,13 @@
       .team-member {
         display: flex !important;
         flex-direction: column !important;
-        padding: 20px !important;
+        padding: 24px 20px !important;
         border-radius: 12px !important;
         overflow: visible !important;
         align-items: center !important;
         justify-content: center !important;
         text-align: center !important;
-        aspect-ratio: 1/1 !important;
+        min-height: 180px !important;
         gap: 8px !important;
       }
       
@@ -132,9 +132,11 @@
       }
       
       .member-name {
-        font-size: 1.2rem !important;
-        margin-bottom: 4px !important;
+        font-size: 1.8rem !important;
+        margin-bottom: 6px !important;
         color: #fff !important;
+        font-weight: 900 !important;
+        line-height: 1 !important;
       }
       
       .member-role {
@@ -317,8 +319,8 @@
       background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 12px;
-      padding: 24px;
-      aspect-ratio: 1/1;
+      padding: 32px 24px;
+      min-height: 220px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -344,25 +346,29 @@
     }
     
     .member-name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 4px;
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin-bottom: 8px;
       text-transform: uppercase;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
+      line-height: 1;
     }
     
     .member-role {
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: #60A5FA;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
+      font-weight: 500;
     }
     
     .member-skills {
       display: flex;
-      gap: 6px;
+      gap: 8px;
       flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
     
     .skill-tag {
