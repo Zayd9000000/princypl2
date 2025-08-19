@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Case Studies - Builded Design Agency</title>
-  <meta content="Selected projects showcasing our end-to-end design and development capabilities across diverse industries." name="description" />
+  <meta content="Meticulously crafted digital experiences that push boundaries and deliver results" name="description" />
   <meta content="Case Studies - Builded Design Agency" property="og:title" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
@@ -32,234 +32,474 @@
     }
     
     /* Container */
-    .container-tight {
-      max-width: 1400px;
+    .container-wide {
+      max-width: 1600px;
       margin: 0 auto;
-      padding: 0 60px;
+      padding: 0 80px;
       position: relative;
     }
     
+    @media (max-width: 1400px) {
+      .container-wide {
+        padding: 0 60px;
+      }
+    }
+    
     @media (max-width: 1200px) {
-      .container-tight {
+      .container-wide {
         padding: 0 40px;
       }
     }
     
     @media (max-width: 767px) {
-      .container-tight {
+      .container-wide {
         padding: 0 24px;
       }
     }
 
     /* Hero Section */
-    .hero-compact {
-      min-height: 50vh;
-      display: flex;
-      align-items: center;
+    .hero-section {
+      padding: 120px 0 100px 0;
       position: relative;
-      margin-bottom: 80px;
     }
     
     .hero-inner {
       position: relative;
       z-index: 10;
       width: 100%;
+      text-align: center;
+    }
+    
+    .hero-tagline {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin: 0 0 20px 0;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
     }
     
     .hero-heading {
-      font-size: clamp(3.5rem, 8vw, 6rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 0.9;
-      margin: 0 0 30px 0;
-      text-transform: uppercase;
-    }
-    
-    .hero-heading span {
-      display: inline-block;
+      font-size: clamp(4rem, 10vw, 8rem);
+      font-weight: 200;
+      letter-spacing: -0.04em;
+      line-height: 0.85;
+      margin: 0 0 40px 0;
       opacity: 0;
-      animation: dropIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.1s;
     }
     
-    .hero-heading span:nth-child(1) { animation-delay: 0.05s; }
-    .hero-heading span:nth-child(2) { animation-delay: 0.1s; }
-    .hero-heading span:nth-child(3) { animation-delay: 0.15s; }
-    .hero-heading span:nth-child(4) { animation-delay: 0.2s; }
-    .hero-heading span:nth-child(5) { animation-delay: 0.25s; }
-    .hero-heading span:nth-child(6) { animation-delay: 0.3s; }
-    .hero-heading span:nth-child(7) { animation-delay: 0.35s; }
-    .hero-heading span:nth-child(8) { animation-delay: 0.4s; }
-    .hero-heading span:nth-child(9) { animation-delay: 0.45s; }
-    .hero-heading span:nth-child(10) { animation-delay: 0.5s; }
-    .hero-heading span:nth-child(11) { animation-delay: 0.55s; }
-    .hero-heading span:nth-child(12) { animation-delay: 0.6s; }
+    .hero-heading strong {
+      font-weight: 600;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
     
-    @keyframes dropIn {
+    @keyframes fadeInUp {
       0% {
         opacity: 0;
-        transform: translateY(-30px) scale(0.9);
+        transform: translateY(30px);
       }
       100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
       }
     }
     
     .hero-description {
-      font-size: clamp(1rem, 1.8vw, 1.3rem);
-      line-height: 1.5;
-      color: rgba(255,255,255,0.7);
-      max-width: 800px;
-      margin: 0;
-      font-weight: 400;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      line-height: 1.6;
+      color: rgba(255,255,255,0.6);
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.2s;
     }
 
-    /* Case Studies Grid */
-    .case-studies-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-      margin-bottom: 120px;
+    /* Floating Portfolio Elements */
+    .floating-portfolio-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: linear-gradient(135deg, 
+        rgba(10, 10, 10, 0.9) 0%, 
+        rgba(20, 20, 20, 0.8) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      animation: fadeInFloat 1s ease forwards;
+    }
+
+    /* Portfolio Metrics Card */
+    .portfolio-metric-card {
+      top: 15%;
+      right: 8%;
+      width: 160px;
+      text-align: center;
+      animation-delay: 0.4s;
+    }
+
+    .metric-value {
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Results Card */
+    .results-card {
+      top: 25%;
+      left: 6%;
+      width: 180px;
+      animation-delay: 0.6s;
+    }
+
+    .result-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 8px 0;
+    }
+
+    .result-metric {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #3B82F6;
+      margin-bottom: 4px;
+    }
+
+    .result-desc {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+    }
+
+    .result-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      margin: 12px 0;
+    }
+
+    /* Tech Stack Card */
+    .tech-stack-card {
+      bottom: 20%;
+      right: 12%;
+      width: 140px;
+      animation-delay: 0.8s;
+    }
+
+    .tech-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .tech-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.4);
+      transition: all 0.3s ease;
+    }
+
+    .tech-icon.active {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      border-color: #3B82F6;
+      color: white;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    /* Category Card */
+    .category-card {
+      bottom: 30%;
+      left: 10%;
+      width: 120px;
+      animation-delay: 1s;
+    }
+
+    .category-item {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .category-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .category-dot.saas {
+      background: #10B981;
+    }
+
+    .category-dot.ecommerce {
+      background: #3B82F6;
+    }
+
+    .category-dot.fintech {
+      background: #8B5CF6;
+    }
+
+    @keyframes fadeInFloat {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Hide floating elements on mobile */
+    @media (max-width: 991px) {
+      .floating-portfolio-elements {
+        display: none;
+      }
+    }
+
+    /* Case Studies Mosaic Grid */
+    .case-studies-mosaic {
+      margin-bottom: 200px;
+      position: relative;
     }
     
-    /* Window-like case study cards */
+    .mosaic-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 100px 80px;
+      grid-auto-rows: auto;
+    }
+    
+    /* Case study cards - clean rectangles with sharp corners */
     .case-study-card {
-      background: linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(30, 30, 30, 0.8) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 0; /* Sharp edges as requested */
-      overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background: transparent;
+      border-radius: 0; /* Sharp corners */
+      overflow: visible;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
       text-decoration: none;
       color: inherit;
       position: relative;
-      aspect-ratio: 16/10; /* Window-like proportions */
       display: flex;
       flex-direction: column;
     }
     
+    /* Varying heights and stagger for visual interest */
+    .case-study-card:nth-child(1) {
+      transform: translateY(0);
+    }
+    
+    .case-study-card:nth-child(2) {
+      transform: translateY(50px);
+    }
+    
+    .case-study-card:nth-child(3) {
+      transform: translateY(20px);
+    }
+    
+    .case-study-card:nth-child(4) {
+      transform: translateY(0);
+    }
+    
+    .case-study-card:nth-child(5) {
+      transform: translateY(0);
+    }
+    
+    .case-study-card:nth-child(6) {
+      transform: translateY(40px);
+    }
+    
+    .case-study-card:nth-child(7) {
+      transform: translateY(30px);
+    }
+    
+    .case-study-card:nth-child(8) {
+      transform: translateY(0);
+    }
+    
+    /* Image heights */
+    .case-study-card:nth-child(1) .case-image { height: 400px; }
+    .case-study-card:nth-child(2) .case-image { height: 350px; }
+    .case-study-card:nth-child(3) .case-image { height: 380px; }
+    .case-study-card:nth-child(4) .case-image { height: 420px; }
+    .case-study-card:nth-child(5) .case-image { height: 360px; }
+    .case-study-card:nth-child(6) .case-image { height: 440px; }
+    .case-study-card:nth-child(7) .case-image { height: 390px; }
+    .case-study-card:nth-child(8) .case-image { height: 370px; }
+    
     .case-study-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      z-index: 10;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    
+    .case-study-card:hover .case-image img {
+      transform: scale(1.05);
+      opacity: 1;
     }
     
     /* Image container */
     .case-image {
-      flex: 1;
-      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+      width: 100%;
+      background: #0a0a0a;
       position: relative;
       overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
     
-    .case-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(45deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
+    .case-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     }
     
-    .case-study-card:hover .case-image::after {
+    .case-study-card:hover .case-image img {
+      transform: scale(1.05);
       opacity: 1;
     }
     
-    /* Content section */
+    /* Content section - below image */
     .case-content {
-      padding: 24px;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 24px 0;
+      background: transparent;
+      position: relative;
     }
     
-    .case-tags {
-      margin-bottom: 12px;
-    }
-    
-    .case-tag {
+    .case-category {
       font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      padding: 4px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 2px; /* Sharp but slightly rounded for readability */
-      display: inline-block;
-      margin-right: 6px;
-      margin-bottom: 6px;
-      color: rgba(255, 255, 255, 0.8);
-      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.4);
+      margin: 0 0 8px 0;
     }
     
     .case-title {
-      font-size: 1.1rem;
-      font-weight: 600;
+      font-size: 1.4rem;
+      font-weight: 400;
       color: #ffffff;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
+      margin: 0 0 10px 0;
+      line-height: 1.2;
       letter-spacing: -0.01em;
     }
     
     .case-description {
       font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.5;
       margin: 0;
       font-weight: 300;
     }
     
-    /* Staggered layout - first row normal, second row offset */
-    .case-study-card:nth-child(5),
-    .case-study-card:nth-child(6),
-    .case-study-card:nth-child(7),
-    .case-study-card:nth-child(8) {
-      transform: translateY(60px);
-    }
-    
-    .case-study-card:nth-child(5):hover,
-    .case-study-card:nth-child(6):hover,
-    .case-study-card:nth-child(7):hover,
-    .case-study-card:nth-child(8):hover {
-      transform: translateY(52px);
-    }
-    
     /* Responsive Design */
     @media (max-width: 1200px) {
-      .case-studies-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
+      .mosaic-grid {
+        gap: 60px 40px;
       }
       
-      .case-study-card:nth-child(4),
-      .case-study-card:nth-child(7),
-      .case-study-card:nth-child(8) {
-        transform: translateY(40px);
+      /* Reset image heights for tablet */
+      .case-study-card .case-image {
+        height: 320px !important;
       }
       
-      .case-study-card:nth-child(4):hover,
-      .case-study-card:nth-child(7):hover,
-      .case-study-card:nth-child(8):hover {
-        transform: translateY(32px);
+      /* Simple alternating stagger for 2 columns */
+      .case-study-card:nth-child(odd) {
+        transform: translateY(0) !important;
+      }
+      
+      .case-study-card:nth-child(even) {
+        transform: translateY(30px) !important;
       }
     }
     
-    @media (max-width: 768px) {
-      .case-studies-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    @media (max-width: 767px) {
+      .hero-section {
+        padding: 80px 0 60px 0;
       }
       
+      .mosaic-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      
+      .case-study-card,
       .case-study-card:nth-child(n) {
         transform: translateY(0) !important;
       }
       
-      .case-study-card:nth-child(n):hover {
-        transform: translateY(-8px) !important;
+      .case-study-card .case-image {
+        height: 280px !important;
       }
       
-      .hero-compact {
-        margin-bottom: 60px;
+      .case-study-card:hover,
+      .case-study-card:nth-child(n):hover {
+        /* No movement on mobile */
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+      
+      .hero-heading {
+        text-align: left;
+      }
+      
+      .hero-tagline,
+      .hero-description {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      
+      .hero-inner {
+        text-align: left;
+      }
+      
+      .case-content {
+        padding: 24px;
+      }
+      
+      .case-title {
+        font-size: 1.3rem;
       }
     }
 
@@ -462,13 +702,21 @@
     /* Footer */
     .footer {
       padding: 40px 0 30px 0;
-      margin-top: 80px;
+      margin-top: 0;
+      background: #000;
     }
     
     .footer-con {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0 80px;
+    }
+    
+    .line {
+      width: 100%;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.15);
+      margin: 20px 0;
     }
     
     .footer-disclaimer {
@@ -477,15 +725,150 @@
     }
     
     .footer-disclaimer h4 {
-      font-size: 13px;
+      font-size: 0.75rem;
       font-weight: 400;
       color: rgba(255,255,255,0.4);
       margin: 0;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    
+    @media (max-width: 1400px) {
+      .footer-con {
+        padding: 0 60px;
+      }
+    }
+    
+    @media (max-width: 1200px) {
+      .footer-con {
+        padding: 0 40px;
+      }
     }
     
     @media (max-width: 767px) {
       .footer-con {
         padding: 0 24px;
+      }
+    }
+
+    /* CTA Section Styles */
+    .cta-section {
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-wrapper {
+      max-width: 800px;
+    }
+    
+    .cta-left {
+      width: 100%;
+    }
+    
+    .cta-title {
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 200;
+      color: #ffffff;
+      margin: 0 0 30px 0;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+    }
+    
+    .cta-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+      margin: 0 0 50px 0;
+      font-weight: 300;
+    }
+    
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 40px;
+      background: transparent;
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      z-index: -1;
+    }
+    
+    .cta-button:hover {
+      border-color: transparent;
+      transform: translateX(8px);
+    }
+    
+    .cta-button:hover::before {
+      left: 0;
+    }
+    
+    .cta-button svg {
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    .cta-button:hover svg {
+      transform: translateX(4px);
+    }
+    
+    /* Responsive CTA Styles */
+    @media (max-width: 991px) {
+      .cta-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+      }
+      
+      .cta-left {
+        max-width: 100%;
+      }
+      
+      .cta-icon {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .cta-section {
+        padding: 80px 0;
+      }
+      
+      .cta-title {
+        text-align: left;
+      }
+      
+      .cta-subtitle {
+        text-align: left;
+      }
+      
+      .cta-wrapper {
+        text-align: left;
+      }
+      
+      .cta-button {
+        padding: 16px 32px;
+        font-size: 0.85rem;
       }
     }
 
@@ -816,6 +1199,32 @@
       .menu-mobile {
         display: block;
       }
+
+      /* Mobile navbar layout with logo on left, icon on right */
+      @media (max-width: 767px) {
+        .navbar-wrapper {
+          display: flex !important;
+          flex-direction: row !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          padding-top: 20px !important;
+        }
+        
+        .brand.w-nav-brand {
+          order: 1 !important;
+          margin: 0 !important;
+        }
+        
+        .hamburger-menu {
+          order: 2 !important;
+          margin: 0 !important;
+        }
+        
+        /* Hide desktop nav menu */
+        .nav-menu-wrapper {
+          display: none !important;
+        }
+      }
     }
     
     @media (min-width: 992px) {
@@ -1054,7 +1463,7 @@
     
     /* Mobile Dropdown Flair */
     .dropdown-caret-mobile {
-      width: 20px !important;
+      width: 22px !important;
       height: 20px !important;
       display: inline-flex !important;
       align-items: center !important;
@@ -1149,10 +1558,10 @@
     .hamburger-menu span {
       display: block !important;
       position: absolute !important;
-      height: 2px !important;
-      width: 20px !important;
+      height: 1px !important;
+      width: 22px !important;
       background: #ffffff !important;
-      border-radius: 1px !important;
+      border-radius: 0.5px !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -1160,7 +1569,7 @@
     }
     
     .hamburger-menu span:nth-child(1) {
-      top: 16px;
+      top: 18px;
     }
     
     .hamburger-menu span:nth-child(2) {
@@ -1169,12 +1578,12 @@
     
     .hamburger-menu.active span:nth-child(1) {
       transform: translateX(-50%) rotate(45deg);
-      top: 21px;
+      top: 18px;
     }
     
     .hamburger-menu.active span:nth-child(2) {
       transform: translateX(-50%) rotate(-45deg);
-      top: 21px;
+      top: 18px;
     }
     
     /* Third line using ::after */
@@ -1182,14 +1591,14 @@
       content: '';
       display: block !important;
       position: absolute !important;
-      height: 2px !important;
-      width: 20px !important;
+      height: 1px !important;
+      width: 22px !important;
       background: #ffffff !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
       bottom: 16px !important;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-      border-radius: 1px !important;
+      border-radius: 0.5px !important;
     }
     
     .hamburger-menu.active::after {
@@ -1305,6 +1714,40 @@
         min-height: 44px !important;
       }
     }
+    /* Logo and text positioning adjustments */
+    .brand.w-nav-brand > div {
+      width: 50px !important;
+      height: 50px !important;
+    }
+    
+    .brand.w-nav-brand .logo {
+      max-width: 100px !important;
+      height: 100px !important;
+      width: 100px !important;
+    }
+    
+    .brand.w-nav-brand .builded-text {
+      font-size: 0.95rem !important;
+      margin-left: 3px !important;
+    }
+    
+    @media (max-width: 480px) {
+      .brand.w-nav-brand > div {
+        width: 45px !important;
+        height: 45px !important;
+      }
+      
+      .brand.w-nav-brand .logo {
+        max-width: 90px !important;
+        height: 90px !important;
+        width: 90px !important;
+      }
+      
+      .brand.w-nav-brand .builded-text {
+        font-size: 0.85rem !important;
+        margin-left: 2px !important;
+      }
+    }
   </style>
 </head>
 
@@ -1318,8 +1761,14 @@
       class="navbar-logo-left-container shadow-three w-nav">
       <div class="container">
         <div class="navbar-wrapper">
-          <a href="index.html" class="brand w-nav-brand" style="display: flex !important; align-items: center !important; width: auto !important;">
-            <img alt="" loading="lazy" src="princyplnav.png" class="logo" style="max-width: 120px !important; height: 120px !important; width: 120px !important; flex-shrink: 0 !important; margin: 0 !important;" />
+          <a href="index.html" class="brand w-nav-brand" style="display: flex !important; align-items: center !important; width: auto !important; justify-content: flex-start !important; text-decoration: none !important; position: relative !important;">
+            <div style="position: relative !important; width: 60px !important; height: 60px !important; overflow: visible !important;">
+              <img alt=""
+                loading="lazy"
+                src="princyplnav.png"
+                class="logo" style="position: absolute !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; max-width: 120px !important; height: 120px !important; width: 120px !important; object-fit: contain !important;" />
+            </div>
+            <span class="builded-text" style="font-size: 1.1rem !important; font-weight: 300 !important; color: #FFFFFF !important; letter-spacing: 0.04em !important; text-transform: uppercase !important; margin-left: 5px !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;">BUILDED</span>
           </a>
           <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
             <!-- Services -->
@@ -1351,7 +1800,7 @@
               </a>
               <div class="nav-dropdown-menu">
                 <a href="casestudies.html" class="nav-dropdown-item">Case Studies</a>
-                <a href="index.html#showcase" class="nav-dropdown-item">Showcase</a>
+                <a href="showcase.html" class="nav-dropdown-item">Showcase</a>
               </div>
             </div>
             
@@ -1405,146 +1854,301 @@
             <!-- Contact Us Button -->
             <a href="contact.html" class="nav-button primary">Contact Us</a>
           </nav>
+          <!-- Hamburger Menu Button -->
+          <div class="hamburger-menu" onclick="openMobileMenu()">
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Hero Section -->
-  <section class="hero-compact">
-    <div class="container-tight">
+  <section class="hero-section">
+    <!-- Floating Portfolio Elements -->
+    <div class="floating-portfolio-elements">
+      <!-- Portfolio Metrics Card -->
+      <div class="portfolio-metric-card floating-card">
+        <div class="metric-value">47</div>
+        <div class="metric-label">Projects Delivered</div>
+      </div>
+      
+      <!-- Results Showcase -->
+      <div class="results-card floating-card">
+        <div class="result-item">
+          <span class="result-metric">+284%</span>
+          <span class="result-desc">Avg. Conversion Lift</span>
+        </div>
+        <div class="result-divider"></div>
+        <div class="result-item">
+          <span class="result-metric">$12M+</span>
+          <span class="result-desc">Revenue Generated</span>
+        </div>
+      </div>
+      
+      <!-- Tech Stack Visual -->
+      <div class="tech-stack-card floating-card">
+        <div class="tech-icons">
+          <div class="tech-icon active" title="Design">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <div class="tech-icon" title="Development">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+            </svg>
+          </div>
+          <div class="tech-icon" title="Strategy">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Category Distribution -->
+      <div class="category-card floating-card">
+        <div class="category-item">
+          <div class="category-dot saas"></div>
+          <span>SaaS</span>
+        </div>
+        <div class="category-item">
+          <div class="category-dot ecommerce"></div>
+          <span>E-comm</span>
+        </div>
+        <div class="category-item">
+          <div class="category-dot fintech"></div>
+          <span>Fintech</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-wide">
       <div class="hero-inner">
+        <p class="hero-tagline">Our Work</p>
         <h1 class="hero-heading">
-          <span>C</span><span>A</span><span>S</span><span>E</span>
-          <span>S</span><span>T</span><span>U</span><span>D</span><span>I</span><span>E</span><span>S</span>
+          <strong>Case</strong><br>
+          Studies
         </h1>
         <p class="hero-description">
-          Selected projects showcasing our end-to-end design and development capabilities across diverse industries. 
-          Each case study represents our commitment to crafting digital experiences that define and elevate brands.
+          Explore how we've transformed ambitious ideas into market-leading products. 
+          Take a look at some of our favorite projects.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Case Studies Grid -->
-  <section class="container-tight">
-    <div class="case-studies-grid">
+  <!-- Case Studies Mosaic -->
+  <section class="case-studies-mosaic">
+    <div class="container-wide">
+      <div class="mosaic-grid">
       
-      <!-- Case Study 1: LUMINA HOUSE -->
-      <a href="lumina.html" class="case-study-card">
-        <div class="case-image"></div>
-        <div class="case-content">
-          <div class="case-tags">
-            <span class="case-tag">WEB</span>
-            <span class="case-tag">DESIGN</span>
+        <!-- Case Study 1: LUMINA HOUSE - Large card -->
+        <a href="lumina.html" class="case-study-card">
+          <div class="case-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Lumina House Project">
           </div>
-          <h3 class="case-title">LUMINA HOUSE</h3>
-          <p class="case-description">Modular brand system for Europe's all-female hacker house</p>
-        </div>
-      </a>
-
-      <!-- Case Study 2: SMARTER.AI -->
-      <a href="smarter.html" class="case-study-card">
-        <div class="case-image"></div>
-        <div class="case-content">
-          <div class="case-tags">
-            <span class="case-tag">UI/UX</span>
-            <span class="case-tag">WEB</span>
+          <div class="case-content">
+            <p class="case-category">Brand Identity • Web Design</p>
+            <h3 class="case-title">Lumina House</h3>
+            <p class="case-description">Scalable Brand Architecture for European Tech Community</p>
           </div>
-          <h3 class="case-title">SMARTER.AI</h3>
-          <p class="case-description">Unified interface system for AI recruitment platform</p>
-        </div>
-      </a>
+        </a>
 
-      <!-- Case Study 3: TERNION INTELLIGENCE -->
-      <a href="ternion.html" class="case-study-card">
-        <div class="case-image"></div>
-        <div class="case-content">
-          <div class="case-tags">
-            <span class="case-tag">WEB</span>
-            <span class="case-tag">DESIGN</span>
+        <!-- Case Study 2: SMARTER.AI -->
+        <a href="smarter.html" class="case-study-card">
+          <div class="case-image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop" alt="Smarter AI Platform">
           </div>
-          <h3 class="case-title">TERNION INTELLIGENCE</h3>
-          <p class="case-description">Scalable identity framework for geopolitical risk analysis</p>
-        </div>
-      </a>
-
-      <!-- Case Study 4: CYRCL -->
-      <a href="cyrcl.html" class="case-study-card">
-        <div class="case-image"></div>
-        <div class="case-content">
-          <div class="case-tags">
-            <span class="case-tag">UI/UX</span>
-            <span class="case-tag">WEB</span>
+          <div class="case-content">
+            <p class="case-category">Product Design</p>
+            <h3 class="case-title">Smarter.AI</h3>
+            <p class="case-description">Streamlined AI Platform for Recruitment Excellence</p>
           </div>
-          <h3 class="case-title">CYRCL</h3>
-          <p class="case-description">Gesture-driven interface design for social presence app</p>
-        </div>
-      </a>
+        </a>
 
-      <!-- Case Study 5: CIRCLES INITIATIVE (Second row - staggered) -->
-      <a href="circles.html" class="case-study-card">
-        <div class="case-image"></div>
-        <div class="case-content">
-          <div class="case-tags">
-            <span class="case-tag">WEB</span>
-            <span class="case-tag">DESIGN</span>
+        <!-- Case Study 3: TERNION INTELLIGENCE -->
+        <a href="ternion.html" class="case-study-card">
+          <div class="case-image">
+            <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=800&h=600&fit=crop" alt="Ternion Intelligence">
           </div>
-          <h3 class="case-title">CIRCLES INITIATIVE</h3>
-          <p class="case-description">Systematic brand architecture for global think-tank network</p>
-        </div>
-      </a>
-
-      <!-- Case Study 6: NEXUS LABS (Additional case study) -->
-      <a href="#" class="case-study-card">
-        <div class="case-image"></div>
-        <div class="case-content">
-          <div class="case-tags">
-            <span class="case-tag">PRODUCT</span>
-            <span class="case-tag">DESIGN</span>
+          <div class="case-content">
+            <p class="case-category">Brand & Digital</p>
+            <h3 class="case-title">Ternion Intelligence</h3>
+            <p class="case-description">Strategic Intelligence Platform for Risk Management</p>
           </div>
-          <h3 class="case-title">NEXUS LABS</h3>
-          <p class="case-description">Research platform interface for quantum computing startup</p>
-        </div>
-      </a>
+        </a>
 
-      <!-- Case Study 7: ATLAS FINANCE -->
-      <a href="#" class="case-study-card">
-        <div class="case-image"></div>
-        <div class="case-content">
-          <div class="case-tags">
-            <span class="case-tag">FINTECH</span>
-            <span class="case-tag">UI/UX</span>
+        <!-- Case Study 4: CYRCL - Wide card -->
+        <a href="cyrcl.html" class="case-study-card">
+          <div class="case-image">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop" alt="Cyrcl Mobile App">
           </div>
-          <h3 class="case-title">ATLAS FINANCE</h3>
-          <p class="case-description">Digital banking experience for next-generation investors</p>
-        </div>
-      </a>
-
-      <!-- Case Study 8: MERIDIAN HEALTH -->
-      <a href="#" class="case-study-card">
-        <div class="case-image"></div>
-        <div class="case-content">
-          <div class="case-tags">
-            <span class="case-tag">HEALTHCARE</span>
-            <span class="case-tag">PLATFORM</span>
+          <div class="case-content">
+            <p class="case-category">Mobile Application</p>
+            <h3 class="case-title">Cyrcl</h3>
+            <p class="case-description">Intuitive Mobile Experience for Social Connectivity</p>
           </div>
-          <h3 class="case-title">MERIDIAN HEALTH</h3>
-          <p class="case-description">Patient portal redesign for integrated healthcare network</p>
-        </div>
-      </a>
+        </a>
 
+        <!-- Case Study 5: CIRCLES INITIATIVE -->
+        <a href="circles.html" class="case-study-card">
+          <div class="case-image">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop" alt="Circles Initiative">
+          </div>
+          <div class="case-content">
+            <p class="case-category">Non-Profit</p>
+            <h3 class="case-title">Circles Initiative</h3>
+            <p class="case-description">Unified Brand Strategy for Global Research Network</p>
+          </div>
+        </a>
+
+        <!-- Case Study 6: NEXUS LABS - Tall card -->
+        <a href="#" class="case-study-card">
+          <div class="case-image">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" alt="Nexus Labs Platform">
+          </div>
+          <div class="case-content">
+            <p class="case-category">Platform Design</p>
+            <h3 class="case-title">Nexus Labs</h3>
+            <p class="case-description">Advanced Research Platform for Quantum Computing Innovation</p>
+          </div>
+        </a>
+
+        <!-- Case Study 7: ATLAS FINANCE -->
+        <a href="#" class="case-study-card">
+          <div class="case-image">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop" alt="Atlas Finance">
+          </div>
+          <div class="case-content">
+            <p class="case-category">Fintech</p>
+            <h3 class="case-title">Atlas Finance</h3>
+            <p class="case-description">Modern Banking Solutions for Investment Management</p>
+          </div>
+        </a>
+
+        <!-- Case Study 8: MERIDIAN HEALTH - Wide card -->
+        <a href="#" class="case-study-card">
+          <div class="case-image">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop" alt="Meridian Health Portal">
+          </div>
+          <div class="case-content">
+            <p class="case-category">Healthcare Platform</p>
+            <h3 class="case-title">Meridian Health</h3>
+            <p class="case-description">Healthcare Portal Optimization for Patient Experience</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container-wide">
+      <div class="cta-wrapper">
+        <div class="cta-left">
+          <h2 class="cta-title">
+            Like what<br>
+            you see?
+          </h2>
+          <p class="cta-subtitle">
+            Let's discuss your project and bring your vision to life.
+          </p>
+          <a href="contact.html" class="cta-button">
+            <span>Get in Touch</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 10H15M15 10L10 5M15 10L10 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <div class="footer">
     <div class="footer-con w-container">
+      <div class="line"></div>
       <div class="footer-disclaimer">
         <h4 class="grey">2025 Builded agency. All rights reserved</h4>
       </div>
     </div>
   </div>
 
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63ef85bbe954cc6863a77eab"
+    type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/63ef85bbe954cc6863a77eab/js/webflow.6926b7bcf.js"
+    type="text/javascript"></script>
+  
+  <!-- Navigation JavaScript -->
+  <script>
+    function toggleMobDropdown(element) {
+      const dropdown = element.parentElement;
+      const allDropdowns = document.querySelectorAll('.mob-dropdown');
+      
+      // Close other dropdowns with smooth animation
+      allDropdowns.forEach(dd => {
+        if (dd !== dropdown && dd.classList.contains('active')) {
+          dd.classList.remove('active');
+        }
+      });
+      
+      // Toggle current dropdown
+      dropdown.classList.toggle('active');
+    }
+    
+    function openMobileMenu() {
+      const menu = document.querySelector('.menu-mobile');
+      const hamburger = document.querySelector('.hamburger-menu');
+      if (menu) {
+        menu.style.display = 'block';
+        setTimeout(() => {
+          menu.classList.add('active');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+      if (hamburger) {
+        hamburger.classList.add('active');
+      }
+    }
+    
+    function closeMobileMenu() {
+      const menu = document.querySelector('.menu-mobile');
+      const hamburger = document.querySelector('.hamburger-menu');
+      if (menu) {
+        menu.classList.remove('active');
+        setTimeout(() => {
+          menu.style.display = 'none';
+        }, 300);
+        document.body.style.overflow = '';
+      }
+      if (hamburger) {
+        hamburger.classList.remove('active');
+      }
+    }
+    
+    // Close mobile menu on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeMobileMenu();
+      }
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      const menu = document.querySelector('.menu-mobile');
+      const hamburger = document.querySelector('.hamburger-menu');
+      
+      if (menu && menu.classList.contains('active')) {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+          closeMobileMenu();
+        }
+      }
+    });
+  </script>
 </body>
 </html>

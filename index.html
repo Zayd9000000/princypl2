@@ -77,7 +77,7 @@
       }
       
       html body .navbar-logo-left-container .container {
-        padding: 0 8px !important;
+        padding: 0 40px 0 4px !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
@@ -92,6 +92,7 @@
         height: auto !important;
         margin: 0 !important;
         padding: 0 !important;
+        justify-content: center !important;
       }
       
       html body .brand.w-nav-brand img.logo {
@@ -246,7 +247,7 @@
         margin: 0 auto !important;
         padding: 24px 20px !important;
         background: #101010 !important;
-        border-radius: 8px !important;
+        border-radius: 12px !important;
       }
       
       /* Hide decorative elements on mobile */
@@ -266,7 +267,7 @@
         background: rgba(16, 16, 16, 0.8) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 12px !important;
-        padding: 16px !important;
+        padding: 12px !important;
         flex-direction: column !important;
         gap: 0 !important;
         max-width: 100% !important;
@@ -276,25 +277,32 @@
       html body .about-image-container {
         flex: none !important;
         order: 1 !important;
-        height: 80px !important;
-        margin: 0 0 16px 0 !important;
+        width: 100% !important;
+        height: 120px !important;
+        margin: 0 0 15px 0 !important;
         max-width: 100% !important;
-        background: rgba(8, 8, 8, 0.6) !important;
-        border-radius: 8px !important;
-        padding: 6px !important;
+        background: transparent !important;
+        border-radius: 12px !important;
+        padding: 0 !important;
       }
       
       html body .about-image-container > div {
-        height: 68px !important;
-        border-radius: 6px !important;
-        border: 1px solid rgba(255,255,255,0.1) !important;
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 12px !important;
+        border: 1px solid rgba(255,255,255,0.15) !important;
         overflow: hidden !important;
+        min-height: unset !important;
+        position: relative !important;
       }
       
       html body .about-image-container img {
         width: 100% !important;
-        height: 68px !important;
+        height: 100% !important;
         object-fit: cover !important;
+        object-position: center center !important;
+        min-height: unset !important;
+        display: block !important;
       }
       
       html body .about-content {
@@ -327,7 +335,7 @@
         background: rgba(16, 16, 16, 0.8) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 12px !important;
-        padding: 16px !important;
+        padding: 12px !important;
         flex-direction: column !important;
         gap: 0 !important;
         max-width: 100% !important;
@@ -337,25 +345,32 @@
       html body .what-we-do-image-container {
         flex: none !important;
         order: 1 !important;
-        height: 80px !important;
-        margin: 0 0 16px 0 !important;
+        width: 100% !important;
+        height: 120px !important;
+        margin: 0 0 15px 0 !important;
         max-width: 100% !important;
-        background: rgba(8, 8, 8, 0.6) !important;
-        border-radius: 8px !important;
-        padding: 6px !important;
+        background: transparent !important;
+        border-radius: 12px !important;
+        padding: 0 !important;
       }
       
       html body .what-we-do-image-container > div {
-        height: 68px !important;
-        border-radius: 6px !important;
-        border: 1px solid rgba(255,255,255,0.1) !important;
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 12px !important;
+        border: 1px solid rgba(255,255,255,0.15) !important;
         overflow: hidden !important;
+        min-height: unset !important;
+        position: relative !important;
       }
       
       html body .what-we-do-image-container img {
         width: 100% !important;
-        height: 68px !important;
+        height: 100% !important;
         object-fit: cover !important;
+        object-position: center center !important;
+        min-height: unset !important;
+        display: block !important;
       }
       
       html body .centered-what-we-do-content {
@@ -461,7 +476,7 @@
         font-size: 0.7rem !important;
         padding: 6px 12px !important;
         border: 1px solid rgba(255,255,255,0.2) !important;
-        border-radius: 16px !important;
+        border-radius: 12px !important;
         background: transparent !important;
         color: rgba(255,255,255,0.8) !important;
         text-transform: uppercase !important;
@@ -475,7 +490,7 @@
         margin: 0 -20px 20px -20px !important;
         position: relative !important;
         overflow: hidden !important;
-        border-radius: 4px !important;
+        border-radius: 12px !important;
       }
       
       html body .products-list .product-con .video-product-wrapper img {
@@ -820,7 +835,7 @@
     .section-block {
       margin-bottom: 200px;
       background: transparent;
-      border-radius: 4px;
+      border-radius: 12px;
       /* box-shadow: 0 4px 24px rgba(0,0,0,0.04);  Uncomment for subtle elevation */
     }
 
@@ -851,7 +866,7 @@
       }
       .section-block {
         margin-bottom: 60px;
-        border-radius: 4px;
+        border-radius: 12px;
       }
       .brand-identity-text-wrapper-v .text-block-under-hero-desktop + .text-block-under-hero-desktop {
         margin-top: 32px;
@@ -967,7 +982,7 @@
       max-width: 54px !important;
       height: 44px !important;
       object-fit: cover;
-      border-radius: 4px;
+      border-radius: 12px;
       background: none;
       margin-right: 8px;
       flex-shrink: 0;
@@ -988,7 +1003,7 @@
         height: 36px;
         max-width: 44px;
         min-width: 28px;
-        border-radius: 4px;
+        border-radius: 12px;
       }
       
     }
@@ -1462,7 +1477,7 @@
       font-size: 13px;
       font-weight: 400;
       letter-spacing: 0.3px;
-      border-radius: 8px;
+      border-radius: 12px;
       transition: all 0.2s ease;
       position: relative;
       overflow: hidden;
@@ -1496,7 +1511,7 @@
       color: white;
       border: 1.5px solid rgba(59, 130, 246, 0.5);
       padding: 7px 16px;
-      border-radius: 8px;
+      border-radius: 12px;
       font-size: 13px;
       font-weight: 500;
       letter-spacing: 0.2px;
@@ -1530,7 +1545,7 @@
       border: none !important;
       padding: 0 !important; /* Remove padding, let .mob-menu-link handle it */
       margin-bottom: 8px !important; /* Reduced margin for tighter spacing */
-      border-radius: 8px !important;
+      border-radius: 12px !important;
       position: relative;
       overflow: hidden !important;
     }
@@ -1565,7 +1580,7 @@
       width: 100%;
       background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(15, 15, 15, 0.95) 100%);
       margin-top: 10px;
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 8px;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -1592,7 +1607,7 @@
       padding: 10px 16px;
       text-decoration: none;
       font-size: 13px;
-      border-radius: 6px;
+      border-radius: 12px;
       margin-bottom: 4px;
       transition: all 0.2s ease;
     }
@@ -1799,6 +1814,41 @@
       body {
         padding-top: 70px !important;
       }
+      
+      /* Logo and text positioning adjustments */
+      .brand.w-nav-brand > div {
+        width: 50px !important;
+        height: 50px !important;
+      }
+      
+      .brand.w-nav-brand .logo {
+        max-width: 100px !important;
+        height: 100px !important;
+        width: 100px !important;
+      }
+      
+      .brand.w-nav-brand .builded-text {
+        font-size: 0.95rem !important;
+        margin-left: 3px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .brand.w-nav-brand > div {
+        width: 45px !important;
+        height: 45px !important;
+      }
+      
+      .brand.w-nav-brand .logo {
+        max-width: 90px !important;
+        height: 90px !important;
+        width: 90px !important;
+      }
+      
+      .brand.w-nav-brand .builded-text {
+        font-size: 0.85rem !important;
+        margin-left: 2px !important;
+      }
     }
   </style>
   
@@ -1969,7 +2019,7 @@
         height: 60px !important;
         background: rgba(16, 16, 16, 0.7) !important;
         border: 1px solid rgba(255,255,255,0.1) !important;
-        border-radius: 6px !important;
+        border-radius: 12px !important;
         padding: 8px !important;
         font-size: 0.6rem !important;
         animation: floatGently 8s infinite ease-in-out !important;
@@ -2110,11 +2160,14 @@
       class="navbar-logo-left-container shadow-three w-nav">
       <div class="container">
         <div class="navbar-wrapper">
-          <a href="index.html" class="brand w-nav-brand" style="display: flex !important; align-items: center !important; width: auto !important; justify-content: flex-start !important;">
-            <img alt=""
-              loading="lazy"
-              src="princyplnav.png"
-              class="logo" style="max-width: 120px !important; height: 120px !important; width: 120px !important; flex-shrink: 0 !important; margin: 0 !important; object-fit: contain !important;" />
+          <a href="index.html" class="brand w-nav-brand" style="display: flex !important; align-items: center !important; width: auto !important; justify-content: flex-start !important; text-decoration: none !important; position: relative !important;">
+            <div style="position: relative !important; width: 60px !important; height: 60px !important; overflow: visible !important;">
+              <img alt=""
+                loading="lazy"
+                src="princyplnav.png"
+                class="logo" style="position: absolute !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; max-width: 120px !important; height: 120px !important; width: 120px !important; object-fit: contain !important;" />
+            </div>
+            <span class="builded-text" style="font-size: 1.1rem !important; font-weight: 300 !important; color: #FFFFFF !important; letter-spacing: 0.04em !important; text-transform: uppercase !important; margin-left: 5px !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;">BUILDED</span>
           </a>
           <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
             <!-- Services -->
@@ -2145,8 +2198,8 @@
                 </svg>
               </a>
               <div class="nav-dropdown-menu">
-                <a href="#case-studies" class="nav-dropdown-item">Case Studies</a>
-                <a href="#showcase" class="nav-dropdown-item">Showcase</a>
+                <a href="casestudies.html" class="nav-dropdown-item">Case Studies</a>
+                <a href="showcase.html" class="nav-dropdown-item">Showcase</a>
               </div>
             </div>
             
@@ -2243,8 +2296,8 @@
             </svg>
           </div>
           <div class="mob-dropdown-menu">
-            <a href="#case-studies" class="mob-dropdown-item">Case Studies</a>
-            <a href="#showcase" class="mob-dropdown-item">Showcase</a>
+            <a href="casestudies.html" class="mob-dropdown-item">Case Studies</a>
+            <a href="showcase.html" class="mob-dropdown-item">Showcase</a>
           </div>
         </div>
         
@@ -2298,7 +2351,7 @@
         </a>
         
         <!-- Contact Us -->
-        <a href="contact.html" class="mob-menu-ul w-inline-block" style="background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); border-radius: 8px; margin: 15px 20px;">
+        <a href="contact.html" class="mob-menu-ul w-inline-block" style="background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); border-radius: 12px; margin: 15px 20px;">
           <div class="mob-menu-link" style="color: white;">Contact Us</div>
         </a>
       </div>
@@ -2463,7 +2516,7 @@
         left: 10%;
         background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
         border: 1px solid rgba(255,255,255,0.15);
-        border-radius: 4px;
+        border-radius: 12px;
         transform: rotate(15deg);
         animation: float1 15s infinite ease-in-out;
       }
@@ -2682,7 +2735,7 @@
           left: -80px;
           background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
           border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 4px;
+          border-radius: 12px;
           transform: rotate(-25deg);
         }
         
@@ -3449,7 +3502,7 @@
         padding: 4px 10px;
         font-size: 10px;
         color: rgba(255, 255, 255, 0.5);
-        border-radius: 4px;
+        border-radius: 12px;
         cursor: pointer;
         transition: all 0.2s;
       }
@@ -3471,7 +3524,7 @@
         color: #fff;
         font-size: 9px;
         font-weight: 600;
-        border-radius: 4px;
+        border-radius: 12px;
         cursor: pointer;
       }
       
@@ -3889,7 +3942,7 @@
 
       .demo-btn {
         padding: 6px 12px;
-        border-radius: 6px;
+        border-radius: 12px;
         font-size: 10px;
         font-weight: 500;
         border: none;
@@ -4134,7 +4187,7 @@
         justify-content: space-around;
         padding: 12px;
         background: rgba(255, 255, 255, 0.02);
-        border-radius: 10px;
+        border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
 
@@ -4204,7 +4257,7 @@
       
       <!-- CTA Buttons below subtitle -->
       <div class="hero-cta-buttons" style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 30px; animation: fadeInUp 1.2s forwards; animation-delay: 1s; opacity: 0;">
-      <a href="#case-studies" class="hero-btn hero-btn-primary" onclick="smoothScrollToSection(event, '.product-list-sec')">
+      <a href="casestudies.html" class="hero-btn hero-btn-primary" onclick="smoothScrollToSection(event, '.product-list-sec')">
         <span>EXPLORE OUR WORK</span>
         <svg class="hero-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px; opacity: 0.7; transition: all 0.3s ease;">
           <circle cx="11" cy="11" r="8"></circle>
@@ -4246,7 +4299,7 @@
           text-decoration: none;
           transition: all 0.3s ease;
           cursor: pointer;
-          border-radius: 4px;
+          border-radius: 12px;
         }
         
         .hero-btn-primary {
@@ -4372,7 +4425,7 @@
         <p style="color: rgba(255,255,255,0.8); font-weight: 400; animation: fadeInUp 1s forwards; animation-delay: 0.8s; opacity: 0;">An integrated design and engineering team for every step of the creative process. We build alongside you from concept to launch with the dedication of an in-house team and the expertise of seasoned specialists.</p>
         <!-- CTA Buttons Mobile -->
         <div class="hero-cta-buttons" style="margin-top: 2rem; display: flex; gap: 1rem; animation: fadeInUp 1.2s forwards; animation-delay: 1s; opacity: 0;">
-          <a href="#case-studies" class="hero-btn hero-btn-primary" onclick="smoothScrollToSection(event, '.product-list-sec')">
+          <a href="casestudies.html" class="hero-btn hero-btn-primary" onclick="smoothScrollToSection(event, '.product-list-sec')">
             <span>EXPLORE OUR WORK</span>
             <svg class="hero-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px; opacity: 0.7; transition: all 0.3s ease;">
               <circle cx="11" cy="11" r="8"></circle>
@@ -4524,7 +4577,7 @@
         <!-- Buttons Container -->
         <div style="display: flex; gap: 15px; margin-top: 35px; flex-wrap: wrap;">
           <!-- Learn More Button -->
-          <a href="aboutus.html" style="display: inline-flex; align-items: center; padding: 14px 28px; background: transparent; border: 1px solid rgba(255,255,255,0.4); border-radius: 4px; text-decoration: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s ease; backdrop-filter: blur(60px) saturate(180%); -webkit-backdrop-filter: blur(60px) saturate(180%); width: fit-content;"
+          <a href="aboutus.html" style="display: inline-flex; align-items: center; padding: 14px 28px; background: transparent; border: 1px solid rgba(255,255,255,0.4); border-radius: 12px; text-decoration: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s ease; backdrop-filter: blur(60px) saturate(180%); -webkit-backdrop-filter: blur(60px) saturate(180%); width: fit-content;"
              onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.6)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(255,255,255,0.15)'; this.style.backdropFilter='blur(80px) saturate(200%)'; this.style.webkitBackdropFilter='blur(80px) saturate(200%)'"
              onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.4)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.backdropFilter='blur(60px) saturate(180%)'; this.style.webkitBackdropFilter='blur(60px) saturate(180%)'">
             <span style="margin-right: 10px;">LEARN MORE</span>
@@ -4533,7 +4586,7 @@
             </svg>
           </a>
           <!-- Book a Meeting Button -->
-          <a href="https://calendly.com/buildedstudio/30min" target="_blank" style="display: inline-flex; align-items: center; padding: 14px 28px; background: transparent; border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 4px; text-decoration: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s ease; backdrop-filter: blur(60px) saturate(180%); -webkit-backdrop-filter: blur(60px) saturate(180%); width: fit-content;"
+          <a href="https://calendly.com/buildedstudio/30min" target="_blank" style="display: inline-flex; align-items: center; padding: 14px 28px; background: transparent; border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 12px; text-decoration: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s ease; backdrop-filter: blur(60px) saturate(180%); -webkit-backdrop-filter: blur(60px) saturate(180%); width: fit-content;"
              onmouseover="this.style.background='rgba(99, 102, 241, 0.1)'; this.style.borderColor='rgba(99, 102, 241, 0.6)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(99, 102, 241, 0.15)'; this.style.backdropFilter='blur(80px) saturate(200%)'; this.style.webkitBackdropFilter='blur(80px) saturate(200%)'"
              onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(99, 102, 241, 0.4)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.backdropFilter='blur(60px) saturate(180%)'; this.style.webkitBackdropFilter='blur(60px) saturate(180%)'">
             <span style="margin-right: 10px;">BOOK A MEETING</span>
@@ -4670,7 +4723,7 @@
       padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
       position: relative;
       overflow: hidden;
-      border-radius: 8px;
+      border-radius: 12px;
       margin-bottom: 20px;
       background: #0a0a0a;
     }
@@ -4783,12 +4836,28 @@
         margin-bottom: 25px !important;
       }
       .about-image-container {
-        max-width: 90%;
-        height: 120px !important;
-        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+        height: 140px !important;
+        margin: 0 auto 15px auto;
+        padding: 0 !important;
+        background: transparent !important;
+      }
+      .about-image-container > div {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: unset !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        position: relative !important;
       }
       .about-image-container img {
-        object-fit: contain !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: unset !important;
+        display: block !important;
       }
     }
 
@@ -4855,7 +4924,7 @@
           We plug in a design squad—strategists, UI/UX architects, and engineers—directly into your workflow. Our process compresses discovery, design, and delivery into rapid sprints, producing complete brand identities and production-ready interfaces in days, not weeks. From naming and visual identity to B2B dashboards, zero-UI prototypes, and React component libraries, we deliver digital infrastructure without the back-and-forth.
         </p>
         <!-- View Our Services Button -->
-        <a href="#services-list" style="display: inline-flex; align-items: center; margin-top: 35px; padding: 14px 28px; background: transparent; border: 1px solid rgba(255,255,255,0.4); border-radius: 4px; text-decoration: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s ease; backdrop-filter: blur(60px) saturate(180%); -webkit-backdrop-filter: blur(60px) saturate(180%); width: fit-content;"
+        <a href="#services-list" style="display: inline-flex; align-items: center; margin-top: 35px; padding: 14px 28px; background: transparent; border: 1px solid rgba(255,255,255,0.4); border-radius: 12px; text-decoration: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s ease; backdrop-filter: blur(60px) saturate(180%); -webkit-backdrop-filter: blur(60px) saturate(180%); width: fit-content;"
            onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.6)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(255,255,255,0.15)'; this.style.backdropFilter='blur(80px) saturate(200%)'; this.style.webkitBackdropFilter='blur(80px) saturate(200%)'"
            onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.4)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.backdropFilter='blur(60px) saturate(180%)'; this.style.webkitBackdropFilter='blur(60px) saturate(180%)'">
           <span style="margin-right: 10px;">VIEW OUR SERVICES</span>
@@ -4918,17 +4987,29 @@
         margin-bottom: 25px !important;
       }
       .what-we-do-image-container {
-        max-width: 90%;
-        height: 120px !important;
+        max-width: 100%;
+        width: 100%;
+        height: 140px !important;
         margin: 0 auto 15px auto;
+        padding: 0 !important;
+        background: transparent !important;
       }
       .what-we-do-image-container > div {
-        border-radius: 4px !important;
-        border-left: 1px solid rgba(255,255,255,0.1) !important;
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 12px !important;
+        border-left: 1px solid rgba(255,255,255,0.15) !important;
+        min-height: unset !important;
+        overflow: hidden !important;
+        position: relative !important;
       }
       .what-we-do-image-container img {
-        object-fit: contain !important;
-        min-height: 120px !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: unset !important;
+        display: block !important;
       }
     }
 
@@ -5124,125 +5205,355 @@
   </div>
 
   <!-- Case Studies Section -->
-  <div data-w-id="a22462d5-49af-5288-7bef-21b49129c0b0" class="product-list-sec" style="margin-top: 20px !important; padding-top: 20px !important;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 20px 40px 30px 40px; text-align: left;">
-      <h3 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; letter-spacing: 0.02em; text-transform: uppercase; color: #FFFFFF; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">CASE STUDIES</h3>
-      <p style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.5; color: rgba(255,255,255,0.95); font-weight: 400; max-width: 900px; margin: 0 0 30px; letter-spacing: -0.01em;">
-        Selected projects showcasing our end-to-end design and development capabilities across diverse industries.
-      </p>
-    </div>
-    <div class="products-list w-container">
-      <a href="lumina.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0b3"
-         class="product-con w-inline-block">
-        <div class="tags-con">
-          <span>WEB</span>
-          <span>DESIGN</span>
-          <span>BRANDING</span>
-        </div>
-        <div class="video-product-wrapper">
-          <img src="1.png" alt="LUMINA HOUSE" />
-        </div>
-        <div class="product-name-wrapper">
-          <h4 class="product-name-txt">LUMINA HOUSE</h4>
-          <p>Modular brand system for Europe's all-female hacker house</p>
-        </div>
-      </a>
-      <a href="smarter.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0c2"
-        class="product-con w-inline-block">
-        <div class="tags-con">
-          <span>UI/UX</span>
-          <span>WEB</span>
-        </div>
-        <div class="video-product-wrapper">
-          <img src="2.png" alt="SMARTER.AI" />
-        </div>
-        <div class="product-name-wrapper">
-          <h4 class="product-name-txt">SMARTER.AI</h4>
-          <p>Unified interface system for AI recruitment platform</p>
-        </div>
-      </a>
-      <a href="ternion.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0d1"
-        class="product-con w-inline-block">
-        <div class="tags-con">
-          <span>WEB</span>
-          <span>DESIGN</span>
-          <span>BRANDING</span>
-        </div>
-        <div class="video-product-wrapper">
-          <img src="3.png" alt="TERNION INTELLIGENCE" />
-        </div>
-        <div class="product-name-wrapper">
-          <h4 class="product-name-txt">TERNION INTELLIGENCE</h4>
-          <p>Scalable identity framework for geopolitical risk analysis</p>
-        </div>
-      </a>
-
-
-      <a href="cyrcl.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0e3" 
-         class="product-con w-inline-block">
-        <div class="tags-con">
-          <span>UI/UX</span>
-          <span>WEB</span>
-          <span>BRANDING</span>
-        </div>
-        <div class="video-product-wrapper">
-          <img src="4.png" alt="CYRCL" />
-        </div>
-        <div class="product-name-wrapper">
-          <h4 class="product-name-txt">CYRCL</h4>
-          <p>Gesture-driven interface design for social presence app</p>
-        </div>
-      </a>
-      
-      
-      <a href="circles.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c0f5" 
-         class="product-con w-inline-block">
-        <div class="tags-con">
-          <span>WEB</span>
-          <span>DESIGN</span>
-        </div>
-        <div class="video-product-wrapper">
-          <img src="5.png" alt="CIRCLES INITIATIVE" />
-        </div>
-        <div class="product-name-wrapper">
-          <h4 class="product-name-txt">CIRCLES INITIATIVE</h4>
-          <p>Systematic brand architecture for global think-tank network</p>
-        </div>
-      </a>
-      
-      <a href="contact.html" data-w-id="a22462d5-49af-5288-7bef-21b49129c106" 
-         class="product-con w-inline-block">
-        <div class="tags-con">
-          <span>CONSULTATION</span>
-          <span>PORTFOLIO</span>
-        </div>
-        <div class="video-product-wrapper" style="padding-bottom: 56.25%; position: relative; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.15); display: block;">
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px;">
-            <div style="width: 3px; height: 60px; background: linear-gradient(180deg, #8B5CF6, #EC4899); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 2px;"></div>
-            <div style="width: 60px; height: 3px; background: linear-gradient(90deg, #8B5CF6, #EC4899); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 2px;"></div>
+  <div data-w-id="a22462d5-49af-5288-7bef-21b49129c0b0" class="case-studies-section" style="margin-top: 60px !important; padding: 80px 0 !important;">
+    <div class="case-studies-container">
+      <div class="case-studies-header">
+        <h3 class="case-studies-title">CASE STUDIES</h3>
+        <p class="case-studies-subtitle">
+          Selected projects showcasing our end-to-end design and development capabilities across diverse industries.
+        </p>
+      </div>
+      <div class="case-studies-grid">
+        <!-- Case Study 1: LUMINA HOUSE -->
+        <a href="lumina.html" class="case-study-card-index">
+          <div class="case-image-index">
+            <img src="1.png" alt="LUMINA HOUSE" />
           </div>
-        </div>
-        <div class="product-name-wrapper">
-          <h4 class="product-name-txt">MORE WORK</h4>
-          <p>Schedule consultation for full portfolio access</p>
-        </div>
-      </a>
-    </div>
-    <style>
+          <div class="case-content-index">
+            <p class="case-category-index">Brand Identity • Web Design</p>
+            <h4 class="case-title-index">Lumina House</h4>
+            <p class="case-description-index">Modular brand system for Europe's all-female hacker house</p>
+          </div>
+        </a>
+
+        <!-- Case Study 2: SMARTER.AI -->
+        <a href="smarter.html" class="case-study-card-index">
+          <div class="case-image-index">
+            <img src="2.png" alt="SMARTER.AI" />
+          </div>
+          <div class="case-content-index">
+            <p class="case-category-index">Product Design</p>
+            <h4 class="case-title-index">Smarter.AI</h4>
+            <p class="case-description-index">Unified interface system for AI recruitment platform</p>
+          </div>
+        </a>
+
+        <!-- Case Study 3: TERNION INTELLIGENCE -->
+        <a href="ternion.html" class="case-study-card-index">
+          <div class="case-image-index">
+            <img src="3.png" alt="TERNION INTELLIGENCE" />
+          </div>
+          <div class="case-content-index">
+            <p class="case-category-index">Brand & Digital</p>
+            <h4 class="case-title-index">Ternion Intelligence</h4>
+            <p class="case-description-index">Scalable identity framework for geopolitical risk analysis</p>
+          </div>
+        </a>
+
+        <!-- Case Study 4: CYRCL -->
+        <a href="cyrcl.html" class="case-study-card-index">
+          <div class="case-image-index">
+            <img src="4.png" alt="CYRCL" />
+          </div>
+          <div class="case-content-index">
+            <p class="case-category-index">Mobile Application</p>
+            <h4 class="case-title-index">Cyrcl</h4>
+            <p class="case-description-index">Gesture-driven interface design for social presence app</p>
+          </div>
+        </a>
+
+        <!-- Case Study 5: CIRCLES INITIATIVE -->
+        <a href="circles.html" class="case-study-card-index">
+          <div class="case-image-index">
+            <img src="5.png" alt="CIRCLES INITIATIVE" />
+          </div>
+          <div class="case-content-index">
+            <p class="case-category-index">Non-Profit</p>
+            <h4 class="case-title-index">Circles Initiative</h4>
+            <p class="case-description-index">Systematic brand architecture for global think-tank network</p>
+          </div>
+        </a>
+      </div>
       
-      /* Mobile Responsive Layout */
-      @media (max-width: 767px) {
-        .products-list.w-container {
-          grid-template-columns: 1fr !important;
-          gap: 20px !important;
-          padding: 0 20px !important;
+      <!-- Buttons Section -->
+      <div class="buttons-wrapper">
+        <a href="casestudies.html" class="view-button">
+          View All Case Studies
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 10H15M15 10L10 5M15 10L10 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="showcase.html" class="view-button">
+          View Other Work
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 10H15M15 10L10 5M15 10L10 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    
+    <style>
+      /* Case Studies Section Styling */
+      .case-studies-section {
+        background: #000;
+        padding: 80px 0 !important;
+      }
+      
+      .case-studies-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 60px;
+      }
+      
+      .case-studies-header {
+        text-align: left;
+        margin-bottom: 60px;
+      }
+      
+      .case-studies-title {
+        font-size: clamp(2.5rem, 5vw, 4rem) !important;
+        font-weight: 300 !important;
+        letter-spacing: 0.02em !important;
+        text-transform: uppercase !important;
+        color: #FFFFFF !important;
+        margin-bottom: 30px !important;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+      }
+      
+      .case-studies-subtitle {
+        font-size: clamp(1.1rem, 2vw, 1.3rem) !important;
+        line-height: 1.5 !important;
+        color: rgba(255,255,255,0.6) !important;
+        font-weight: 300 !important;
+        max-width: 800px !important;
+        margin: 0 !important;
+        letter-spacing: -0.01em !important;
+      }
+      
+      /* Case Studies Grid - 2 columns like main page */
+      .case-studies-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px 80px;
+        margin-bottom: 80px;
+      }
+      
+      /* Case study cards matching casestudies.html */
+      .case-study-card-index {
+        background: transparent;
+        border-radius: 0;
+        overflow: visible;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      /* Stagger pattern for visual interest */
+      .case-study-card-index:nth-child(1) {
+        transform: translateY(0);
+      }
+      
+      .case-study-card-index:nth-child(2) {
+        transform: translateY(50px);
+      }
+      
+      .case-study-card-index:nth-child(3) {
+        transform: translateY(20px);
+      }
+      
+      .case-study-card-index:nth-child(4) {
+        transform: translateY(0);
+      }
+      
+      .case-study-card-index:nth-child(5) {
+        transform: translateY(40px);
+      }
+      
+      /* Image container */
+      .case-image-index {
+        width: 100%;
+        height: 350px;
+        background: #0a0a0a;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      
+      .case-image-index img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.9;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      
+      .case-study-card-index:hover .case-image-index img {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+      
+      .case-study-card-index:hover {
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        z-index: 10;
+      }
+      
+      .case-study-card-index:hover .case-image-index {
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      /* Content section */
+      .case-content-index {
+        padding: 24px 0;
+        background: transparent;
+        position: relative;
+      }
+      
+      .case-category-index {
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0 0 8px 0;
+      }
+      
+      .case-title-index {
+        font-size: 1.4rem !important;
+        font-weight: 400 !important;
+        color: #ffffff !important;
+        margin: 0 0 10px 0 !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.01em !important;
+      }
+      
+      .case-description-index {
+        font-size: 0.9rem !important;
+        color: rgba(255, 255, 255, 0.5) !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        font-weight: 300 !important;
+      }
+      
+      /* Buttons Section */
+      .buttons-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 80px;
+      }
+      
+      .view-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 32px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border-radius: 12px;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .view-button {
+        background: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      
+      .view-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+        transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        z-index: -1;
+      }
+      
+      .view-button:hover {
+        border-color: transparent;
+        transform: translateY(-2px);
+      }
+      
+      .view-button:hover::before {
+        left: 0;
+      }
+      
+      .view-button svg {
+        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      
+      .view-button:hover svg {
+        transform: translateX(4px);
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .case-studies-container {
+          padding: 0 40px;
+        }
+        
+        .case-studies-grid {
+          gap: 60px 40px;
+        }
+        
+        .case-image-index {
+          height: 320px;
+        }
+        
+        .case-study-card-index:nth-child(odd) {
+          transform: translateY(0) !important;
+        }
+        
+        .case-study-card-index:nth-child(even) {
+          transform: translateY(30px) !important;
         }
       }
-
-      @media (max-width: 480px) {
-        .products-list.w-container {
-          padding: 0 15px !important;
-          gap: 15px !important;
+      
+      @media (max-width: 767px) {
+        .case-studies-container {
+          padding: 0 24px;
+        }
+        
+        .case-studies-grid {
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+        
+        .case-study-card-index,
+        .case-study-card-index:nth-child(n) {
+          transform: translateY(0) !important;
+        }
+        
+        .case-image-index {
+          height: 280px;
+        }
+        
+        .case-studies-header {
+          text-align: left;
+        }
+        
+        .buttons-wrapper {
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+          margin-top: 60px;
+        }
+        
+        .view-button {
+          padding: 14px 28px;
+          font-size: 0.85rem;
+          width: 240px;
+          justify-content: center;
         }
       }
     </style>
@@ -5686,7 +5997,7 @@
       z-index: 10002;
       background: transparent !important;
       border: 1px solid rgba(255, 255, 255, 0.3) !important;
-      border-radius: 8px;
+      border-radius: 12px;
       transition: all 0.3s ease;
       justify-content: center;
       align-items: center;
@@ -5701,10 +6012,10 @@
     .hamburger-menu span {
       display: block !important;
       position: absolute !important;
-      height: 2px !important;
-      width: 20px !important;
+      height: 1px !important;
+      width: 22px !important;
       background: #ffffff !important;
-      border-radius: 1px !important;
+      border-radius: 0.5px !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -5712,7 +6023,7 @@
     }
     
     .hamburger-menu span:nth-child(1) {
-      top: 16px;
+      top: 18px;
     }
     
     .hamburger-menu span:nth-child(2) {
@@ -5721,27 +6032,17 @@
     
     .hamburger-menu.active span:nth-child(1) {
       transform: translateX(-50%) rotate(45deg);
-      top: 21px;
+      top: 22px;
     }
     
     .hamburger-menu.active span:nth-child(2) {
       transform: translateX(-50%) rotate(-45deg);
-      top: 21px;
+      top: 22px;
     }
     
-    /* Third line using ::after */
+    /* Remove third line - we only want two lines */
     .hamburger-menu::after {
-      content: '';
-      display: block !important;
-      position: absolute !important;
-      height: 2px !important;
-      width: 20px !important;
-      background: #ffffff !important;
-      left: 50% !important;
-      transform: translateX(-50%) !important;
-      bottom: 16px !important;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-      border-radius: 1px !important;
+      display: none !important;
     }
     
     .hamburger-menu.active::after {
@@ -5765,6 +6066,32 @@
         gap: 0 !important;
         padding: 0 !important;
         margin: 0 !important;
+      }
+      
+      /* Mobile navbar layout with logo on left, icon on right */
+      @media (max-width: 767px) {
+        .navbar-wrapper {
+          display: flex !important;
+          flex-direction: row !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          padding-top: 20px !important;
+        }
+        
+        .brand.w-nav-brand {
+          order: 1 !important;
+          margin: 0 !important;
+        }
+        
+        .hamburger-menu {
+          order: 2 !important;
+          margin: 0 !important;
+        }
+        
+        /* Hide desktop nav menu */
+        .nav-menu-wrapper {
+          display: none !important;
+        }
       }
       
       /* Position logo on left with proper spacing */
@@ -5801,7 +6128,7 @@
     
     .mob-menu-ul[href="#pricing"] .mob-menu-link {
       border: 1.5px solid rgba(59, 130, 246, 0.5) !important;
-      border-radius: 8px !important;
+      border-radius: 12px !important;
       text-align: center !important;
       justify-content: center !important;
       min-height: 52px !important; /* Slightly taller for CTA buttons */
@@ -5814,7 +6141,7 @@
     
     .mob-menu-ul[href="contact.html"] .mob-menu-link {
       background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%) !important;
-      border-radius: 8px !important;
+      border-radius: 12px !important;
       text-align: center !important;
       justify-content: center !important;
       color: white !important;
@@ -5844,7 +6171,7 @@
         flex-direction: column !important;
         box-sizing: border-box !important;
         background: white !important;
-        border-radius: 6px !important;
+        border-radius: 12px !important;
         box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
       }
       
@@ -6021,7 +6348,7 @@
       .app-icon {
         width: 48px !important;
         height: 48px !important;
-        border-radius: 10px !important;
+        border-radius: 12px !important;
         flex-shrink: 0 !important;
       }
       
@@ -6080,7 +6407,7 @@
         align-items: center !important;
         justify-content: center !important;
         font-size: 14px !important;
-        border-radius: 8px !important;
+        border-radius: 12px !important;
         cursor: pointer !important;
         min-height: 35px !important;
         background: #f9f9f9 !important;
@@ -6149,7 +6476,7 @@
         margin: 4px auto !important;
         padding: 6px !important;
         min-height: auto !important;
-        border-radius: 3px !important;
+        border-radius: 12px !important;
         box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
       }
       
@@ -6187,7 +6514,7 @@
       .profile-button {
         padding: 3px 6px !important;
         font-size: 8px !important;
-        border-radius: 10px !important;
+        border-radius: 12px !important;
         max-width: 50px !important;
         min-height: 18px !important;
       }
@@ -6230,7 +6557,7 @@
         width: 20px !important;
         height: 20px !important;
         margin-bottom: 4px !important;
-        border-radius: 3px !important;
+        border-radius: 12px !important;
       }
       
       .component-card h3,
@@ -6259,7 +6586,7 @@
       .app-icon {
         width: 20px !important;
         height: 20px !important;
-        border-radius: 3px !important;
+        border-radius: 12px !important;
       }
       
       .software-card .title,
@@ -6291,7 +6618,7 @@
       .calendar-day {
         font-size: 7px !important;
         min-height: 14px !important;
-        border-radius: 2px !important;
+        border-radius: 12px !important;
       }
       
       /* Grid layout with very tight spacing */
